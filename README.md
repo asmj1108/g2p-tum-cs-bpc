@@ -2,9 +2,17 @@
 
 |          | Transformer<br/>(baseline 2020) | Neural transducer<br/>(baseline 2021) | Yoyodyne<br/>(baseline 2024) |
 |----------|---------------------------------|---------------------------------------|------------------------------| 
+| Adyghe   |                                 | 22.00                                 |                              |
 | French   | 6.89                            |                                       |                              |
+| Greek    |                                 | 20.00                                 |                              |
+| Icelandic|                                 | 11.00                                 |                              |
+| Khmer    |                                 | 36.00                                 |                              |
+| Latvian  |                                 | 54.00                                 |                              |
+| Maltese_L|                                 | 18.00                                 |                              |
 | Maori    |                                 |                                       | 41.30                        |
 | Romanian |                                 | 10.00                                 |                              |
+| Slovene  |                                 | 49.00                                 |                              |
+| Welsh_sw |                                 | 13.00                                 |                              |
 
 ---
 ## Models
