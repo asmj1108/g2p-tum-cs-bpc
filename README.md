@@ -47,4 +47,20 @@ the best many-to-many alignment of letters and phonetic symbol
 |----------|---------|---------|--------|-------|---------|---------|---------|---------|-------|-----------|---------------|
 | WER      | 68.49   | 48.00   | 61.00  | 51.00 | 25.00   | 67.86   | 55.00   | 18.00   | 72.00 | 50.00     | 51.63         |
 
+---
+## Models
 
+### 2024
+**Baseline**: attentive_gru, attentive_lstm, gru, hard_attention_gru, lstm, pointer_generator_gru, transducer_gru, transformer(20\40\60 epochs)
+
+
+## Languages
+
+### 2024
+#### Reference Result(different results of abjad, a multilingual set):
+
+- Baseline
+
+| Models                | gru   | lstm  | attentive_gru | attentive_lstm | hard_attention_gru | hard_attention_gru (Arab) | pointer_generator_gru | transducer_gru | transformer_20 | transformer_40 | transformer_60 |
+|-----------------------|-------|-------|---------------|----------------|--------------------|--------------------------|----------------------|----------------|----------------|----------------|----------------|
+| Accuracy              | 56.25 | 55.75 | 36.92         | 52.75          | 59.33              | 68.67                    | 37.83                | 30.67          | 21.75          | 18.42          | 20.50          |
