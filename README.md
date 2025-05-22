@@ -77,8 +77,8 @@ the best many-to-many alignment of letters and phonetic symbol
 
 - GRU、LSTM、Transformer on different languages
   
-| Model/Language       | Pashto | Spanish | English | Russian |
-|----------------------|--------|---------|---------|---------|
-| GRU                  | 39.00  | 9.00    | 31.00   | 14.00   |
-| LSTM                 | 57.67  | 9.00    | 48.33   | 10.33   |
-| Transformer          | 77.00  | 24.67   | 81.33   | 35.67   |
+| Model/Languages   | English | Pashto | Russian | Spanish |
+|-------------------|---------|--------|---------|---------|
+| GRU               | 31.00   | 39.00  | 14.00   | 9.00    |
+| LSTM              | 48.33   | 57.67  | 10.33   | 9.00    |
+| Transformer       | 81.33   | 77.00  | 35.67   | 24.67   |
