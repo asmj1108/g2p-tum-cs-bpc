@@ -3,9 +3,12 @@
 |          | Transformer<br/>(baseline 2020) | Neural transducer<br/>(baseline 2021) | Yoyodyne<br/>(baseline 2024) |
 |----------|---------------------------------|---------------------------------------|------------------------------| 
 | Adyghe   |                                 | 22.00                                 |                              |
+| Bengali  |                                 | 67.12                                 |                              |
 | French   | 6.89                            |                                       |                              |
+| German   |                                 | 53.00                                 |                              |
 | Greek    |                                 | 20.00                                 |                              |
 | Icelandic|                                 | 11.00                                 |                              |
+| Italian  |                                 | 17.00                                 |                              |
 | Khmer    |                                 | 36.00                                 |                              |
 | Latvian  |                                 | 54.00                                 |                              |
 | Maltese_L|                                 | 18.00                                 |                              |
@@ -21,7 +24,8 @@
 **Baseline**: A neural transducer system using an imitation learning paradigm (dyNET framework)
 
 **Submissions**:
-1. Tü-G2P:
+1. [Tü-G2P](https://aclanthology.org/2023.sigmorphon-1.28.pdf): A series of sequence labelling systems to G2P tasks, 
+which use ​simpler alignment​ rather than dynamic transducer-based alignment.(Pytorch) 
 2. [Hammond](https://aclanthology.org/2023.sigmorphon-1.29.pdf) ([Repo](https://github.com/hammondm/g2p2022)): A 
 non-neural system based on OpenFST and uses weighted finite-state transducers and expectation-maximization to compute 
 the best many-to-many alignment of letters and phonetic symbol 

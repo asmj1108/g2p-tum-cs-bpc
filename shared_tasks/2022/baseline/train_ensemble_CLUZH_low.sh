@@ -14,7 +14,7 @@
 #$ -pe smp 10
 #$ -t 1
 
-LANGS=( "ben" "ger" "ita" "per" "swe" "tgl" "tha" "ukr" "gle" "bur" )
+LANGS=( "ben" "ger" "ita" "per" "swe" "tgl" "tha" "ukr" "gle" "bur" ) # Language codes
 LANG=${LANGS[(( SGE_TASK_ID - 1))]}
 SETTING="low"
 
@@ -39,7 +39,7 @@ HIDDEN_DIM=100
 for ENSEMBLE_SIZE in $(seq 1 "${MAX_ENSEMBLE_SIZE}"); do
   OUTPUT="${OUTPUT_BASE}/${SETTING}/${LANG}/${ENSEMBLE_SIZE}"
   mkdir -p "${OUTPUT}"
-
+  basename "$PWD"
   python "${CODE_DIR}/baseline/trans/train.py" \
     --dynet-seed "${ENSEMBLE_SIZE}" \
     --output "${OUTPUT}" \
