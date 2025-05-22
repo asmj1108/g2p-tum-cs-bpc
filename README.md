@@ -69,7 +69,7 @@ the best many-to-many alignment of letters and phonetic symbol
 |-----------------------|-------|-------|---------------|----------------|--------------------|--------------------------|----------------------|----------------|----------------|----------------|----------------|
 | WER (%)               | 43.75 | 44.25 | 63.08         | 47.25          | 40.67              | 31.33                    | 62.17                | 69.33          | 78.25          | 81.58          | 79.50          |
 
-- Best perfomance model on all datasets(hard_attenton_gru)
+- Best performance model on all datasets(hard_attenton_gru)
 
 | Languages  | Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu |
 |------------|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|------|
