@@ -71,20 +71,9 @@ the best many-to-many alignment of letters and phonetic symbol
 
 - Best perfomance model on all datasets(hard_attenton_gru)
 
-| Language    | WER   |
-|-------------|-------|
-| Arabic      | 31.33 |
-| Bulgarian   | 20.00 |
-| English     | 58.00 |
-| Persian     | 29.67 |
-| Indonesian  | 55.33 |
-| Macedonian  | 3.67  |
-| Pashto      | 44.33 |
-| Russian     | 10.33 |
-| Spanish     | 5.00  |
-| Tagalog     | 40.33 |
-| Ukrainian   | 15.67 |
-| Urdu        | 64.00 |
+| Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu |
+|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|------|
+| 31.33  | 20.00     | 58.00   | 29.67   | 55.33      | 3.67       | 44.33  | 10.33   | 5.00    | 40.33   | 15.67     | 64.00 |
 
 - GRU、LSTM、Transformer on different languages
   
