@@ -1,5 +1,7 @@
 .idea
 .vscodes
-shared_tasks
 
+shared_tasks
 data/*.py
+
+Note.md
