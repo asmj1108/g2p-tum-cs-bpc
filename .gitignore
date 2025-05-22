@@ -1,0 +1,5 @@
+.idea
+.vscodes
+shared_tasks
+
+data/*.py
