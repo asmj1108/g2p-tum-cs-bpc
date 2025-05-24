@@ -61,10 +61,24 @@ the best many-to-many alignment of letters and phonetic symbol
 ## Languages
 
 ### 2024
-#### Reference Result(different results of abjad, a multilingual set):
+#### Reference Result:
 
 - Baseline
 
 | Models                | gru   | lstm  | attentive_gru | attentive_lstm | hard_attention_gru | hard_attention_gru (Arab) | pointer_generator_gru | transducer_gru | transformer_20 | transformer_40 | transformer_60 |
 |-----------------------|-------|-------|---------------|----------------|--------------------|--------------------------|----------------------|----------------|----------------|----------------|----------------|
-| Accuracy              | 56.25 | 55.75 | 36.92         | 52.75          | 59.33              | 68.67                    | 37.83                | 30.67          | 21.75          | 18.42          | 20.50          |
+| WER (%)               | 43.75 | 44.25 | 63.08         | 47.25          | 40.67              | 31.33                    | 62.17                | 69.33          | 78.25          | 81.58          | 79.50          |
+
+- Best performance model on all datasets(hard_attenton_gru)
+
+| Languages  | Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu |
+|------------|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|------|
+| WER        | 31.33  | 20.00     | 58.00   | 29.67   | 55.33      | 3.67       | 44.33  | 10.33   | 5.00    | 40.33   | 15.67     | 64.00 |
+
+- GRU、LSTM、Transformer on different languages
+  
+| Model/Languages   | English | Pashto | Russian | Spanish |
+|-------------------|---------|--------|---------|---------|
+| GRU               | 31.00   | 39.00  | 14.00   | 9.00    |
+| LSTM              | 48.33   | 57.67  | 10.33   | 9.00    |
+| Transformer       | 81.33   | 77.00  | 35.67   | 24.67   |
