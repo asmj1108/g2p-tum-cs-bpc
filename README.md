@@ -1,21 +1,54 @@
 # Our Results
 
-|          | Transformer<br/>(baseline 2020) | Neural transducer<br/>(baseline 2021) | Yoyodyne<br/>(baseline 2024) |
-|----------|---------------------------------|---------------------------------------|------------------------------| 
-| Adyghe   |                                 | 22.00                                 |                              |
-| Bengali  |                                 | 67.12                                 |                              |
-| French   | 6.89                            |                                       |                              |
-| German   |                                 | 53.00                                 |                              |
-| Greek    |                                 | 20.00                                 |                              |
-| Icelandic|                                 | 11.00                                 |                              |
-| Italian  |                                 | 17.00                                 |                              |
-| Khmer    |                                 | 36.00                                 |                              |
-| Latvian  |                                 | 54.00                                 |                              |
-| Maltese_L|                                 | 18.00                                 |                              |
-| Maori    |                                 |                                       | 41.30                        |
-| Romanian |                                 | 10.00                                 |                              |
-| Slovene  |                                 | 49.00                                 |                              |
-| Welsh_sw |                                 | 13.00                                 |                              |
+| Language                 | Pair n-gram Model<br/>(baseline 2020) | Transformer<br/>(baseline 2020) | Neural transducer<br/>(baseline 2021/22) | Yoyodyne<br/>(baseline 2024) |
+|--------------------------|---------------------------------------|---------------------------------|------------------------------------------|------------------------------|
+| English                  | 70.00                                 |                                 |                                          |                              |
+| Dutch                    | 32.00                                 |                                 |                                          |                              |
+| Armenian (Eastern)       | 17.00                                 |                                 |                                          |                              |
+| French                   | 31.00                                 |                                 |                                          |                              |
+| Georgian                 | 0.00                                  |                                 |                                          |                              |
+| Serbo-Croatian (Latin)   | 84.00                                 |                                 |                                          |                              |
+| Hungarian                | 9.00                                  |                                 |                                          |                              |
+| Japanese (Hiragana)      | 23.00                                 |                                 |                                          |                              |
+| Korean                   | 81.00                                 |                                 |                                          |                              |
+| Vietnamese (Hanoi)       | 44.00                                 |                                 |                                          |                              |
+| Hindi                    | 23.00                                 |                                 |                                          |                              |
+| Lithuanian               | 32.00                                 |                                 |                                          |                              |
+| Arabic                   | 43.00                                 |                                 |                                          |                              |
+| Bulgarian                | 37.00                                 |                                 |                                          |                              |
+| Indonesian               | 58.00                                 |                                 |                                          |                              |
+| Macedonian               | 6.00                                  |                                 |                                          |                              |
+| Persian (Classical)      | 51.00                                 |                                 |                                          |                              |
+| Russian                  | 31.00                                 |                                 |                                          |                              |
+| Spanish                  | 3.00                                  |                                 |                                          |                              |
+| Tagalog                  | 11.00                                 |                                 |                                          |                              |
+| Ukrainian                | 27.00                                 |                                 |                                          |                              |
+| Urdu                     | 67.00                                 |                                 |                                          |                              |
+| Romanian                 | 10.00                                 |                                 |                                          |                              |
+| Italian                  | 22.00                                 |                                 |                                          |                              |
+| Adyghe                   | 27.00                                 |                                 |                                          |                              |
+| Assamese                 | 14.00                                 |                                 |                                          |                              |
+| Belarusian               | 7.00                                  |                                 |                                          |                              |
+| Bengali                  | 70.00                                 |                                 |                                          |                              |                              
+| Burmese                  | 39.00                                 |                                 |                                          |                              |
+| Cebuano                  | 22.00                                 |                                 |                                          |                              |
+| Central Khmer            | 56.00                                 |                                 |                                          |                              |
+| Eastern Lawa             | 44.00                                 |                                 |                                          |                              |
+| German                   | 49.00                                 |                                 |                                          |                              |
+| Greek                    | 27.00                                 |                                 |                                          |                              |
+| Irish                    | 57.00                                 |                                 |                                          |                              |
+| Icelandic                | 35.00                                 |                                 |                                          |                              |
+| Latvian                  | 51.00                                 |                                 |                                          |                              |
+| Maltese (Latin)          | 27.00                                 |                                 |                                          |                              |
+| Norwegian Nynorsk        | 61.00                                 |                                 |                                          |                              |
+| Pashto                   | 70.00                                 |                                 |                                          |                              |
+| Persian (Iranian)        | 66.00                                 |                                 |                                          |                              |
+| Shan                     | 6.00                                  |                                 |                                          |                              |
+| Slovenian                | 73.00                                 |                                 |                                          |                              |
+| Swedish                  | 67.00                                 |                                 |                                          |                              |
+| Thai                     | 70.00                                 |                                 |                                          |                              |
+| Welsh                    | 33.00                                 |                                 |                                          |                              |
+| Welsh (Southern Dialect) | 28.00                                 |                                 |                                          |                              |
 
 ---
 ## Models
@@ -82,3 +115,24 @@ the best many-to-many alignment of letters and phonetic symbol
 | GRU               | 31.00   | 39.00  | 14.00   | 9.00    |
 | LSTM              | 48.33   | 57.67  | 10.33   | 9.00    |
 | Transformer       | 81.33   | 77.00  | 35.67   | 24.67   |
+
+
+
+---
+
+|          | Transformer<br/>(baseline 2020) | Neural transducer<br/>(baseline 2021) | Yoyodyne<br/>(baseline 2024) |
+|----------|---------------------------------|---------------------------------------|------------------------------| 
+| Adyghe   |                                 | 22.00                                 |                              |
+| Bengali  |                                 | 67.12                                 |                              |
+| French   | 6.89                            |                                       |                              |
+| German   |                                 | 53.00                                 |                              |
+| Greek    |                                 | 20.00                                 |                              |
+| Icelandic|                                 | 11.00                                 |                              |
+| Italian  |                                 | 17.00                                 |                              |
+| Khmer    |                                 | 36.00                                 |                              |
+| Latvian  |                                 | 54.00                                 |                              |
+| Maltese_L|                                 | 18.00                                 |                              |
+| Maori    |                                 |                                       | 41.30                        |
+| Romanian |                                 | 10.00                                 |                              |
+| Slovene  |                                 | 49.00                                 |                              |
+| Welsh_sw |                                 | 13.00                                 |                              |

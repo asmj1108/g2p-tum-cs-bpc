@@ -4,4 +4,6 @@
 shared_tasks/
 data/*.py
 
+models/fst/checkpoints/
+
 Note.md
