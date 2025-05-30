@@ -9,7 +9,8 @@ To run:
 1.  Create and enable the Conda environment using
     ```bash
     conda env create -f environment.yml
+    conda activate g2p-fst
     ```
-2.  Run [`sweep`](sweep). This may take a while.
+2.  Run [`sweep`](sweep).
 
 Results are stored in the [`checkpoints`](checkpoints) directory.

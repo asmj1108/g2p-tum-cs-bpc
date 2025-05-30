@@ -1,0 +1,62 @@
+#!/bin/bash
+
+clean_worse_cps() {
+
+	local -r DIR=$(dirname "$1")
+	local exclude_pattern=""
+
+	# Build exclusion patterns
+	for file in "$@"; do
+		local checkpoint_prefix
+		checkpoint_prefix=$(basename "$file" | grep -oE '^checkpoint[0-9]+')
+		if [ -n "$checkpoint_prefix" ]; then
+			if [ -z "$exclude_pattern" ]; then
+				exclude_pattern="${checkpoint_prefix}[^0-9]"
+			else
+				exclude_pattern="${exclude_pattern}|${checkpoint_prefix}[^0-9]"
+			fi
+		fi
+	done
+
+	find "$DIR" -type f | grep -vE "(${exclude_pattern})" | xargs -r rm
+
+}
+
+readonly BATCHES=(256 512 1024)
+readonly DROPOUTS=(.1 .2 .3)
+
+# Due to time and resource constrain, hyperparameter tuning was only done with ady and the best setting is then apply to all languages
+readonly LANG="ady"
+
+echo "Hint: Add --clean argument to remove all checkpoints that are that doesn't have the lowest WER for dev or test set"
+
+
+for BATCH in "${BATCHES[@]}"; do
+	for DROPOUT in "${DROPOUTS[@]}"; do
+		for ED in "s-s" "s-l" "l-s" "l-l"; do
+			MIN_WER=100
+			MIN_CHECKPOINT=""
+			MODEL="checkpoints/${LANG}-${BATCH}-${DROPOUT}-${ED}"
+			TO_KEEP=()
+			for LEVEL in "dev" "test"; do
+				shopt -s nullglob
+				for RESULT_FILE in "${MODEL}/checkpoint"*"-${LEVEL}.res"; do
+					WER=$(grep "WER:" "${RESULT_FILE}" | awk '{print $2}')
+
+					if (($(echo "${WER} < ${MIN_WER}" | bc -l))); then
+						MIN_WER=${WER}
+						MIN_CHECKPOINT=${RESULT_FILE}
+					fi
+				done
+				shopt -u nullglob
+				if [ -n "${MIN_CHECKPOINT}" ]; then
+					TO_KEEP+=("${MIN_CHECKPOINT}")
+					echo "Lowest WER for ${LEVEL}: ${MIN_WER} found in ${MIN_CHECKPOINT}"
+				fi
+			done
+			if [ "$1" == "--clean" ]; then
+				clean_worse_cps "${TO_KEEP[@]}"
+			fi
+		done
+	done
+done

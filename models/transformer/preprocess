@@ -6,67 +6,48 @@ set -euo pipefail
 # Two train, two dev, two test, each distinguished by prefixes.
 # One file is the source and one is the target, distinguished by suffixes.
 readonly DATA=../../data
+readonly LANGS=('ady' 'ara' 'arm_e' 'asm' 'bel' 'ben' 'bul' 'bur' 'ceb' 'dut' 'eng_us' 'fas' 'fre' 'geo' 'ger' 'gle'
+	'gre' 'hbs_latn' 'hin' 'hun' 'ice' 'ind' 'ita' 'jpn_hira' 'khm' 'kor' 'lav' 'lit' 'lwl' 'mkd' 'mlt_latn' 'nno' 'per'
+	'pus' 'rum' 'rus' 'shn' 'slv' 'spa' 'swe' 'tgl' 'tha' 'ukr' 'urd' 'vie_hanoi' 'wel' 'wel_sw')
 
 tsv() {
-    for LANGUAGE_DIR in "${DATA}"/*/; do
-        LANGUAGE=$(basename "${LANGUAGE_DIR}")
-        echo "Processing language: ${LANGUAGE}"
-
-        for TASK in train dev test; do
-            TSV_FILE="${LANGUAGE_DIR}${LANGUAGE}_${TASK}.tsv"
-            if [[ -f "${TSV_FILE}" ]]; then
-                # Separates graphemes with spaces.
-                cut -f1 "${TSV_FILE}" | \
-                    sed 's/./& /g' \
-                    > "${TASK}.${LANGUAGE}.graphemes"
-                # Phonemes are already separated intelligently in WikiPron.
-                cut -f2 "${TSV_FILE}" \
-                    > "${TASK}.${LANGUAGE}.phonemes"
-            else
-                echo "Warning: ${TSV_FILE} not found, skipping..."
-            fi
-        done
-    done
+	for LANG in "${LANGS[@]}"; do
+		for TASK in train dev test; do
+			TSV="${DATA}/${LANG}/${LANG}_${TASK}.tsv"
+			# Separates graphemes with spaces
+			# Using python to avoid `sed` because `sed` operates on byte-level and messes up utf-8 encoding
+			cut -f1 "${TSV}" |
+				python -c "
+import sys
+for line in sys.stdin:
+    print(' '.join(line.strip()))
+            " >"${TASK}.${LANG}.graphemes"
+			# Phonemes are already separated intelligently in WikiPron.
+			cut -f2 "${TSV}" \
+				>"${TASK}.${LANG}.phonemes"
+		done
+	done
 }
 
 bin() {
-    # Now we include test data since it's available.
-    for DEVPATH in dev.*.graphemes; do  # e.g., dev.eng.graphemes
-        LANGUAGE="$(echo "${DEVPATH}" | cut -d'.' -f2)"
-        echo "Creating binary data for language: ${LANGUAGE}"
-
-        # Check if test files exist before including them
-        if [[ -f "test.${LANGUAGE}.graphemes" && -f "test.${LANGUAGE}.phonemes" ]]; then
-            echo "Including test data for ${LANGUAGE}"
-            fairseq-preprocess \
-                --source-lang="${LANGUAGE}.graphemes" \
-                --target-lang="${LANGUAGE}.phonemes" \
-                --trainpref=train \
-                --validpref=dev \
-                --testpref=test \
-                --tokenizer=space \
-                --thresholdsrc=5 \
-                --thresholdtgt=5 \
-                --destdir="data-bin/${LANGUAGE}"
-        else
-            echo "Test data not found for ${LANGUAGE}, proceeding without test set"
-            fairseq-preprocess \
-                --source-lang="${LANGUAGE}.graphemes" \
-                --target-lang="${LANGUAGE}.phonemes" \
-                --trainpref=train \
-                --validpref=dev \
-                --tokenizer=space \
-                --thresholdsrc=5 \
-                --thresholdtgt=5 \
-                --destdir="data-bin/${LANGUAGE}"
-        fi
-    done
+	for LANG in "${LANGS[@]}"; do
+		fairseq-preprocess \
+			--source-lang="${LANG}.graphemes" \
+			--target-lang="${LANG}.phonemes" \
+			--trainpref=train \
+			--validpref=dev \
+			--testpref=test \
+			--tokenizer=space \
+			--thresholdsrc=5 \
+			--thresholdtgt=5 \
+			--destdir="data-bin/${LANG}"
+	done
 }
 
 main() {
-    tsv
-    bin
-    rm -f *.{graph,phon}emes
+	tsv
+	bin
+	rm -f -- *.{graph,phon}emes
 }
 
 main

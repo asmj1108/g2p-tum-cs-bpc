@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script evaluates predictions.
-# 
+#
 # In the first stage it applies `cut -f2` to extract predicted phonemes from
 # the gold data, and then `paste` to combine this with the hypothesized
 # phonemes. In the second stage it calls `evaluate.py`.
@@ -10,40 +10,40 @@ set -eou pipefail
 # Flag parsing.
 
 readonly FLAGS=(
-    "gold_path"
-    "hypo_path"
+	"gold_path"
+	"hypo_path"
 )
 LONGOPTS_STRING="$(printf "%s:," "${FLAGS[@]}")"
 readonly LONGOPTS_STRING
-OPTS=$(getopt                 			\
-    --name "$(basename "$0")"          	\
-    --options ""                       	\
-    --longoptions "${LONGOPTS_STRING}" 	\
-    -- "$@")
+OPTS=$(getopt \
+	--name "$(basename "$0")" \
+	--options "" \
+	--longoptions "${LONGOPTS_STRING}" \
+	-- "$@")
 readonly OPTS
 eval set --"${OPTS}"
 while [ $# -gt 0 ]; do
-    case "$1" in
-        --gold_path)
-            GOLD_PATH="$2"
-            shift 2
-            ;;
-        --hypo_path)
-            HYPO_PATH="$2"
-            shift 2
-            ;;
-        *)
-            break
-            ;;
-    esac
+	case "$1" in
+	--gold_path)
+		GOLD_PATH="$2"
+		shift 2
+		;;
+	--hypo_path)
+		HYPO_PATH="$2"
+		shift 2
+		;;
+	*)
+		break
+		;;
+	esac
 done
 
 main() {
-    local -r EVALUATE_PATH="$(mktemp -u -t evaluate.XXXXXX.$$.tsv)"
-    paste <(cut -f2 "${GOLD_PATH}") <(cut -f2 "${HYPO_PATH}") > "${EVALUATE_PATH}"
-    # We hide the "incorrect predictions" logging.
-    python evaluation/evaluate.py "${EVALUATE_PATH}" 2>/dev/null
-    # rm -f "${EVALUATE_PATH}"
+	local -r EVALUATE_PATH="$(mktemp -u -t evaluate.XXXXXX.$$.tsv)"
+	paste <(cut -f2 "${GOLD_PATH}") <(cut -f2 "${HYPO_PATH}") >"${EVALUATE_PATH}"
+	# We hide the "incorrect predictions" logging.
+	python evaluation/evaluate.py "${EVALUATE_PATH}" 2>/dev/null
+	rm -f "${EVALUATE_PATH}"
 }
 
 main

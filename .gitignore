@@ -6,4 +6,12 @@ data/*.py
 
 models/fst/checkpoints/
 
+models/transducer/results/
+models/transducer/build/
+models/transducer/neural_transducer.egg-info/
+
+models/transformer/checkpoints/
+models/transformer/data-bin/
+models/transformer/*.log
+
 Note.md
