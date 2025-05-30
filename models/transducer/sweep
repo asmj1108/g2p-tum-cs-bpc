@@ -1,0 +1,76 @@
+#!/bin/bash
+
+set -euo pipefail
+
+readonly BEAM_WIDTH=4
+readonly EPOCHS=60
+readonly PATIENCE=12
+readonly SED_EM_ITERATIONS=10
+readonly MAX_ENSEMBLE_SIZE=10
+readonly HIDDEN_DIM=100
+
+DATA_TARGET='../../data'
+OUTPUT_BASE='results'
+mkdir -p "${OUTPUT_BASE}"
+
+readonly LANGS=('ady' 'ara' 'arm_e' 'asm' 'bel' 'ben' 'bul' 'bur' 'ceb' 'dut' 'eng_us' 'fas' 'fre' 'geo' 'ger' 'gle'
+	'gre' 'hbs_latn' 'hin' 'hun' 'ice' 'ind' 'ita' 'jpn_hira' 'khm' 'kor' 'lav' 'lit' 'lwl' 'mkd' 'mlt_latn' 'nno' 'per'
+	'pus' 'rum' 'rus' 'shn' 'slv' 'spa' 'swe' 'tgl' 'tha' 'ukr' 'urd' 'vie_hanoi' 'wel' 'wel_sw')
+
+for LANG in "${LANGS[@]}"; do
+	# Train MAX_ENSEMBLE_SIZE models
+	for ENSEMBLE_SIZE in $(seq 1 "${MAX_ENSEMBLE_SIZE}"); do
+		OUTPUT="${OUTPUT_BASE}/${LANG}/${ENSEMBLE_SIZE}"
+		mkdir -p "${OUTPUT}"
+
+		python trans/train.py \
+			--dynet-seed "${ENSEMBLE_SIZE}" \
+			--output "${OUTPUT}" \
+			--train "${DATA_TARGET}/${LANG}/${LANG}_train.tsv" \
+			--dev "${DATA_TARGET}/${LANG}/${LANG}_dev.tsv" \
+			--test "${DATA_TARGET}/${LANG}/${LANG}_test.tsv" \
+			--sed-em-iterations "${SED_EM_ITERATIONS}" \
+			--enc-hidden-dim "${HIDDEN_DIM}" \
+			--dec-hidden-dim "${HIDDEN_DIM}" \
+			--epochs "${EPOCHS}" \
+			--beam-width "${BEAM_WIDTH}" \
+			--patience "${PATIENCE}" \
+			--nfd &
+
+	done
+	wait
+	echo "${LANG}: Done training"
+
+	# Ensemble models
+	OUTPUT="${OUTPUT_BASE}/${LANG}/ensemble"
+	mkdir -p "${OUTPUT}"
+	for SPLIT in "dev" "test"; do
+		python trans/ensembling.py \
+			--gold "${DATA_TARGET}/${LANG}/${LANG}_${SPLIT}.tsv" \
+			--systems "${OUTPUT_BASE}/${LANG}/"*"/${SPLIT}_beam${BEAM_WIDTH}.predictions" \
+			--output "${OUTPUT}"
+	done
+	echo "${LANG}: Done ensembling"
+
+	# Evaluate ensemble model
+	# Create two-column TSV with gold and hypothesis data
+	for SPLIT in "dev" "test"; do
+		paste \
+			"${DATA_TARGET}/${LANG}/${LANG}_${SPLIT}.tsv" \
+			"${OUTPUT_BASE}/${LANG}/ensemble/${SPLIT}_${MAX_ENSEMBLE_SIZE}ensemble.predictions" |
+			cut -f2,4 \
+				>"${OUTPUT_BASE}/${LANG}/ensemble/${SPLIT}_${MAX_ENSEMBLE_SIZE}ensemble.tsv"
+	done
+
+	echo "${LANG}: Done"
+
+done
+
+# Evaluate
+for SPLIT in "dev" "test"; do
+	python evaluation/evaluate.py \
+		"${OUTPUT_BASE}/"*"/ensemble/${SPLIT}_${MAX_ENSEMBLE_SIZE}ensemble.tsv"
+	echo
+done
+
+echo "${LANG}: Done done"
