@@ -68,7 +68,7 @@ done
 
 # Evaluate
 for SPLIT in "dev" "test"; do
-	python evaluation/evaluate.py \
+	python evaluation/evaluate_all.py \
 		"${OUTPUT_BASE}/"*"/ensemble/${SPLIT}_${MAX_ENSEMBLE_SIZE}ensemble.tsv"
 	echo
 done

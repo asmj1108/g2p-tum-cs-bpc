@@ -2,54 +2,54 @@
 
 | Language                 | Pair n-gram Model<br/>(baseline 2020) | Transformer<br/>(baseline 2020) | Neural transducer<br/>(baseline 2021/22) | Yoyodyne<br/>(baseline 2024) |
 |--------------------------|---------------------------------------|---------------------------------|------------------------------------------|------------------------------|
-| English                  | 70.00                                 |                                 |                                          |                              |
-| Dutch                    | 32.00                                 |                                 |                                          |                              |
-| Armenian (Eastern)       | 17.00                                 |                                 |                                          |                              |
-| French                   | 31.00                                 |                                 |                                          |                              |
-| Georgian                 | 0.00                                  |                                 |                                          |                              |
-| Serbo-Croatian (Latin)   | 84.00                                 |                                 |                                          |                              |
-| Hungarian                | 9.00                                  |                                 |                                          |                              |
-| Japanese (Hiragana)      | 23.00                                 |                                 |                                          |                              |
-| Korean                   | 81.00                                 |                                 |                                          |                              |
-| Vietnamese (Hanoi)       | 44.00                                 |                                 |                                          |                              |
-| Hindi                    | 23.00                                 |                                 |                                          |                              |
-| Lithuanian               | 32.00                                 |                                 |                                          |                              |
-| Arabic                   | 43.00                                 |                                 |                                          |                              |
-| Bulgarian                | 37.00                                 |                                 |                                          |                              |
-| Indonesian               | 58.00                                 |                                 |                                          |                              |
-| Macedonian               | 6.00                                  |                                 |                                          |                              |
-| Persian (Classical)      | 51.00                                 |                                 |                                          |                              |
-| Russian                  | 31.00                                 |                                 |                                          |                              |
-| Spanish                  | 3.00                                  |                                 |                                          |                              |
-| Tagalog                  | 11.00                                 |                                 |                                          |                              |
-| Ukrainian                | 27.00                                 |                                 |                                          |                              |
-| Urdu                     | 67.00                                 |                                 |                                          |                              |
-| Romanian                 | 10.00                                 |                                 |                                          |                              |
-| Italian                  | 22.00                                 |                                 |                                          |                              |
-| Adyghe                   | 27.00                                 |                                 |                                          |                              |
-| Assamese                 | 14.00                                 |                                 |                                          |                              |
-| Belarusian               | 7.00                                  |                                 |                                          |                              |
-| Bengali                  | 70.00                                 |                                 |                                          |                              |                              
-| Burmese                  | 39.00                                 |                                 |                                          |                              |
-| Cebuano                  | 22.00                                 |                                 |                                          |                              |
-| Central Khmer            | 56.00                                 |                                 |                                          |                              |
-| Eastern Lawa             | 44.00                                 |                                 |                                          |                              |
-| German                   | 49.00                                 |                                 |                                          |                              |
-| Greek                    | 27.00                                 |                                 |                                          |                              |
-| Irish                    | 57.00                                 |                                 |                                          |                              |
-| Icelandic                | 35.00                                 |                                 |                                          |                              |
-| Latvian                  | 51.00                                 |                                 |                                          |                              |
-| Maltese (Latin)          | 27.00                                 |                                 |                                          |                              |
-| Norwegian Nynorsk        | 61.00                                 |                                 |                                          |                              |
-| Pashto                   | 70.00                                 |                                 |                                          |                              |
-| Persian (Iranian)        | 66.00                                 |                                 |                                          |                              |
-| Shan                     | 6.00                                  |                                 |                                          |                              |
-| Slovenian                | 73.00                                 |                                 |                                          |                              |
-| Swedish                  | 67.00                                 |                                 |                                          |                              |
-| Thai                     | 70.00                                 |                                 |                                          |                              |
-| Welsh                    | 33.00                                 |                                 |                                          |                              |
-| Welsh (Southern Dialect) | 28.00                                 |                                 |                                          |                              |
-
+| English                  | 70.00                                 |                                 | 63.00                                    |                              |
+| Dutch                    | 32.00                                 |                                 | 24.00                                    |                              |
+| Armenian (Eastern)       | 17.00                                 |                                 | 15.00                                    |                              |
+| French                   | 31.00                                 |                                 | 23.00                                    |                              |
+| Georgian                 | 0.00                                  |                                 | 0.00                                     |                              |
+| Serbo-Croatian (Latin)   | 84.00                                 |                                 | 64.00                                    |                              |
+| Hungarian                | 9.00                                  |                                 | 7.00                                     |                              |
+| Japanese (Hiragana)      | 23.00                                 |                                 | 10.00                                    |                              |
+| Korean                   | 81.00                                 |                                 | 23.00                                    |                              |
+| Vietnamese (Hanoi)       | 44.00                                 |                                 | 5.00                                     |                              |
+| Hindi                    | 23.00                                 |                                 | 11.00                                    |                              |
+| Lithuanian               | 32.00                                 |                                 | 33.00                                    |                              |
+| Arabic                   | 43.00                                 |                                 | 53.00                                    |                              |
+| Bulgarian                | 37.00                                 |                                 | 32.00                                    |                              |
+| Indonesian               | 58.00                                 |                                 | 64.00                                    |                              |
+| Macedonian               | 6.00                                  |                                 | 5.00                                     |                              |
+| Persian (Classical)      | 51.00                                 |                                 | 57.00                                    |                              |
+| Russian                  | 31.00                                 |                                 | 23.00                                    |                              |
+| Spanish                  | 3.00                                  |                                 | 4.00                                     |                              |
+| Tagalog                  | 11.00                                 |                                 | 13.00                                    |                              |
+| Ukrainian                | 27.00                                 |                                 | 19.00                                    |                              |
+| Urdu                     | 67.00                                 |                                 | 72.00                                    |                              |
+| Romanian                 | 10.00                                 |                                 | 9.00                                     |                              |
+| Italian                  | 22.00                                 |                                 | 15.00                                    |                              |
+| Adyghe                   | 27.00                                 |                                 | 20.00                                    |                              |
+| Assamese                 | 14.00                                 |                                 | 7.00                                     |                              |
+| Belarusian               | 7.00                                  |                                 | 2.00                                     |                              |
+| Bengali                  | 70.00                                 |                                 | 68.00                                    |                              |                              
+| Burmese                  | 39.00                                 |                                 | 29.00                                    |                              |
+| Cebuano                  | 22.00                                 |                                 | 20.00                                    |                              |
+| Central Khmer            | 56.00                                 |                                 | 31.00                                    |                              |
+| Eastern Lawa             | 44.00                                 |                                 | 8.00                                     |                              |
+| German                   | 49.00                                 |                                 | 46.00                                    |                              |
+| Greek                    | 27.00                                 |                                 | 20.00                                    |                              |
+| Irish                    | 57.00                                 |                                 | 43.00                                    |                              |
+| Icelandic                | 35.00                                 |                                 | 12.00                                    |                              |
+| Latvian                  | 51.00                                 |                                 | 51.00                                    |                              |
+| Maltese (Latin)          | 27.00                                 |                                 | 17.00                                    |                              |
+| Norwegian Nynorsk        | 61.00                                 |                                 | 66.00                                    |                              |
+| Pashto                   | 70.00                                 |                                 | 67.00                                    |                              |
+| Persian (Iranian)        | 66.00                                 |                                 | 65.00                                    |                              |
+| Shan                     | 6.00                                  |                                 | 5.00                                     |                              |
+| Slovenian                | 73.00                                 |                                 | 56.00                                    |                              |
+| Swedish                  | 67.00                                 |                                 | 59.00                                    |                              |
+| Thai                     | 70.00                                 |                                 | 39.00                                    |                              |
+| Welsh                    | 33.00                                 |                                 | 12.00                                    |                              |
+| Welsh (Southern Dialect) | 28.00                                 |                                 | 13.00                                    |                              |
+| **Marco-average WER**    | **38.53**                             |                                 | **29.79**                                |                              |
 ---
 ## Models
 
