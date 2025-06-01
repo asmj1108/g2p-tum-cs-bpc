@@ -1,5 +1,34 @@
 #!/bin/bash
 
+set -euo pipefail
+
+usage() {
+	cat <<EOF
+Usage: $0 CHECKPOINT_DIR [clean]
+
+Arguments:
+    CHECKPOINT_DIR    Directory containing checkpoint files and results
+    clean            Optional: Remove checkpoints that don't have the lowest WER
+
+Examples:
+    $0 checkpoints/pus-512-.3-l-s
+    $0 checkpoints/pus-512-.3-l-s clean
+EOF
+}
+
+# Validate arguments
+if [[ $# -lt 1 || $# -gt 2 ]]; then
+    echo "Error: Invalid number of arguments" >&2
+    usage >&2
+    exit 1
+fi
+
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    usage
+    exit 0
+fi
+
+
 clean_worse_cps() {
 
 	local -r DIR=$(dirname "$1")
@@ -22,41 +51,34 @@ clean_worse_cps() {
 
 }
 
-readonly BATCHES=(256 512 1024)
-readonly DROPOUTS=(.1 .2 .3)
+readonly CP="$1"
+readonly CLEAN_MODE="${2:-}"
 
-# Due to time and resource constrain, hyperparameter tuning was only done with ady and the best setting is then apply to all languages
-readonly LANG="ady"
+MIN_WER=100
+MIN_CHECKPOINT=""
+TO_KEEP=()
 
-echo "Hint: Add --clean argument to remove all checkpoints that are that doesn't have the lowest WER for dev or test set"
+for LEVEL in "dev" "test"; do
+	shopt -s nullglob
+	for RESULT_FILE in "${CP}/checkpoint"*"-${LEVEL}.res"; do
+		WER=$(grep "WER:" "${RESULT_FILE}" | awk '{print $2}')
 
-
-for BATCH in "${BATCHES[@]}"; do
-	for DROPOUT in "${DROPOUTS[@]}"; do
-		for ED in "s-s" "s-l" "l-s" "l-l"; do
-			MIN_WER=100
-			MIN_CHECKPOINT=""
-			MODEL="checkpoints/${LANG}-${BATCH}-${DROPOUT}-${ED}"
-			TO_KEEP=()
-			for LEVEL in "dev" "test"; do
-				shopt -s nullglob
-				for RESULT_FILE in "${MODEL}/checkpoint"*"-${LEVEL}.res"; do
-					WER=$(grep "WER:" "${RESULT_FILE}" | awk '{print $2}')
-
-					if (($(echo "${WER} < ${MIN_WER}" | bc -l))); then
-						MIN_WER=${WER}
-						MIN_CHECKPOINT=${RESULT_FILE}
-					fi
-				done
-				shopt -u nullglob
-				if [ -n "${MIN_CHECKPOINT}" ]; then
-					TO_KEEP+=("${MIN_CHECKPOINT}")
-					echo "Lowest WER for ${LEVEL}: ${MIN_WER} found in ${MIN_CHECKPOINT}"
-				fi
-			done
-			if [ "$1" == "--clean" ]; then
-				clean_worse_cps "${TO_KEEP[@]}"
-			fi
-		done
+		if awk "BEGIN {exit !($WER < $MIN_WER)}"; then
+			MIN_WER="${WER}"
+			MIN_CHECKPOINT="${RESULT_FILE}"
+		fi
 	done
+	shopt -u nullglob
+	if [ -n "${MIN_CHECKPOINT}" ]; then
+		TO_KEEP+=("${MIN_CHECKPOINT}")
+		if [ "${LEVEL}" == "dev" ]; then
+			echo "${MIN_CHECKPOINT} is the best checkpoint (WER: ${MIN_WER} on dev set)."
+			echo "${MIN_CHECKPOINT} scored $(head -n1 "${MIN_CHECKPOINT/dev/test}" | cut -f2) on test set."
+		else
+			echo "${MIN_CHECKPOINT} is the highest-scoring checkpoint on test set (WER: ${MIN_WER})."$'\n'
+		fi
+	fi
 done
+if [ "${CLEAN_MODE}" == "clean" ]; then
+	clean_worse_cps "${TO_KEEP[@]}"
+fi

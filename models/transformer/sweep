@@ -3,6 +3,24 @@
 
 set -euo pipefail
 
+# Script usage
+usage() {
+	cat <<EOF
+Usage: $0 [OPTIONS] [MODE]
+
+OPTIONS:
+    --help, -h      Show this help message
+
+MODE:
+    tune            Run hyperparameter tuning on 'ady' language
+    (default)       Run training on all languages with best hyperparameters
+
+Examples:
+    $0 tune         # Run hyperparameter tuning
+    $0              # Run training on all languages
+EOF
+}
+
 # Defaults.
 readonly SEED=1917
 readonly CRITERION=label_smoothed_cross_entropy
@@ -28,9 +46,32 @@ readonly DROPOUTS=(.1 .2 .3)
 # Prediction options.
 readonly BEAM=5
 
-readonly LANGS=('ady' 'ara' 'arm_e' 'asm' 'bel' 'ben' 'bul' 'bur' 'ceb' 'dut' 'eng_us' 'fas' 'fre' 'geo' 'ger' 'gle'
+LANGS=('ara' 'arm_e' 'asm' 'bel' 'ben' 'bul' 'bur' 'ceb' 'dut' 'eng_us' 'fas' 'fre' 'geo' 'ger' 'gle'
 	'gre' 'hbs_latn' 'hin' 'hun' 'ice' 'ind' 'ita' 'jpn_hira' 'khm' 'kor' 'lav' 'lit' 'lwl' 'mkd' 'mlt_latn' 'nno' 'per'
 	'pus' 'rum' 'rus' 'shn' 'slv' 'spa' 'swe' 'tgl' 'tha' 'ukr' 'urd' 'vie_hanoi' 'wel' 'wel_sw')
+
+MODE="default"
+
+# Parse command line arguments
+parse_args() {
+	while [[ $# -gt 0 ]]; do
+		case $1 in
+		--help | -h)
+			usage
+			exit 0
+			;;
+		tune)
+			MODE="tune"
+			shift
+			;;
+		*)
+			echo "Error: Unknown argument $1" >&2
+			usage >&2
+			exit 1
+			;;
+		esac
+	done
+}
 
 train() {
 	local -r CP="$1"
@@ -118,6 +159,7 @@ train_evaluate() {
 	train "${CP}"
 	evaluate "${CP}" dev
 	evaluate "${CP}" test
+	./inspect "${CP}" clean
 }
 
 # These set the encoder and/or decoder size.
@@ -142,25 +184,40 @@ large_decoder() {
 	export DHS=1024
 }
 
-main() {
-	for LANGUAGE in "${LANGS[@]}"; do
-		for BATCH in "${BATCHES[@]}"; do
-			for DROPOUT in "${DROPOUTS[@]}"; do
-				small_encoder
-				small_decoder
-				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-s"
-				small_encoder
-				large_decoder
-				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-l"
-				large_encoder
-				small_decoder
-				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-s"
-				large_encoder
-				large_decoder
-				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-l"
-			done
+run_hyperparameter_tuning() {
+	# Choose a language for hyperparameter tuning process
+	local -r LANGUAGE="ady"
+	for BATCH in "${BATCHES[@]}"; do
+		for DROPOUT in "${DROPOUTS[@]}"; do
+			small_encoder
+			small_decoder
+			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-s"
+			small_encoder
+			large_decoder
+			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-l"
+			large_encoder
+			small_decoder
+			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-s"
+			large_encoder
+			large_decoder
+			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-l"
 		done
 	done
 }
 
-main
+run_training() {
+	local -r BATCH=512
+	local -r DROPOUT=.3
+	for LANGUAGE in "${LANGS[@]}"; do
+		large_encoder
+		small_decoder
+		train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-s"
+	done
+}
+
+parse_args "$@"
+if [ "${MODE}" == "tune" ]; then
+	run_hyperparameter_tuning
+else
+	run_training
+fi
