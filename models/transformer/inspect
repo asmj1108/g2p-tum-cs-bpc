@@ -18,16 +18,15 @@ EOF
 
 # Validate arguments
 if [[ $# -lt 1 || $# -gt 2 ]]; then
-    echo "Error: Invalid number of arguments" >&2
-    usage >&2
-    exit 1
+	echo "Error: Invalid number of arguments" >&2
+	usage >&2
+	exit 1
 fi
 
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
-    usage
-    exit 0
+	usage
+	exit 0
 fi
-
 
 clean_worse_cps() {
 
@@ -54,11 +53,11 @@ clean_worse_cps() {
 readonly CP="$1"
 readonly CLEAN_MODE="${2:-}"
 
-MIN_WER=100
-MIN_CHECKPOINT=""
 TO_KEEP=()
 
 for LEVEL in "dev" "test"; do
+	MIN_WER=100
+	MIN_CHECKPOINT=""
 	shopt -s nullglob
 	for RESULT_FILE in "${CP}/checkpoint"*"-${LEVEL}.res"; do
 		WER=$(grep "WER:" "${RESULT_FILE}" | awk '{print $2}')
