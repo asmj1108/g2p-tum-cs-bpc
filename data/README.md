@@ -69,6 +69,325 @@
 | Welsh                    | wel      | 1000         | 2022                              |
 | Welsh (Southern Dialect) | wel_sw   | 1000         | 2021                              |
 
-Persian (Iranian)
-Pashto Wiktionary Max Available 983
-Eastern Lawa Wiktionary Max Available 255
+---
+
+| **Family**              | **Latin**                                                                                                                                                                                                           | **Armenian**        | **Georgian** | **Cyrillic**                                           | **Hiragana**            | **Hangul** | **Devanagari** | **Arabic**                                            | **Bengali-Assamese** | **Burmese** | **Khmer**        | **Thai**         | **Greek** | **Shan** |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|--------------|--------------------------------------------------------|-------------------------|------------|----------------|-------------------------------------------------------|----------------------|-------------|------------------|------------------|-----------|----------|
+| **Indo-European**       | English, Dutch, French, Serbo-Croatian (Latin), Hungarian, Lithuanian, Spanish, Romanian, Italian, Irish, Icelandic, Latvian, Norwegian Nynorsk, Slovenian, Swedish, Welsh, Welsh (Southern Dialect), German, Greek | Armenian (Eastern)  |              | Russian, Ukrainian, Bulgarian, Macedonian, Belarusian  |                         |            | Hindi          | Urdu, Persian (Classical), Persian (Iranian), Pashto  | Bengali, Assamese    |             |                  |                  | Greek     |          |
+| **Kartvelian**          |                                                                                                                                                                                                                     |                     | Georgian     |                                                        |                         |            |                |                                                       |                      |             |                  |                  |           |          |
+| **Japonic**             |                                                                                                                                                                                                                     |                     |              |                                                        | Japanese (Hiragana)     |            |                |                                                       |                      |             |                  |                  |           |          |
+| **Koreanic**            |                                                                                                                                                                                                                     |                     |              |                                                        |                         | Korean     |                |                                                       |                      |             |                  |                  |           |          |
+| **Austroasiatic**       | Vietnamese (Hanoi)                                                                                                                                                                                                  |                     |              |                                                        |                         |            |                |                                                       |                      |             | Central Khmer    | Eastern Lawa     |           |          |
+| **Austronesian**        | Indonesian, Tagalog, Cebuano                                                                                                                                                                                        |                     |              |                                                        |                         |            |                |                                                       |                      |             |                  |                  |           |          |
+| **Afro-Asiatic**        | Maltese (Latin)                                                                                                                                                                                                     |                     |              |                                                        |                         |            |                | Arabic                                                |                      |             |                  |                  |           |          |
+| **Northwest Caucasian** |                                                                                                                                                                                                                     |                     |              | Adyghe                                                 |                         |            |                |                                                       |                      |             |                  |                  |           |          |
+| **Sino-Tibetan**        |                                                                                                                                                                                                                     |                     |              |                                                        |                         |            |                |                                                       |                      | Burmese     |                  |                  |           |          |
+| **Tai-Kadai**           |                                                                                                                                                                                                                     |                     |              |                                                        |                         |            |                |                                                       |                      |             |                  | Thai             |           | Shan     |
+| **Uralic**              | Hungarian                                                                                                                                                                                                           |                     |              |                                                        |                         |            |                |                                                       |                      |             |                  |                  |           |          |
+
+---
+# Category
+
+<table><thead>
+  <tr>
+    <th>Family/Script</th>
+    <th>Branch</th>
+    <th>Latin</th>
+    <th>Greek</th>
+    <th>Cyrillic</th>
+    <th>Georgian</th>
+    <th>Arabic</th>
+    <th>Hiragana</th>
+    <th>Hangul</th>
+    <th>Devanagari</th>
+    <th>Armenian</th>
+    <th>Bengali-Assamese</th>
+    <th>Mon-Burmese</th>
+    <th>Khmer</th>
+    <th>Thai</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td rowspan="7">Indo-European</td>
+    <td>Germanic</td>
+    <td>English, Dutch, Icelandic, Norwegian Nynorsk, Swedish, German</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Italic</td>
+    <td>French, Spanish, Romanian, Italian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Balto-Slavic</td>
+    <td>Serbo-Croatian (Latin), Lithuanian, Latvian, Slovenian</td>
+    <td></td>
+    <td>Russian, Ukrainian, Bulgarian, Macedonian, Belarusian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Celtic</td>
+    <td>Irish, Welsh, Welsh (Souther Dialect)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Hellenic</td>
+    <td></td>
+    <td>Greek</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Armenian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Armenian (Eastern)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Indo-Iranian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Urdu, Persian (Classical | Iranian), Pashto</td>
+    <td></td>
+    <td></td>
+    <td>Hindi</td>
+    <td></td>
+    <td>Bengali, Assamese</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Kartvelian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Georgian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Japonic</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Japanese (Hiragana)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Koreanic</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Korean</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Austroasiatic</td>
+    <td></td>
+    <td>Vietnamese (Hanoi)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Central Khmer</td>
+    <td>Eastern Lawa</td>
+  </tr>
+  <tr>
+    <td>Austronesian</td>
+    <td></td>
+    <td>Indonesian, Tagalog, Cebuano</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Afro-Asiatic</td>
+    <td></td>
+    <td>Maltese (Latin)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Arabic</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Northwest Caucasian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Adyghe</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sino-Tibetan</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Burmese</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Tai-Kadai</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Shan</td>
+    <td></td>
+    <td>Thai</td>
+  </tr>
+  <tr>
+    <td>Uralic</td>
+    <td></td>
+    <td>Hungarian</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody></table>
