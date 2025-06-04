@@ -101,6 +101,8 @@ for dropout in [0.1, 0.2, 0.3]:
     subset = df[df['dropout'] == dropout]
     group = subset.groupby('batch_size')['WER'].mean()
     plt.plot(group.index, group.values, marker='o', label=f'Dropout {dropout}')
+plt.xscale('log', base=2)
+plt.xticks([256, 512, 1024], ['256', '512', '1024'])
 plt.title('Batch Size-Dropout Interaction')
 plt.xlabel('Batch Size')
 plt.ylabel('Average WER')
