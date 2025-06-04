@@ -69,16 +69,90 @@ Comparing best performing model and transformer on different amount fo English d
 ## How Language Family and Language Script affects
 -->
 - Same Language Family and Same Script
-- 
-|   |         | Multilingual      |                             | Monolingual       |                             |
-|---|---------|-------------------|-----------------------------|-------------------|-----------------------------|
-|   |         | Neural Transducer | Encoder-decoder Transformer | Neural Transducer | Encoder-decoder Transformer |
-|   | German  | 48                |                             | 46                |                             |
-|   | Dutch   | 25                |                             | 24                |                             |
-|   | Swedish | 62                |                             | 59                |                             |
-|   |         |                   |                             |                   |                             |
-|   |         |                   |                             |                   |                             |
-|   |         |                   |                             |                   |                             |
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th colspan="2">Multilingual</th>
+    <th colspan="2">Monolingual</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>-Family<br>+Script</td>
+    <td>Language/Model</td>
+    <td>Neural Transducer</td>
+    <td>Encoder-decoder Transformer</td>
+    <td>Neural Transducer</td>
+    <td>Encoder-decoder Transformer</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Germanic<br>+Latin</td>
+    <td>German</td>
+    <td>48</td>
+    <td>47</td>
+    <td>46</td>
+    <td>56</td>
+  </tr>
+  <tr>
+    <td>Dutch</td>
+    <td>25</td>
+    <td>21</td>
+    <td>24</td>
+    <td>29</td>
+  </tr>
+  <tr>
+    <td>Swedish</td>
+    <td>62</td>
+    <td>60</td>
+    <td>59</td>
+    <td>68</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Romance<br>+Latin</td>
+    <td>Italian</td>
+    <td>26</td>
+    <td>22</td>
+    <td>15</td>
+    <td>21</td>
+  </tr>
+  <tr>
+    <td>Spanish</td>
+    <td>12</td>
+    <td>3</td>
+    <td>4</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Romanian</td>
+    <td>18</td>
+    <td>13</td>
+    <td>9</td>
+    <td>17</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Slavic<br>+Cyrillic</td>
+    <td>Bulgarian</td>
+    <td>34</td>
+    <td>27</td>
+    <td>32</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Russian</td>
+    <td>33</td>
+    <td>18</td>
+    <td>23</td>
+    <td>21</td>
+  </tr>
+  <tr>
+    <td>Ukrainian</td>
+    <td>26</td>
+    <td>27</td>
+    <td>19</td>
+    <td>26</td>
+  </tr>
+</tbody></table>
 
 
 --- 
