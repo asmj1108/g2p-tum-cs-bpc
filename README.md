@@ -68,7 +68,7 @@ Comparing best performing model and transformer on different amount fo English d
 | 20k         | 44.05              | 43.35                       |
 | 40k         | 42.38              | 40.10                       |
 
-<img src="https://github.com/asmj1108/g2p-tum-cs-bpc/tree/main/eng_us_data/graph.png" alt="transformer-analysis"/>
+![transformer-analysis](eng_us_data/graph.png)
 
 ---
 # Multilingual Approach
