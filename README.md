@@ -1,14 +1,15 @@
 # Our Results
 
-| Language                 | Pair n-gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural transducer<br/>(baseline 2021/22) | GRU (Hard Attention)<br/>(baseline 2024) |
+| Language                 | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | GRU (Hard Attention)<br/>(baseline 2024) |
 |--------------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------------|
 | Adyghe                   | 27.00                                 | 39.00                                           | 20.00                                    | 41.00                                    |
-| Armenian (Eastern)       | 17.00                                 | 16.00                                           | 15.00                                    | 58.00                                    |
 | Arabic                   | 43.00                                 | 43.00                                           | 53.00                                    | 58.00                                    |
+| Armenian (Eastern)       | 17.00                                 | 16.00                                           | 15.00                                    | 58.00                                    |
 | Assamese                 | 14.00                                 | 15.00                                           | 7.00                                     | 15.00                                    |
 | Belarusian               | 7.00                                  | 6.00                                            | 2.00                                     | 10.00                                    |
 | Bengali                  | 70.00                                 | 78.00                                           | 68.00                                    | 80.00                                    |
 | Bulgarian                | 37.00                                 | 30.00                                           | 32.00                                    | 50.00                                    |
+| Burmese                  | 39.00                                 | 41.00                                           | 29.00                                    |                                          |
 | Cebuano                  | 22.00                                 | 26.00                                           | 20.00                                    | 53.00                                    |
 | Central Khmer            | 56.00                                 | 43.00                                           | 31.00                                    | 52.00                                    |
 | Dutch                    | 32.00                                 | 29.00                                           | 24.00                                    | 37.00                                    |
@@ -57,11 +58,17 @@ Comparing best performing model and transformer on different amount fo English d
 
 | Data Amount | Neutral Transducer | Encoder-Decoder Transformer |
 |-------------|--------------------|-----------------------------|
-| 1k          | 63                 | 70                          |
-| 5k          | 46.8               | 47.6                        |
-| 10k         | 45.6               | 46.1                        |
+| 1k          | 63.00              | 70.00                       |
+| 1.5k        | 62.00              | 64.00                       |
+| 2k          | 54.00              | 58.00                       |
+| 3k          | 50.67              | 53.67                       |
+| 4k          | 47.00              | 49.50                       |
+| 5k          | 46.80              | 47.60                       |
+| 10k         | 45.60              | 46.10                       |
 | 20k         | 44.05              | 43.35                       |
-| 40k         | 42.38              | 40.1                        |
+| 40k         | 42.38              | 40.10                       |
+
+<img src="https://github.com/asmj1108/g2p-tum-cs-bpc/tree/main/eng_us_data/graph.png" alt="transformer-analysis"/>
 
 ---
 # Multilingual Approach
@@ -195,14 +202,14 @@ Comparing best performing model and transformer on different amount fo English d
 - Baseline
 
 | Models                | gru   | lstm  | attentive_gru | attentive_lstm | hard_attention_gru | hard_attention_gru (Arab) | pointer_generator_gru | transducer_gru | transformer_20 | transformer_40 | transformer_60 |
-|-----------------------|-------|-------|---------------|----------------|--------------------|--------------------------|----------------------|----------------|----------------|----------------|----------------|
-| WER (%)               | 43.75 | 44.25 | 63.08         | 47.25          | 40.67              | 31.33                    | 62.17                | 69.33          | 78.25          | 81.58          | 79.50          |
+|-----------------------|-------|-------|---------------|----------------|--------------------|---------------------------|-----------------------|----------------|----------------|----------------|----------------|
+| WER (%)               | 43.75 | 44.25 | 63.08         | 47.25          | 40.67              | 31.33                     | 62.17                 | 69.33          | 78.25          | 81.58          | 79.50          |
 
 - Best performance model on all datasets(hard_attenton_gru)
 
-| Languages  | Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu |
-|------------|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|------|
-| WER        | 31.33  | 20.00     | 58.00   | 29.67   | 55.33      | 3.67       | 44.33  | 10.33   | 5.00    | 40.33   | 15.67     | 64.00 |
+| Languages  | Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu   |
+|------------|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|--------|
+| WER        | 31.33  | 20.00     | 58.00   | 29.67   | 55.33      | 3.67       | 44.33  | 10.33   | 5.00    | 40.33   | 15.67     | 64.00  |
 
 - GRU、LSTM、Transformer on different languages
   
