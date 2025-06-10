@@ -62,6 +62,7 @@
 | Norwegian Nynorsk        | nno      | 1000         | 2022                              |
 | Pashto                   | pus      | 1000         | 2022 (721) + scraped (262) + o.s. | 
 | Persian (Iranian)        | per      | 1000         | 2022 (565) + o.s.                 |
+| Polish                   | pol      | 1000         | scraped                           |
 | Shan                     | shn      | 1000         | 2022 (841) + scraped (157)        | 
 | Slovenian                | slv      | 1000         | 2021                              |
 | Swedish                  | swe      | 1000         | 2022                              |
@@ -126,7 +127,7 @@
   </tr>
   <tr>
     <td>Balto-Slavic</td>
-    <td>Serbo-Croatian (Latin), Lithuanian, Latvian, Slovenian</td>
+    <td>Serbo-Croatian (Latin), Lithuanian, Latvian, Slovenian, Polish</td>
     <td></td>
     <td>Russian, Ukrainian, Bulgarian, Macedonian, Belarusian</td>
     <td></td>
