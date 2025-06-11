@@ -73,6 +73,21 @@ Comparing best performing model and transformer on different amount fo English d
 
 ---
 # Multilingual Approach
+
+A tag comprising a language code (e.g. <|ENG|>, <|GER|>) is prepended  to each grapheme sequence source. 
+The datasets of each language are simply concatenated.
+
+#### Does converting the language tag to the corresponding script of the language improve the model performance?
+
+Using `slavic_cyrillic` dataset we got following validation WER:
+
+| Tag in          | Neural Transducer | Encode-Decoder Transformer |
+|-----------------|-------------------|----------------------------|
+| Upper Cyrillic  | 39.67             | 28.00                      |
+| Uppercase Latin | 31                | 28.00                      |
+| Lowercase Latin |                   | 28.00                      |
+
+## Results
 <!---
 ## How Language Family and Language Script affects
 -->
