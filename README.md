@@ -1,4 +1,4 @@
-# Our Results
+# Monolingual Results
 
 | Language                 | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive_LSTM<br/>(baseline 2024) |
 |--------------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------|
@@ -82,86 +82,151 @@ Comparing best performing model and transformer on different amount fo English d
   <tr>
     <th></th>
     <th></th>
-    <th colspan="2">Multilingual</th>
-    <th colspan="2">Monolingual</th>
+    <th colspan="2">Neural Transducer</th>
+    <th colspan="2">Encoder-decoder Transformer</th>
   </tr></thead>
 <tbody>
   <tr>
     <td>-Family<br>+Script</td>
-    <td>Language/Model</td>
-    <td>Neural Transducer</td>
-    <td>Encoder-decoder Transformer</td>
-    <td>Neural Transducer</td>
-    <td>Encoder-decoder Transformer</td>
+    <td>Language</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
   </tr>
   <tr>
     <td rowspan="3">-Germanic<br>+Latin</td>
     <td>German</td>
     <td>48</td>
-    <td>47</td>
     <td>46</td>
+    <td>47</td>
     <td>56</td>
   </tr>
   <tr>
     <td>Dutch</td>
     <td>25</td>
-    <td>21</td>
     <td>24</td>
+    <td>21</td>
     <td>29</td>
   </tr>
   <tr>
     <td>Swedish</td>
     <td>62</td>
-    <td>60</td>
     <td>59</td>
+    <td>60</td>
     <td>68</td>
   </tr>
   <tr>
     <td rowspan="3">-Romance<br>+Latin</td>
     <td>Italian</td>
     <td>26</td>
-    <td>22</td>
     <td>15</td>
+    <td>22</td>
     <td>21</td>
   </tr>
   <tr>
     <td>Spanish</td>
     <td>12</td>
-    <td>3</td>
     <td>4</td>
+    <td>3</td>
     <td>10</td>
   </tr>
   <tr>
     <td>Romanian</td>
     <td>18</td>
-    <td>13</td>
     <td>9</td>
+    <td>13</td>
     <td>17</td>
   </tr>
   <tr>
     <td rowspan="3">-Slavic<br>+Cyrillic</td>
     <td>Bulgarian</td>
     <td>34</td>
-    <td>27</td>
     <td>32</td>
+    <td>27</td>
     <td>30</td>
   </tr>
   <tr>
     <td>Russian</td>
     <td>33</td>
-    <td>18</td>
     <td>23</td>
+    <td>18</td>
     <td>21</td>
   </tr>
   <tr>
     <td>Ukrainian</td>
     <td>26</td>
-    <td>27</td>
     <td>19</td>
+    <td>27</td>
     <td>26</td>
   </tr>
+  <tr>
+    <td rowspan="3">-Slavic<br>+Latin</td>
+    <td>Serbo-Croatian<br>(Latin)</td>
+    <td>67</td>
+    <td>64</td>
+    <td>63</td>
+    <td>69</td>
+  </tr>
+  <tr>
+    <td>Polish</td>
+    <td>13</td>
+    <td>4</td>
+    <td>9</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Slovenian</td>
+    <td>59</td>
+    <td>56</td>
+    <td>52</td>
+    <td>52</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Indo-Iranian<br>+Arabic</td>
+    <td>Pashto</td>
+    <td>79</td>
+    <td>67</td>
+    <td>66</td>
+    <td>68</td>
+  </tr>
+  <tr>
+    <td>Persian (Iranian)</td>
+    <td>73</td>
+    <td>65</td>
+    <td>67</td>
+    <td>63</td>
+  </tr>
+  <tr>
+    <td>Urdu</td>
+    <td>78</td>
+    <td>72</td>
+    <td>64</td>
+    <td>66</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Austronesian<br>+Latin</td>
+    <td>Indonesian</td>
+    <td>66</td>
+    <td>64</td>
+    <td>57</td>
+    <td>52</td>
+  </tr>
+  <tr>
+    <td>Cebuano</td>
+    <td>26</td>
+    <td>13</td>
+    <td>24</td>
+    <td>26</td>
+  </tr>
+  <tr>
+    <td>Tagalog</td>
+    <td>15</td>
+    <td>20</td>
+    <td>18</td>
+    <td>17</td>
+  </tr>
 </tbody></table>
-
 
 --- 
 # Reference Result from previous shared task
