@@ -84,8 +84,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 | Tag in          | Neural Transducer | Encode-Decoder Transformer |
 |-----------------|-------------------|----------------------------|
 | Upper Cyrillic  | 39.67             | 28.00                      |
-| Uppercase Latin | 31                | 28.00                      |
-| Lowercase Latin |                   | 28.00                      |
+| Uppercase Latin | 31.00             | 28.00                      |
+| Lowercase Latin | 32.33             | 28.00                      |
 
 ## Results
 <!---
@@ -155,25 +155,25 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
   <tr>
     <td rowspan="3">-Slavic<br>+Cyrillic</td>
-    <td>Bulgarian</td>
-    <td>34</td>
-    <td>32</td>
-    <td>27</td>
-    <td>30</td>
-  </tr>
-  <tr>
     <td>Russian</td>
-    <td>33</td>
+    <td>27</td>
     <td>23</td>
     <td>18</td>
     <td>21</td>
   </tr>
   <tr>
     <td>Ukrainian</td>
-    <td>26</td>
+    <td>22</td>
     <td>19</td>
     <td>27</td>
     <td>26</td>
+  </tr>
+  <tr>
+    <td>Bulgarian</td>
+    <td>35</td>
+    <td>32</td>
+    <td>27</td>
+    <td>30</td>
   </tr>
   <tr>
     <td rowspan="3">-Slavic<br>+Latin</td>
