@@ -43,6 +43,7 @@
 | Tagalog                  | tgl      | 3000         | 2024                              |
 | Ukrainian                | ukr      | 3000         | 2024                              |
 | Urdu                     | urd      | 3000         | 2024                              |
+| Uyghur                   | uig      | 2158         | scraped                           |
 | Romanian                 | rum      | 1997         | 2021 + 2022                       |
 | Italian                  | ita      | 1824         | 2021 + 2022                       |
 | Adyghe                   | ady      | 1000         | 2021                              |
@@ -366,6 +367,23 @@
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Turkic</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Uyghur</td>
     <td></td>
     <td></td>
     <td></td>
