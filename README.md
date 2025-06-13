@@ -1,77 +1,93 @@
-# Our Results
+# Monolingual Results
 
-| Language                 | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive_LSTM<br/>(baseline 2024)|
-|--------------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|-----------------------------------|
-| Adyghe                   | 27.00                                 | 39.00                                           | 20.00                                    | 30.00                             |
-| Arabic                   | 43.00                                 | 43.00                                           | 53.00                                    | 45.00                             |
-| Armenian (Eastern)       | 17.00                                 | 16.00                                           | 15.00                                    | 20.00                             |
-| Assamese                 | 14.00                                 | 15.00                                           | 7.00                                     | 12.00                             |
-| Belarusian               | 7.00                                  | 6.00                                            | 2.00                                     | 2.00                              |
-| Bengali                  | 70.00                                 | 78.00                                           | 68.00                                    | 67.00                             |
-| Bulgarian                | 37.00                                 | 30.00                                           | 32.00                                    | 27.00                             |
-| Burmese                  | 39.00                                 | 41.00                                           | 29.00                                    | 35.00                             |
-| Cebuano                  | 22.00                                 | 26.00                                           | 20.00                                    | 20.00                             |
-| Central Khmer            | 56.00                                 | 43.00                                           | 31.00                                    | 35.00                             |
-| Dutch                    | 32.00                                 | 29.00                                           | 24.00                                    | 23.00                             |
-| Eastern Lawa             | 44.00                                 | 24.00                                           | 8.00                                     | 12.00                             |
-| English                  | 70.00                                 | 70.00                                           | 63.00                                    | 66.00                             |
-| French                   | 31.00                                 | 29.00                                           | 23.00                                    | 27.00                             |
-| Georgian                 | 0.00                                  | 4.00                                            | 0.00                                     | 1.00                              |
-| German                   | 49.00                                 | 56.00                                           | 46.00                                    | 45.00                             |
-| Greek                    | 27.00                                 | 26.00                                           | 20.00                                    | 27.00                             |
-| Hindi                    | 23.00                                 | 24.00                                           | 11.00                                    | 13.00                             |
-| Hungarian                | 9.00                                  | 11.00                                           | 7.00                                     | 8.00                              |
-| Icelandic                | 35.00                                 | 24.00                                           | 12.00                                    | 16.00                             |
-| Indonesian               | 58.00                                 | 52.00                                           | 64.00                                    | 73.00                             |
-| Irish                    | 57.00                                 | 46.00                                           | 43.00                                    | 39.00                             |
-| Italian                  | 22.00                                 | 21.00                                           | 15.00                                    | 16.00                             |
-| Japanese (Hiragana)      | 23.00                                 | 20.00                                           | 10.00                                    | 12.00                             |
-| Korean                   | 81.00                                 | 89.00                                           | 23.00                                    | 100.00                            |
-| Latvian                  | 51.00                                 | 51.00                                           | 51.00                                    | 50.00                             |
-| Lithuanian               | 32.00                                 | 35.00                                           | 33.00                                    | 31.00                             |
-| Macedonian               | 6.00                                  | 5.00                                            | 5.00                                     | 5.00                              |
-| Maltese (Latin)          | 27.00                                 | 24.00                                           | 17.00                                    | 22.00                             |
-| Norwegian Nynorsk        | 61.00                                 | 69.00                                           | 66.00                                    | 69.00                             |
-| Pashto                   | 70.00                                 | 68.00                                           | 67.00                                    | 66.00                             |
-| Persian (Classical)      | 51.00                                 | 58.00                                           | 57.00                                    | 51.00                             |
-| Persian (Iranian)        | 66.00                                 | 63.00                                           | 65.00                                    | 65.00                             |
-| Romanian                 | 10.00                                 | 17.00                                           | 9.00                                     | 17.00                             |
-| Russian                  | 31.00                                 | 21.00                                           | 23.00                                    | 25.00                             |
-| Serbo-Croatian (Latin)   | 84.00                                 | 69.00                                           | 64.00                                    | 69.00                             |
-| Shan                     | 6.00                                  | 10.00                                           | 5.00                                     | 4.00                              |
-| Slovenian                | 73.00                                 | 52.00                                           | 56.00                                    | 50.00                             |
-| Spanish                  | 3.00                                  | 10.00                                           | 4.00                                     | 3.00                              |
-| Swedish                  | 67.00                                 | 68.00                                           | 59.00                                    | 61.00                             |
-| Tagalog                  | 11.00                                 | 17.00                                           | 13.00                                    | 11.00                             |
-| Thai                     | 70.00                                 | 49.00                                           | 39.00                                    | 42.00                             |
-| Ukrainian                | 27.00                                 | 26.00                                           | 19.00                                    | 18.00                             |
-| Urdu                     | 67.00                                 | 66.00                                           | 72.00                                    | 77.00                             |
-| Vietnamese (Hanoi)       | 44.00                                 | 20.00                                           | 5.00                                     | 4.00                              |
-| Welsh                    | 33.00                                 | 20.00                                           | 12.00                                    | 19.00                             |
-| Welsh (Southern Dialect) | 28.00                                 | 18.00                                           | 13.00                                    | 13.00                             |
-| **Macro-average WER**    | **38.53**                             | **36.13**                                       | **29.79**                                | **32.56**                         |
+| Language                 | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive_LSTM<br/>(baseline 2024) |
+|--------------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------|
+| Adyghe                   | 27.00                                 | 39.00                                           | 20.00                                    | 30.00                              |
+| Arabic                   | 43.00                                 | 43.00                                           | 53.00                                    | 45.00                              |
+| Armenian (Eastern)       | 17.00                                 | 16.00                                           | 15.00                                    | 20.00                              |
+| Assamese                 | 14.00                                 | 15.00                                           | 7.00                                     | 12.00                              |
+| Belarusian               | 7.00                                  | 6.00                                            | 2.00                                     | 2.00                               |
+| Bengali                  | 70.00                                 | 78.00                                           | 68.00                                    | 67.00                              |
+| Bulgarian                | 37.00                                 | 30.00                                           | 32.00                                    | 27.00                              |
+| Burmese                  | 39.00                                 | 41.00                                           | 29.00                                    | 35.00                              |
+| Cebuano                  | 22.00                                 | 26.00                                           | 20.00                                    | 20.00                              |
+| Central Khmer            | 56.00                                 | 43.00                                           | 31.00                                    | 35.00                              |
+| Dutch                    | 32.00                                 | 29.00                                           | 24.00                                    | 23.00                              |
+| Eastern Lawa             | 44.00                                 | 24.00                                           | 8.00                                     | 12.00                              |
+| English                  | 70.00                                 | 70.00                                           | 63.00                                    | 66.00                              |
+| French                   | 31.00                                 | 29.00                                           | 23.00                                    | 27.00                              |
+| Georgian                 | 0.00                                  | 4.00                                            | 0.00                                     | 1.00                               |
+| German                   | 49.00                                 | 56.00                                           | 46.00                                    | 45.00                              |
+| Greek                    | 27.00                                 | 26.00                                           | 20.00                                    | 27.00                              |
+| Hindi                    | 23.00                                 | 24.00                                           | 11.00                                    | 13.00                              |
+| Hungarian                | 9.00                                  | 11.00                                           | 7.00                                     | 8.00                               |
+| Icelandic                | 35.00                                 | 24.00                                           | 12.00                                    | 16.00                              |
+| Indonesian               | 58.00                                 | 52.00                                           | 64.00                                    | 73.00                              |
+| Irish                    | 57.00                                 | 46.00                                           | 43.00                                    | 39.00                              |
+| Italian                  | 22.00                                 | 21.00                                           | 15.00                                    | 16.00                              |
+| Japanese (Hiragana)      | 23.00                                 | 20.00                                           | 10.00                                    | 12.00                              |
+| Korean                   | 81.00                                 | 89.00                                           | 23.00                                    | 100.00                             |
+| Latvian                  | 51.00                                 | 51.00                                           | 51.00                                    | 50.00                              |
+| Lithuanian               | 32.00                                 | 35.00                                           | 33.00                                    | 31.00                              |
+| Macedonian               | 6.00                                  | 5.00                                            | 5.00                                     | 5.00                               |
+| Maltese (Latin)          | 27.00                                 | 24.00                                           | 17.00                                    | 22.00                              |
+| Norwegian Nynorsk        | 61.00                                 | 69.00                                           | 66.00                                    | 69.00                              |
+| Pashto                   | 70.00                                 | 68.00                                           | 67.00                                    | 66.00                              |
+| Persian (Classical)      | 51.00                                 | 58.00                                           | 57.00                                    | 51.00                              |
+| Persian (Iranian)        | 66.00                                 | 63.00                                           | 65.00                                    | 65.00                              |
+| Polish                   | 9.00                                  | 8.00                                            | 4.00                                     | 7.00                               |
+| Romanian                 | 10.00                                 | 17.00                                           | 9.00                                     | 17.00                              |
+| Russian                  | 31.00                                 | 21.00                                           | 23.00                                    | 25.00                              |
+| Serbo-Croatian (Latin)   | 84.00                                 | 69.00                                           | 64.00                                    | 69.00                              |
+| Shan                     | 6.00                                  | 10.00                                           | 5.00                                     | 4.00                               |
+| Slovenian                | 73.00                                 | 52.00                                           | 56.00                                    | 50.00                              |
+| Spanish                  | 3.00                                  | 10.00                                           | 4.00                                     | 3.00                               |
+| Swedish                  | 67.00                                 | 68.00                                           | 59.00                                    | 61.00                              |
+| Tagalog                  | 11.00                                 | 17.00                                           | 13.00                                    | 11.00                              |
+| Thai                     | 70.00                                 | 49.00                                           | 39.00                                    | 42.00                              |
+| Ukrainian                | 27.00                                 | 26.00                                           | 19.00                                    | 18.00                              |
+| Urdu                     | 67.00                                 | 66.00                                           | 72.00                                    | 77.00                              |
+| Vietnamese (Hanoi)       | 44.00                                 | 20.00                                           | 5.00                                     | 4.00                               |
+| Welsh                    | 33.00                                 | 20.00                                           | 12.00                                    | 19.00                              |
+| Welsh (Southern Dialect) | 28.00                                 | 18.00                                           | 13.00                                    | 13.00                              |
+| **Macro-average WER**    | **37.92**                             | **35.54**                                       | **29.25**                                | **32.29**                          |
 
 ---
 # How Data Amount Affects Performance of Transformer Model
 
 Comparing best performing model and transformer on different amount fo English data
 
-| Data Amount | Neutral Transducer | Encoder-Decoder Transformer |
-|-------------|--------------------|-----------------------------|
-| 1k          | 63.00              | 70.00                       |
-| 1.5k        | 62.00              | 64.00                       |
-| 2k          | 54.00              | 58.00                       |
-| 3k          | 50.67              | 53.67                       |
-| 4k          | 47.00              | 49.50                       |
-| 5k          | 46.80              | 47.60                       |
-| 10k         | 45.60              | 46.10                       |
-| 20k         | 44.05              | 43.35                       |
-| 40k         | 42.38              | 40.10                       |
+| Data Amount | Neutral Transducer | Encoder-Decoder Transformer | Attentive LSTM |
+|-------------|--------------------|-----------------------------|----------------|
+| 1k          | 63.00              | 70.00                       | 66.00          |
+| 1.5k        | 62.00              | 64.00                       | 62.00          |
+| 2k          | 54.00              | 58.00                       | 54.00          |
+| 3k          | 50.67              | 53.67                       | 53.20          |
+| 4k          | 47.00              | 49.50                       | 50.00          |
+| 5k          | 46.80              | 47.60                       | 46.30          |
+| 10k         | 45.60              | 46.10                       | 45.21          |
+| 20k         | 44.05              | 43.35                       | 44.13          |
+| 40k         | 42.38              | 40.10                       | 42.23          |
 
 ![transformer-analysis](eng_us_data/graph.png)
 
 ---
 # Multilingual Approach
+
+A tag comprising a language code (e.g. <|ENG|>, <|GER|>) is prepended  to each grapheme sequence source. 
+The datasets of each language are simply concatenated.
+
+#### Does converting the language tag to the corresponding script of the language improve the model performance?
+
+Using `slavic_cyrillic` dataset we got following validation WER:
+
+| Tag in             | Neural Transducer | Encode-Decoder Transformer |
+|--------------------|-------------------|----------------------------|
+| Uppercase Cyrillic | 39.67             | 28.00                      |
+| Uppercase Latin    | 31.00             | 28.00                      |
+| Lowercase Latin    | 32.33             | 28.00                      |
+
+## Results
 <!---
 ## How Language Family and Language Script affects
 -->
@@ -81,86 +97,151 @@ Comparing best performing model and transformer on different amount fo English d
   <tr>
     <th></th>
     <th></th>
-    <th colspan="2">Multilingual</th>
-    <th colspan="2">Monolingual</th>
+    <th colspan="2">Neural Transducer</th>
+    <th colspan="2">Encoder-decoder Transformer</th>
   </tr></thead>
 <tbody>
   <tr>
     <td>-Family<br>+Script</td>
-    <td>Language/Model</td>
-    <td>Neural Transducer</td>
-    <td>Encoder-decoder Transformer</td>
-    <td>Neural Transducer</td>
-    <td>Encoder-decoder Transformer</td>
+    <td>Language</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
   </tr>
   <tr>
     <td rowspan="3">-Germanic<br>+Latin</td>
     <td>German</td>
     <td>48</td>
-    <td>47</td>
     <td>46</td>
+    <td>47</td>
     <td>56</td>
   </tr>
   <tr>
     <td>Dutch</td>
     <td>25</td>
-    <td>21</td>
     <td>24</td>
+    <td>21</td>
     <td>29</td>
   </tr>
   <tr>
     <td>Swedish</td>
     <td>62</td>
-    <td>60</td>
     <td>59</td>
+    <td>60</td>
     <td>68</td>
   </tr>
   <tr>
     <td rowspan="3">-Romance<br>+Latin</td>
     <td>Italian</td>
     <td>26</td>
-    <td>22</td>
     <td>15</td>
+    <td>22</td>
     <td>21</td>
   </tr>
   <tr>
     <td>Spanish</td>
     <td>12</td>
-    <td>3</td>
     <td>4</td>
+    <td>3</td>
     <td>10</td>
   </tr>
   <tr>
     <td>Romanian</td>
     <td>18</td>
-    <td>13</td>
     <td>9</td>
+    <td>13</td>
     <td>17</td>
   </tr>
   <tr>
     <td rowspan="3">-Slavic<br>+Cyrillic</td>
-    <td>Bulgarian</td>
-    <td>34</td>
-    <td>27</td>
-    <td>32</td>
-    <td>30</td>
-  </tr>
-  <tr>
     <td>Russian</td>
-    <td>33</td>
-    <td>18</td>
+    <td>27</td>
     <td>23</td>
+    <td>18</td>
     <td>21</td>
   </tr>
   <tr>
     <td>Ukrainian</td>
-    <td>26</td>
-    <td>27</td>
+    <td>22</td>
     <td>19</td>
+    <td>27</td>
     <td>26</td>
   </tr>
+  <tr>
+    <td>Bulgarian</td>
+    <td>35</td>
+    <td>32</td>
+    <td>27</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Slavic<br>+Latin</td>
+    <td>Serbo-Croatian (Latin)</td>
+    <td>67</td>
+    <td>64</td>
+    <td>63</td>
+    <td>69</td>
+  </tr>
+  <tr>
+    <td>Polish</td>
+    <td>13</td>
+    <td>4</td>
+    <td>9</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Slovenian</td>
+    <td>59</td>
+    <td>56</td>
+    <td>52</td>
+    <td>52</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Indo-Iranian<br>+Arabic</td>
+    <td>Pashto</td>
+    <td>79</td>
+    <td>67</td>
+    <td>66</td>
+    <td>68</td>
+  </tr>
+  <tr>
+    <td>Persian (Iranian)</td>
+    <td>73</td>
+    <td>65</td>
+    <td>67</td>
+    <td>63</td>
+  </tr>
+  <tr>
+    <td>Urdu</td>
+    <td>78</td>
+    <td>72</td>
+    <td>64</td>
+    <td>66</td>
+  </tr>
+  <tr>
+    <td rowspan="3">-Austronesian<br>+Latin</td>
+    <td>Indonesian</td>
+    <td>66</td>
+    <td>64</td>
+    <td>57</td>
+    <td>52</td>
+  </tr>
+  <tr>
+    <td>Cebuano</td>
+    <td>26</td>
+    <td>13</td>
+    <td>24</td>
+    <td>26</td>
+  </tr>
+  <tr>
+    <td>Tagalog</td>
+    <td>15</td>
+    <td>20</td>
+    <td>18</td>
+    <td>17</td>
+  </tr>
 </tbody></table>
-
 
 --- 
 # Reference Result from previous shared task
