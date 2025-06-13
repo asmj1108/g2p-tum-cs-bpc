@@ -219,7 +219,7 @@ Comparing best performing model and transformer on different amount fo English d
 | LSTM              | 48.33   | 57.67  | 10.33   | 9.00    |
 | Transformer       | 81.33   | 77.00  | 35.67   | 24.67   |
 
-- Comparison among hard_attention_gru、attentive_gru、attentive_lstm 
+- Comparison between hard_attention_gru、attentive_lstm 
 
 | Model / Language    | Korean | Bengali | Indonesian | Pashto | Swedish |
 |---------------------|--------|---------|------------|--------|---------|
