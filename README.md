@@ -223,7 +223,7 @@ Comparing best performing model and transformer on different amount fo English d
 
 | Model / Language    | Korean | Bengali | Indonesian | Pashto | Swedish |
 |---------------------|--------|---------|------------|--------|---------|
-| hard_attention_gru  | 98.00  | 74.00   | 70.00      | 78.00  | 66.00   |
+| hard_attention_gru  | 98.00  | 87.00   | 85.00      | 78.00  | 66.00   |
 | attentive_lstm      | 100.00 | 67.00   | 73.00      | 66.00  | 61.00   |
 
 - Comparison between attentive_gru and attentive_lstm
