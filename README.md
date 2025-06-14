@@ -47,10 +47,11 @@
 | Thai                     | 70.00                                 | 49.00                                           | 39.00                                    | 42.00                              |
 | Ukrainian                | 27.00                                 | 26.00                                           | 19.00                                    | 18.00                              |
 | Urdu                     | 67.00                                 | 66.00                                           | 72.00                                    | 77.00                              |
+| Uyghur                   | 0                                     | 3                                               | 0                                        |                                    |
 | Vietnamese (Hanoi)       | 44.00                                 | 20.00                                           | 5.00                                     | 4.00                               |
 | Welsh                    | 33.00                                 | 20.00                                           | 12.00                                    | 19.00                              |
 | Welsh (Southern Dialect) | 28.00                                 | 18.00                                           | 13.00                                    | 13.00                              |
-| **Macro-average WER**    | **37.92**                             | **35.54**                                       | **29.25**                                | **32.29**                          |
+| **Macro-average WER**    | **37.14**                             | **34.88**                                       | **28.65**                                | **32.29**                          |
 
 ---
 # How Data Amount Affects Performance of Transformer Model
@@ -86,15 +87,17 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 | Uppercase Cyrillic | 39.67             | 28.00                      |
 | Uppercase Latin    | 31.00             | 28.00                      |
 | Lowercase Latin    | 32.33             | 28.00                      |
+| No tag             | 45.00             | 44.67                      |
 
 ## Results
 <!---
 ## How Language Family and Language Script affects
 -->
-- Same Language Family and Same Script
+### Same Language Family and Same Script
 
 <table><thead>
   <tr>
+    <th></th>
     <th></th>
     <th></th>
     <th colspan="2">Neural Transducer</th>
@@ -102,7 +105,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr></thead>
 <tbody>
   <tr>
-    <td>-Family<br>+Script</td>
+    <td>Family</td>
+    <td>Script</td>
     <td>Language</td>
     <td>Multilingual</td>
     <td>Monolingual</td>
@@ -110,7 +114,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Monolingual</td>
   </tr>
   <tr>
-    <td rowspan="3">-Germanic<br>+Latin</td>
+    <td rowspan="3">Germanic</td>
+    <td rowspan="3">Latin</td>
     <td>German</td>
     <td>48</td>
     <td>46</td>
@@ -132,7 +137,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>68</td>
   </tr>
   <tr>
-    <td rowspan="3">-Romance<br>+Latin</td>
+    <td rowspan="3">Romance</td>
+    <td rowspan="3">Latin</td>
     <td>Italian</td>
     <td>26</td>
     <td>15</td>
@@ -154,7 +160,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>17</td>
   </tr>
   <tr>
-    <td rowspan="3">-Slavic<br>+Cyrillic</td>
+    <td rowspan="3">Slavic</td>
+    <td rowspan="3">Cyrillic</td>
     <td>Russian</td>
     <td>27</td>
     <td>23</td>
@@ -176,8 +183,9 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>30</td>
   </tr>
   <tr>
-    <td rowspan="3">-Slavic<br>+Latin</td>
-    <td>Serbo-Croatian (Latin)</td>
+    <td rowspan="3">Slavic</td>
+    <td rowspan="3">Latin</td>
+    <td>Serbo-Croatian<br>(Latin)</td>
     <td>67</td>
     <td>64</td>
     <td>63</td>
@@ -198,7 +206,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>52</td>
   </tr>
   <tr>
-    <td rowspan="3">-Indo-Iranian<br>+Arabic</td>
+    <td rowspan="3">Indo-Iranian</td>
+    <td rowspan="3">Arabic</td>
     <td>Pashto</td>
     <td>79</td>
     <td>67</td>
@@ -220,7 +229,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>66</td>
   </tr>
   <tr>
-    <td rowspan="3">-Austronesian<br>+Latin</td>
+    <td rowspan="3">Austronesian</td>
+    <td rowspan="3">Latin</td>
     <td>Indonesian</td>
     <td>66</td>
     <td>64</td>
@@ -242,6 +252,126 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>17</td>
   </tr>
 </tbody></table>
+
+### Different Language Family and Same Script
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th colspan="2">Neural Transducer</th>
+    <th colspan="2">Encoder-decoder Transformer</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Family</td>
+    <td>Script</td>
+    <td>Language</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
+  </tr>
+  <tr>
+    <td>Afro-Asiatic</td>
+    <td rowspan="3">Arabic</td>
+    <td>Arabic</td>
+    <td>57</td>
+    <td>53</td>
+    <td>38</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>Indo-European</td>
+    <td>Persian (Classic)</td>
+    <td>62</td>
+    <td>57</td>
+    <td>45</td>
+    <td>58</td>
+  </tr>
+  <tr>
+    <td>Turkic</td>
+    <td>Uyghur</td>
+    <td>8</td>
+    <td>0</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Indo-European</td>
+    <td rowspan="3">Latin</td>
+    <td>Italian</td>
+    <td>19</td>
+    <td>15</td>
+    <td>20</td>
+    <td>21</td>
+  </tr>
+  <tr>
+    <td>Afro-Asiatic</td>
+    <td>Maltese (Latin)</td>
+    <td>18</td>
+    <td>17</td>
+    <td>21</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>Uralic</td>
+    <td>Hungarian</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>11</td>
+  </tr>
+</tbody></table>
+
+### Same Language Family and Different Script
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th colspan="2">Neural Transducer</th>
+    <th colspan="2">Encoder-decoder Transformer</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Family</td>
+    <td>Script</td>
+    <td>Language</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
+    <td>Multilingual</td>
+    <td>Monolingual</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Indo-European</td>
+    <td>Armenian</td>
+    <td>Armenian (Eastern)</td>
+    <td>20</td>
+    <td>15</td>
+    <td>14</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>Greek</td>
+    <td>Greek</td>
+    <td>21</td>
+    <td>20</td>
+    <td>25</td>
+    <td>26</td>
+  </tr>
+  <tr>
+    <td>Cyrillic</td>
+    <td>Russian</td>
+    <td>22</td>
+    <td>23</td>
+    <td>21</td>
+    <td>21</td>
+  </tr>
+</tbody>
+</table>
 
 --- 
 # Reference Result from previous shared task
