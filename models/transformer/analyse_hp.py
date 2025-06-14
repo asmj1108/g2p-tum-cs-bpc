@@ -38,6 +38,19 @@ wer_swedish = [
     54, 53, 56, 52, 54, 52, 55, 51, 53, 52, 56, 53
 ]
 
+# Add new languages: English and Pashto
+wer_english = [
+    79, 79, 75, 76, 73, 77, 75, 75, 75, 77, 71, 74,
+    76, 77, 73, 74, 75, 76, 72, 74, 73, 75, 74, 74,
+    74, 78, 75, 71, 75, 76, 75, 73, 73, 75, 73, 73
+]
+
+wer_pashto = [
+    70, 70, 70, 68, 66, 68, 71, 66, 65, 69, 70, 69,
+    67, 69, 67, 67, 66, 71, 65, 67, 65, 69, 68, 68,
+    66, 69, 67, 66, 65, 67, 66, 65, 63, 68, 68, 65
+]
+
 # 3) Turn each into a DataFrame and tag with language
 df_adyghe = param_df.copy()
 df_adyghe['WER'] = wer_adyghe
@@ -51,9 +64,15 @@ df_urdu['language'] = 'Urdu'
 df_swedish = param_df.copy()
 df_swedish['WER'] = wer_swedish
 df_swedish['language'] = 'Swedish'
+df_english = param_df.copy()
+df_english['WER'] = wer_english
+df_english['language'] = 'English'
+df_pashto = param_df.copy()
+df_pashto['WER'] = wer_pashto
+df_pashto['language'] = 'Pashto'
 
 # 4) Concat into one big DataFrame
-df = pd.concat([df_adyghe, df_khmer, df_urdu, df_swedish],
+df = pd.concat([df_adyghe, df_khmer, df_urdu, df_swedish, df_english, df_pashto],
                ignore_index=True)
 
 # 5) Compute averages by (language, hyperparameter)
@@ -86,12 +105,16 @@ vocab_sizes = {
     'Adyghe': '40×64',
     'Khmer': '64×56',
     'Urdu': '48×56',
-    'Swedish': '32×56'
+    'Swedish': '32×56',
+    'English': '32×48',
+    'Pashto': '48×64'
 }
 
-# A) Encoder–Decoder interaction, 2×2 subplots, independent Y‐axes
-fig, axes = plt.subplots(2, 2, figsize=(12, 10), sharex=True)
-for ax, lang in zip(axes.flatten(), languages):
+# A) Encoder–Decoder interaction, 3x2 subplots, independent Y‐axes
+fig, axes = plt.subplots(3, 2, figsize=(12, 15), sharex=True)
+axes = axes.flatten()
+for i, lang in enumerate(languages):
+    ax = axes[i]
     sub = df[df.language == lang]
     for dec in [0, 1]:
         grp = (sub[sub.large_decoder == dec]
@@ -103,7 +126,7 @@ for ax, lang in zip(axes.flatten(), languages):
                 label=f'Decoder {"Large" if dec else "Small"}')
     ax.set_xticks([0, 1])
     ax.set_xticklabels(['Small', 'Large'])
-    ax.set_title(f'{lang} (Vocab Size: {vocab_sizes[lang]})')  # Added vocab size
+    ax.set_title(f'{lang} (Vocab Size: {vocab_sizes[lang]})')
     ax.set_xlabel('Encoder Size')
     ax.set_ylabel('WER')
     ax.legend()
@@ -112,9 +135,11 @@ plt.suptitle('Encoder–Decoder Interaction by Language (Graphemes×Phonemes)',
 plt.tight_layout(rect=[0, 0, 1, 0.97])  # Reserve space for title
 plt.savefig('interaction_encoder_decoder.png')
 
-# B) Batch Size–Dropout interaction, 2×2 subplots, independent Y‐axes
-fig, axes = plt.subplots(2, 2, figsize=(12, 10), sharex=True)
-for ax, lang in zip(axes.flatten(), languages):
+# B) Batch Size–Dropout interaction, 3x2 subplots, independent Y‐axes
+fig, axes = plt.subplots(3, 2, figsize=(12, 15), sharex=True)
+axes = axes.flatten()
+for i, lang in enumerate(languages):
+    ax = axes[i]
     sub = df[df.language == lang]
     for dr in sorted(df.dropout.unique()):
         grp = (sub[sub.dropout == dr]
@@ -127,7 +152,7 @@ for ax, lang in zip(axes.flatten(), languages):
     ax.set_xscale('log', base=2)
     ax.set_xticks(batch_sizes)
     ax.set_xticklabels([str(b) for b in batch_sizes])
-    ax.set_title(f'{lang} (Vocab Size: {vocab_sizes[lang]})')  # Added vocab size
+    ax.set_title(f'{lang} (Vocab Size: {vocab_sizes[lang]})')
     ax.set_xlabel('Batch Size')
     ax.set_ylabel('WER')
     ax.legend()
