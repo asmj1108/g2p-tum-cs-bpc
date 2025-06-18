@@ -433,8 +433,20 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>20</td>
     <td>25</td>
   </tr>
-</tbody>
-</table>
+</tbody></table>
+
+## Effect of Transliteration
+
+### Latin transliteration of languages with Cyrillic script
+|           | Script   | Neural Transducer | Encoder-Decoder Transformer | Attentive_LSTM |
+|-----------|----------|-------------------|-----------------------------|----------------|
+| Russian   | Cyrillic | 23                | 21                          |                |
+| Russian   | Latin    | 20                | 22                          |                |
+| Ukrainian | Cyrillic | 19                | 26                          |                |
+| Ukrainian | Latin    | 22                | 24                          |                |
+| Bulgarian | Cyrillic | 32                | 30                          |                |
+| Bulgarian | Latin    | 34                | 35                          |                |
+
 
 --- 
 # Reference Result from previous shared task
