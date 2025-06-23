@@ -1,6 +1,6 @@
 # Monolingual Results
 
-| Language                 | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive_LSTM<br/>(baseline 2024) |
+| Language                 | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive LSTM<br/>(baseline 2024) |
 |--------------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------|
 | Adyghe                   | 27.00                                 | 39.00                                           | 20.00                                    | 30.00                              |
 | Arabic                   | 43.00                                 | 43.00                                           | 53.00                                    | 45.00                              |
@@ -82,7 +82,7 @@ The datasets of each language are simply concatenated.
 
 Using `slavic_cyrillic` dataset we got following validation WER:
 
-| Tag in             | Neural Transducer | Encode-Decoder Transformer | Attentive_LSTM |
+| Tag in             | Neural Transducer | Encode-Decoder Transformer | Attentive LSTM |
 |--------------------|-------------------|----------------------------|----------------|
 | Uppercase Cyrillic | 39.67             | 28.00                      | 28.00          |
 | Uppercase Latin    | 31.00             | 28.00                      | 27.00          |
@@ -100,21 +100,24 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <th></th>
     <th></th>
     <th></th>
-    <th colspan="2">Neural Transducer</th>
-    <th colspan="2">Encoder-decoder Transformer</th>
-    <th colspan="2">Attentive_LSTM</th>
+    <th colspan="3">Transducer</th>
+    <th colspan="3">Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
   </tr></thead>
 <tbody>
   <tr>
     <td>Family</td>
     <td>Script</td>
     <td>Language</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
   </tr>
   <tr>
     <td rowspan="3">Germanic</td>
@@ -122,173 +125,319 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>German</td>
     <td>48</td>
     <td>46</td>
+    <td>2</td>
     <td>47</td>
     <td>56</td>
+    <td>-9</td>
     <td>42</td>
     <td>45</td>
+    <td>-3</td>
   </tr>
   <tr>
     <td>Dutch</td>
     <td>25</td>
     <td>24</td>
+    <td>1</td>
     <td>21</td>
     <td>29</td>
+    <td>-8</td>
     <td>20</td>
     <td>23</td>
+    <td>-3</td>
   </tr>
   <tr>
     <td>Swedish</td>
     <td>62</td>
     <td>59</td>
+    <td>3</td>
     <td>60</td>
     <td>68</td>
+    <td>-8</td>
     <td>60</td>
     <td>61</td>
+    <td>-1</td>
   </tr>
   <tr>
-    <td rowspan="3">Romance</td>
-    <td rowspan="3">Latin</td>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>2.00</td>
+    <td></td>
+    <td></td>
+    <td>-8.33</td>
+    <td></td>
+    <td></td>
+    <td>-2.33</td>
+  </tr>
+  <tr>
+    <td>Romance</td>
+    <td>Latin</td>
     <td>Italian</td>
     <td>26</td>
     <td>15</td>
+    <td>11</td>
     <td>22</td>
     <td>21</td>
+    <td>1</td>
     <td>18</td>
     <td>16</td>
+    <td>2</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Spanish</td>
     <td>12</td>
     <td>4</td>
+    <td>8</td>
     <td>3</td>
     <td>10</td>
+    <td>-7</td>
     <td>2</td>
     <td>3</td>
+    <td>-1</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Romanian</td>
     <td>18</td>
     <td>9</td>
+    <td>9</td>
     <td>13</td>
     <td>17</td>
+    <td>-4</td>
     <td>13</td>
     <td>17</td>
+    <td>-4</td>
   </tr>
   <tr>
-    <td rowspan="3">Slavic</td>
-    <td rowspan="3">Cyrillic</td>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>9.33</td>
+    <td></td>
+    <td></td>
+    <td>-3.33</td>
+    <td></td>
+    <td></td>
+    <td>-1.00</td>
+  </tr>
+  <tr>
+    <td>Slavic</td>
+    <td>Cyrillic</td>
     <td>Russian</td>
     <td>27</td>
     <td>23</td>
+    <td>4</td>
     <td>18</td>
     <td>21</td>
+    <td>-3</td>
     <td>22</td>
     <td>25</td>
+    <td>-3</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Ukrainian</td>
     <td>22</td>
     <td>19</td>
+    <td>3</td>
     <td>27</td>
     <td>26</td>
+    <td>1</td>
     <td>19</td>
     <td>18</td>
+    <td>1</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Bulgarian</td>
     <td>35</td>
     <td>32</td>
+    <td>3</td>
     <td>27</td>
     <td>30</td>
+    <td>-3</td>
     <td>31</td>
     <td>27</td>
+    <td>4</td>
   </tr>
   <tr>
-    <td rowspan="3">Slavic</td>
-    <td rowspan="3">Latin</td>
-    <td>Serbo-Croatian<br>(Latin)</td>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>3.33</td>
+    <td></td>
+    <td></td>
+    <td>-1.67</td>
+    <td></td>
+    <td></td>
+    <td>0.67</td>
+  </tr>
+  <tr>
+    <td>Slavic</td>
+    <td>Latin</td>
+    <td>Serbo-Croatian (Latin)</td>
     <td>67</td>
     <td>64</td>
+    <td>3</td>
     <td>63</td>
     <td>69</td>
+    <td>-6</td>
     <td>68</td>
     <td>69</td>
+    <td>-1</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Polish</td>
     <td>13</td>
     <td>4</td>
     <td>9</td>
+    <td>9</td>
     <td>8</td>
+    <td>1</td>
     <td>9</td>
     <td>7</td>
+    <td>2</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Slovenian</td>
     <td>59</td>
     <td>56</td>
+    <td>3</td>
     <td>52</td>
     <td>52</td>
+    <td>0</td>
     <td>50</td>
     <td>50</td>
+    <td>0</td>
   </tr>
   <tr>
-    <td rowspan="3">Indo-Iranian</td>
-    <td rowspan="3">Arabic</td>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>5.00</td>
+    <td></td>
+    <td></td>
+    <td>-1.67</td>
+    <td></td>
+    <td></td>
+    <td>0.33</td>
+  </tr>
+  <tr>
+    <td>Indo-Iranian</td>
+    <td>Arabic</td>
     <td>Pashto</td>
     <td>79</td>
     <td>67</td>
+    <td>12</td>
     <td>66</td>
     <td>68</td>
+    <td>-2</td>
     <td>64</td>
     <td>66</td>
+    <td>-2</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Persian (Iranian)</td>
     <td>73</td>
     <td>65</td>
+    <td>8</td>
     <td>67</td>
     <td>63</td>
+    <td>4</td>
     <td>64</td>
     <td>65</td>
+    <td>-1</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Urdu</td>
     <td>78</td>
     <td>72</td>
+    <td>6</td>
     <td>64</td>
     <td>66</td>
+    <td>-2</td>
     <td>71</td>
     <td>77</td>
+    <td>-6</td>
   </tr>
   <tr>
-    <td rowspan="3">Austronesian</td>
-    <td rowspan="3">Latin</td>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>8.67</td>
+    <td></td>
+    <td></td>
+    <td>0.00</td>
+    <td></td>
+    <td></td>
+    <td>-3.00</td>
+  </tr>
+  <tr>
+    <td>Austronesian</td>
+    <td>Latin</td>
     <td>Indonesian</td>
     <td>66</td>
     <td>64</td>
+    <td>2</td>
     <td>57</td>
     <td>52</td>
+    <td>5</td>
     <td>55</td>
     <td>73</td>
+    <td>-18</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Cebuano</td>
     <td>26</td>
     <td>13</td>
+    <td>13</td>
     <td>24</td>
     <td>26</td>
+    <td>-2</td>
     <td>22</td>
     <td>20</td>
+    <td>2</td>
   </tr>
   <tr>
+    <td></td>
+    <td></td>
     <td>Tagalog</td>
     <td>15</td>
     <td>20</td>
+    <td>-5</td>
     <td>18</td>
     <td>17</td>
+    <td>1</td>
     <td>16</td>
     <td>11</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>3.33</td>
+    <td></td>
+    <td></td>
+    <td>1.33</td>
+    <td></td>
+    <td></td>
+    <td>-3.67</td>
   </tr>
 </tbody></table>
 
@@ -299,21 +448,24 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <th></th>
     <th></th>
     <th></th>
-    <th colspan="2">Neural Transducer</th>
-    <th colspan="2">Encoder-decoder Transformer</th>
-    <th colspan="2">Attentive_LSTM</th>
+    <th colspan="3">Transducer</th>
+    <th colspan="3">Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
   </tr></thead>
 <tbody>
   <tr>
     <td>Family</td>
     <td>Script</td>
     <td>Language</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
   </tr>
   <tr>
     <td>Afro-Asiatic</td>
@@ -321,30 +473,51 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Arabic</td>
     <td>57</td>
     <td>53</td>
+    <td>4</td>
     <td>38</td>
     <td>43</td>
+    <td>-5</td>
     <td>53</td>
     <td>45</td>
+    <td>8</td>
   </tr>
   <tr>
     <td>Indo-European</td>
     <td>Persian (Classic)</td>
     <td>62</td>
     <td>57</td>
+    <td>5</td>
     <td>45</td>
     <td>58</td>
+    <td>-13</td>
     <td>55</td>
     <td>51</td>
+    <td>4</td>
   </tr>
   <tr>
     <td>Turkic</td>
     <td>Uyghur</td>
     <td>8</td>
     <td>0</td>
+    <td>8</td>
     <td>2</td>
     <td>3</td>
+    <td>-1</td>
     <td>4</td>
     <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>5.67</td>
+    <td></td>
+    <td></td>
+    <td>-6.33</td>
+    <td></td>
+    <td></td>
+    <td>4.67</td>
   </tr>
   <tr>
     <td>Indo-European</td>
@@ -352,30 +525,51 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Italian</td>
     <td>19</td>
     <td>15</td>
+    <td>4</td>
     <td>20</td>
     <td>21</td>
+    <td>-1</td>
     <td>17</td>
     <td>16</td>
+    <td>1</td>
   </tr>
   <tr>
     <td>Afro-Asiatic</td>
     <td>Maltese (Latin)</td>
     <td>18</td>
     <td>17</td>
+    <td>1</td>
     <td>21</td>
     <td>24</td>
+    <td>-3</td>
     <td>15</td>
     <td>22</td>
+    <td>-7</td>
   </tr>
   <tr>
     <td>Uralic</td>
     <td>Hungarian</td>
     <td>6</td>
     <td>7</td>
+    <td>-1</td>
     <td>8</td>
     <td>11</td>
+    <td>-3</td>
     <td>3</td>
     <td>8</td>
+    <td>-5</td>
+  </tr>
+  <tr>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>1.33</td>
+    <td></td>
+    <td></td>
+    <td>-2.33</td>
+    <td></td>
+    <td></td>
+    <td>-3.67</td>
   </tr>
 </tbody></table>
 
@@ -386,21 +580,24 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <th></th>
     <th></th>
     <th></th>
-    <th colspan="2">Neural Transducer</th>
-    <th colspan="2">Encoder-decoder Transformer</th>
-    <th colspan="2">Attentive_LSTM</th>
+    <th colspan="3">Transducer</th>
+    <th colspan="3">Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
   </tr></thead>
 <tbody>
   <tr>
     <td>Family</td>
     <td>Script</td>
     <td>Language</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
-    <td>Multilingual</td>
-    <td>Monolingual</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
   </tr>
   <tr>
     <td rowspan="3">Indo-European</td>
@@ -408,44 +605,129 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Armenian (Eastern)</td>
     <td>20</td>
     <td>15</td>
+    <td>5</td>
     <td>14</td>
     <td>16</td>
+    <td>-2</td>
     <td>18</td>
     <td>20</td>
+    <td>-2</td>
   </tr>
   <tr>
     <td>Greek</td>
     <td>Greek</td>
     <td>21</td>
     <td>20</td>
+    <td>1</td>
     <td>25</td>
     <td>26</td>
+    <td>-1</td>
     <td>23</td>
     <td>27</td>
+    <td>-4</td>
   </tr>
   <tr>
     <td>Cyrillic</td>
     <td>Russian</td>
     <td>22</td>
     <td>23</td>
+    <td>-1</td>
     <td>21</td>
     <td>21</td>
+    <td>0</td>
     <td>20</td>
     <td>25</td>
+    <td>-5</td>
+  </tr>
+  <tr>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>1.67</td>
+    <td></td>
+    <td></td>
+    <td>-1.00</td>
+    <td></td>
+    <td></td>
+    <td>-3.67</td>
   </tr>
 </tbody></table>
 
 ## Effect of Transliteration
 
 ### Latin transliteration of languages with Cyrillic script
-|           | Script   | Neural Transducer | Encoder-Decoder Transformer | Attentive_LSTM |
-|-----------|----------|-------------------|-----------------------------|----------------|
-| Russian   | Cyrillic | 23                | 21                          |                |
-| Russian   | Latin    | 20                | 22                          |                |
-| Ukrainian | Cyrillic | 19                | 26                          |                |
-| Ukrainian | Latin    | 22                | 24                          |                |
-| Bulgarian | Cyrillic | 32                | 30                          |                |
-| Bulgarian | Latin    | 34                | 35                          |                |
+
+#### Monolingual
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th colspan="3">Neural Transducer</th>
+    <th colspan="3">Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td>Latin</td>
+    <td>Cyrillic</td>
+    <td>Δ</td>
+    <td>Latin</td>
+    <td>Cyrillic</td>
+    <td>Δ</td>
+    <td>Cyrillic</td>
+    <td>Latin</td>
+    <td>Δ</td>
+  </tr>
+  <tr>
+    <td>Russian</td>
+    <td>20</td>
+    <td>23</td>
+    <td>-3</td>
+    <td>22</td>
+    <td>21</td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ukrainian</td>
+    <td>22</td>
+    <td>19</td>
+    <td>3</td>
+    <td>24</td>
+    <td>26</td>
+    <td>-2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Bulgarian</td>
+    <td>34</td>
+    <td>32</td>
+    <td>2</td>
+    <td>35</td>
+    <td>30</td>
+    <td>5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Average</td>
+    <td></td>
+    <td></td>
+    <td>0.67</td>
+    <td></td>
+    <td></td>
+    <td>1.33</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody></table>
 
 
 --- 
