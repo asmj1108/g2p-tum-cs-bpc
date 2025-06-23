@@ -53,6 +53,15 @@
 | Welsh (Southern Dialect) | 28.00                                 | 18.00                                           | 13.00                                    | 13.00                              |
 | **Macro-average WER**    | **37.14**                             | **34.88**                                       | **28.65**                                | **31.67**                          |
 
+## Error Analysis
+
+### Korean
+
+|        | Neutral Transducer | Encoder-Decoder Transformer | Attentive LSTM |
+|--------|--------------------|-----------------------------|----------------|
+| Hangul | 23                 | 89                          |                |
+| Jamo   | 23                 | 28                          |                |
+
 ---
 # How Data Amount Affects Performance of Transformer Model
 
