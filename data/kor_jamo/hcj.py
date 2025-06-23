@@ -10,6 +10,6 @@ def process_file(input_path, output_path):
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 3:
-        print("用法: python hcj.py 输入文件 输出文件")
+        print("usage: python hcj.py input_file output_file")
         sys.exit(1)
     process_file(sys.argv[1], sys.argv[2])
