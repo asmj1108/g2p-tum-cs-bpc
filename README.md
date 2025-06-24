@@ -59,8 +59,8 @@
 
 |        | Neutral Transducer | Encoder-Decoder Transformer | Attentive LSTM |
 |--------|--------------------|-----------------------------|----------------|
-| Hangul | 23                 | 89                          |                |
-| Jamo   | 23                 | 28                          |                |
+| Hangul | 23                 | 89                          | 100            |
+| Jamo   | 23                 | 28                          | 28             |
 
 ---
 # How Data Amount Affects Performance of Transformer Model
@@ -696,9 +696,9 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>22</td>
     <td>21</td>
     <td>1</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>30</td>
+    <td>25</td>
+    <td>5</td>
   </tr>
   <tr>
     <td>Ukrainian</td>
@@ -708,9 +708,9 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>24</td>
     <td>26</td>
     <td>-2</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>20</td>
+    <td>18</td>
+    <td>2</td>
   </tr>
   <tr>
     <td>Bulgarian</td>
@@ -720,9 +720,9 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>35</td>
     <td>30</td>
     <td>5</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>29</td>
+    <td>27</td>
+    <td>2</td>
   </tr>
   <tr>
     <td>Average</td>
@@ -734,7 +734,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>1.33</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>3.00</td>
   </tr>
 </tbody></table>
 
