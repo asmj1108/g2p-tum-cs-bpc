@@ -10,12 +10,11 @@
 2. Data from 2024 were preprocessed using different methods than the 2021/22 data.
     - Manual comparison and selection of datasets is required for languages that appear in both 2024 and 2021/22
       collections.
-3. All datasets are randomly split into 80% training data, 10% development data, and 10% test data.
-4. For ben/bur/ger/gle/ita/per/swe/tha (some target languages from the 2022 task), the test set values were from a
+3. For training, the data amount for each language is set to 1000 and the data samples are randomly selected if there are more available.
+4. All datasets are randomly split into 80% training data, 10% development data, and 10% test data.
+5. For ben/bur/ger/gle/ita/per/swe/tha (some target languages from the 2022 task), the test set values were from a
    [public dataset](https://github.com/CUNY-CL/wikipron/tree/master/data/scrape) that uses the same tool as in the
    shared tasks
-   ~~independently obtained by our team and processed to match the available train/dev set format as closely as
-   possible.~~
 
 ---
 
@@ -29,7 +28,7 @@
 | Serbo-Croatian (Latin)   | hbs_latn | 10000        | 2021                              |
 | Hungarian                | hun      | 10000        | 2021                              |
 | Japanese (Hiragana)      | jpn      | 10000        | 2021                              |
-| Korean                   | kor      | 10000        | 2021                              |
+| Korean (Hangul)          | kor      | 10000        | 2021                              |
 | Vietnamese (Hanoi)       | vie      | 10000        | 2021                              |
 | Hindi                    | hin      | 4500         | 2020                              |
 | Lithuanian               | lit      | 4500         | 2020                              |
@@ -71,6 +70,20 @@
 | Welsh                    | wel      | 1000         | 2022                              |
 | Welsh (Southern Dialect) | wel_sw   | 1000         | 2021                              |
 
+### Other Datasets
+
+| Language           | Code      | Data Samples | Origin                 |
+|--------------------|-----------|--------------|------------------------|
+| Korean (Jamo)      | kor_jamo  | 1000         | Decomposed from Hangul |
+| Bulgarian (Latin)  | bul_latin | 1000         | Romanized              |
+| Macedonian (Latin) | mkd_latin | 1000         | Romanized              |
+| Russian (Latin)    | rus_latin | 1000         | Romanized              |
+| Ukrainian (Latin)  | ukr_latin | 1000         | Romanized              |
+
+Used Tool:
+
+- [Hangul syllable decomposition](https://github.com/JDongian/python-jamo)
+- [Universal Romanizer](https://github.com/isi-nlp/uroman)
 
 # Category
 

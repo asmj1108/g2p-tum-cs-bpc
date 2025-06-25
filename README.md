@@ -129,7 +129,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Δ</td>
   </tr>
   <tr>
-    <td rowspan="3">Germanic</td>
+    <td rowspan="3">Indo-European (Germanic)</td>
     <td rowspan="3">Latin</td>
     <td>German</td>
     <td>48</td>
@@ -179,7 +179,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-2.33</td>
   </tr>
   <tr>
-    <td rowspan="3">Romance</td>
+    <td rowspan="3">Indo-European (Romance)</td>
     <td rowspan="3">Latin</td>
     <td>Italian</td>
     <td>26</td>
@@ -229,7 +229,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-1.00</td>
   </tr>
   <tr>
-    <td rowspan="3">Slavic</td>
+    <td rowspan="3">Indo-European (Slavic)</td>
     <td rowspan="3">Cyrillic</td>
     <td>Russian</td>
     <td>27</td>
@@ -279,7 +279,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>0.67</td>
   </tr>
   <tr>
-    <td rowspan="3">Slavic</td>
+    <td rowspan="3">Indo-European (Slavic)</td>
     <td rowspan="3">Latin</td>
     <td>Serbo-Croatian (Latin)</td>
     <td>67</td>
@@ -921,16 +921,12 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 <table><thead>
   <tr>
     <th></th>
-    <th></th>
-    <th></th>
     <th colspan="3">Neural Transducer</th>
     <th colspan="3">Encoder-decoder Transformer</th>
     <th colspan="3">Attentive LSTM</th>
   </tr></thead>
 <tbody>
   <tr>
-    <td>Family</td>
-    <td>Script</td>
     <td>Language</td>
     <td>Multi</td>
     <td>Mono</td>
@@ -943,8 +939,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Δ</td>
   </tr>
   <tr>
-    <td rowspan="7">Slavic</td>
-    <td rowspan="7">Latin</td>
     <td>Bulgarian*</td>
     <td>31</td>
     <td>34</td>
@@ -1029,7 +1023,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-1</td>
   </tr>
   <tr>
-    <td colspan="3">Average</td>
+    <td>Average</td>
     <td></td>
     <td></td>
     <td>2.00</td>
