@@ -179,8 +179,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-2.33</td>
   </tr>
   <tr>
-    <td>Romance</td>
-    <td>Latin</td>
+    <td rowspan="3">Romance</td>
+    <td rowspan="3">Latin</td>
     <td>Italian</td>
     <td>26</td>
     <td>15</td>
@@ -193,8 +193,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>2</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Spanish</td>
     <td>12</td>
     <td>4</td>
@@ -207,8 +205,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-1</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Romanian</td>
     <td>18</td>
     <td>9</td>
@@ -233,8 +229,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-1.00</td>
   </tr>
   <tr>
-    <td>Slavic</td>
-    <td>Cyrillic</td>
+    <td rowspan="3">Slavic</td>
+    <td rowspan="3">Cyrillic</td>
     <td>Russian</td>
     <td>27</td>
     <td>23</td>
@@ -247,8 +243,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-3</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Ukrainian</td>
     <td>22</td>
     <td>19</td>
@@ -261,8 +255,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>1</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Bulgarian</td>
     <td>35</td>
     <td>32</td>
@@ -287,8 +279,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>0.67</td>
   </tr>
   <tr>
-    <td>Slavic</td>
-    <td>Latin</td>
+    <td rowspan="3">Slavic</td>
+    <td rowspan="3">Latin</td>
     <td>Serbo-Croatian (Latin)</td>
     <td>67</td>
     <td>64</td>
@@ -301,8 +293,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-1</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Polish</td>
     <td>13</td>
     <td>4</td>
@@ -315,8 +305,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>2</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Slovenian</td>
     <td>59</td>
     <td>56</td>
@@ -341,8 +329,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>0.33</td>
   </tr>
   <tr>
-    <td>Indo-Iranian</td>
-    <td>Arabic</td>
+    <td rowspan="3">Indo-Iranian</td>
+    <td rowspan="3">Arabic</td>
     <td>Pashto</td>
     <td>79</td>
     <td>67</td>
@@ -355,8 +343,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-2</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Persian (Iranian)</td>
     <td>73</td>
     <td>65</td>
@@ -369,8 +355,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-1</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Urdu</td>
     <td>78</td>
     <td>72</td>
@@ -395,8 +379,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-3.00</td>
   </tr>
   <tr>
-    <td>Austronesian</td>
-    <td>Latin</td>
+    <td rowspan="3">Austronesian</td>
+    <td rowspan="3">Latin</td>
     <td>Indonesian</td>
     <td>66</td>
     <td>64</td>
@@ -409,8 +393,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-18</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Cebuano</td>
     <td>26</td>
     <td>13</td>
@@ -423,8 +405,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>2</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
     <td>Tagalog</td>
     <td>15</td>
     <td>20</td>
@@ -582,6 +562,99 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
+#### Larger Model/Dataset
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th colspan="3">Neural Transducer</th>
+    <th colspan="3">Encoder-decoder Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Family</td>
+    <td>Script</td>
+    <td>Language</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+  </tr>
+  <tr>
+    <td>Indo-European</td>
+    <td rowspan="4">Latin</td>
+    <td>Italian</td>
+    <td>16</td>
+    <td>15</td>
+    <td>1</td>
+    <td>22</td>
+    <td>21</td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Afro-Asiatic</td>
+    <td>Maltese (Latin)</td>
+    <td>19</td>
+    <td>17</td>
+    <td>2</td>
+    <td>18</td>
+    <td>24</td>
+    <td>-6</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Uralic</td>
+    <td>Hungarian</td>
+    <td>9</td>
+    <td>7</td>
+    <td>2</td>
+    <td>12</td>
+    <td>11</td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Austronesian</td>
+    <td>Indonesian</td>
+    <td>56</td>
+    <td>64</td>
+    <td>-8</td>
+    <td>52</td>
+    <td>52</td>
+    <td>0</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>-0.75</td>
+    <td></td>
+    <td></td>
+    <td>-1.00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody></table>
+
 ### Same Language Family and Different Script
 
 <table><thead>
@@ -662,6 +735,99 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
+#### Larger Model/Dataset
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th colspan="3">Neural Transducer</th>
+    <th colspan="3">Encoder-decoder Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Family</td>
+    <td>Script</td>
+    <td>Language</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Indo-European</td>
+    <td>Armenian</td>
+    <td>Armenian (Eastern)</td>
+    <td>15</td>
+    <td>15</td>
+    <td>0</td>
+    <td>17</td>
+    <td>16</td>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Greek</td>
+    <td>Greek</td>
+    <td>22</td>
+    <td>20</td>
+    <td>2</td>
+    <td>26</td>
+    <td>26</td>
+    <td>0</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Cyrillic</td>
+    <td>Russian</td>
+    <td>22</td>
+    <td>23</td>
+    <td>-1</td>
+    <td>26</td>
+    <td>21</td>
+    <td>5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Latin</td>
+    <td>Italian</td>
+    <td>19</td>
+    <td>15</td>
+    <td>4</td>
+    <td>21</td>
+    <td>21</td>
+    <td>0</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>1.25</td>
+    <td></td>
+    <td></td>
+    <td>1.50</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody></table>
+
 ## Effect of Transliteration
 
 ### Latin transliteration of languages with Cyrillic script
@@ -725,19 +891,156 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>2</td>
   </tr>
   <tr>
+    <td>Macedonian</td>
+    <td>6</td>
+    <td>5</td>
+    <td>1</td>
+    <td>5</td>
+    <td>5</td>
+    <td>0</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Average</td>
     <td></td>
     <td></td>
-    <td>0.67</td>
+    <td>0.75</td>
     <td></td>
     <td></td>
-    <td>1.33</td>
+    <td>1.00</td>
     <td></td>
     <td></td>
-    <td>3.00</td>
+    <td></td>
   </tr>
 </tbody></table>
 
+#### Multilingual (Slavic Latin) Dataset
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th colspan="3">Neural Transducer</th>
+    <th colspan="3">Encoder-decoder Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Family</td>
+    <td>Script</td>
+    <td>Language</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+  </tr>
+  <tr>
+    <td rowspan="7">Slavic</td>
+    <td rowspan="7">Latin</td>
+    <td>Bulgarian*</td>
+    <td>31</td>
+    <td>34</td>
+    <td>-3</td>
+    <td>27</td>
+    <td>35</td>
+    <td>-8</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Russian*</td>
+    <td>19</td>
+    <td>20</td>
+    <td>-1</td>
+    <td>24</td>
+    <td>22</td>
+    <td>2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Ukrainian*</td>
+    <td>23</td>
+    <td>22</td>
+    <td>1</td>
+    <td>18</td>
+    <td>24</td>
+    <td>-6</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Serbo-Croatian (Latin)</td>
+    <td>76</td>
+    <td>64</td>
+    <td>12</td>
+    <td>63</td>
+    <td>69</td>
+    <td>-6</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Polish</td>
+    <td>13</td>
+    <td>4</td>
+    <td>9</td>
+    <td>7</td>
+    <td>8</td>
+    <td>-1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Slovenian</td>
+    <td>54</td>
+    <td>56</td>
+    <td>-2</td>
+    <td>57</td>
+    <td>52</td>
+    <td>5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Macedonian*</td>
+    <td>4</td>
+    <td>6</td>
+    <td>-2</td>
+    <td>3</td>
+    <td>5</td>
+    <td>-2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">Average</td>
+    <td></td>
+    <td></td>
+    <td>2.00</td>
+    <td></td>
+    <td></td>
+    <td>-2.29</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody></table>
 
 --- 
 # Reference Result from previous shared task
