@@ -1,57 +1,56 @@
 # Monolingual Results
 
-| Language                 | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive LSTM<br/>(baseline 2024) |
-|--------------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------|
-| Adyghe                   | 27.00                                 | 39.00                                           | 20.00                                    | 30.00                              |
-| Arabic                   | 43.00                                 | 43.00                                           | 53.00                                    | 45.00                              |
-| Armenian (Eastern)       | 17.00                                 | 16.00                                           | 15.00                                    | 20.00                              |
-| Assamese                 | 14.00                                 | 15.00                                           | 7.00                                     | 12.00                              |
-| Belarusian               | 7.00                                  | 6.00                                            | 2.00                                     | 2.00                               |
-| Bengali                  | 70.00                                 | 78.00                                           | 68.00                                    | 67.00                              |
-| Bulgarian                | 37.00                                 | 30.00                                           | 32.00                                    | 27.00                              |
-| Burmese                  | 39.00                                 | 41.00                                           | 29.00                                    | 35.00                              |
-| Cebuano                  | 22.00                                 | 26.00                                           | 20.00                                    | 20.00                              |
-| Central Khmer            | 56.00                                 | 43.00                                           | 31.00                                    | 35.00                              |
-| Dutch                    | 32.00                                 | 29.00                                           | 24.00                                    | 23.00                              |
-| Eastern Lawa             | 44.00                                 | 24.00                                           | 8.00                                     | 12.00                              |
-| English                  | 70.00                                 | 70.00                                           | 63.00                                    | 66.00                              |
-| French                   | 31.00                                 | 29.00                                           | 23.00                                    | 27.00                              |
-| Georgian                 | 0.00                                  | 4.00                                            | 0.00                                     | 1.00                               |
-| German                   | 49.00                                 | 56.00                                           | 46.00                                    | 45.00                              |
-| Greek                    | 27.00                                 | 26.00                                           | 20.00                                    | 27.00                              |
-| Hindi                    | 23.00                                 | 24.00                                           | 11.00                                    | 13.00                              |
-| Hungarian                | 9.00                                  | 11.00                                           | 7.00                                     | 8.00                               |
-| Icelandic                | 35.00                                 | 24.00                                           | 12.00                                    | 16.00                              |
-| Indonesian               | 58.00                                 | 52.00                                           | 64.00                                    | 73.00                              |
-| Irish                    | 57.00                                 | 46.00                                           | 43.00                                    | 39.00                              |
-| Italian                  | 22.00                                 | 21.00                                           | 15.00                                    | 16.00                              |
-| Japanese (Hiragana)      | 23.00                                 | 20.00                                           | 10.00                                    | 12.00                              |
-| Korean                   | 81.00                                 | 89.00                                           | 23.00                                    | 100.00                             |
-| Latvian                  | 51.00                                 | 51.00                                           | 51.00                                    | 50.00                              |
-| Lithuanian               | 32.00                                 | 35.00                                           | 33.00                                    | 31.00                              |
-| Macedonian               | 6.00                                  | 5.00                                            | 5.00                                     | 5.00                               |
-| Maltese (Latin)          | 27.00                                 | 24.00                                           | 17.00                                    | 22.00                              |
-| Norwegian Nynorsk        | 61.00                                 | 69.00                                           | 66.00                                    | 69.00                              |
-| Pashto                   | 70.00                                 | 68.00                                           | 67.00                                    | 66.00                              |
-| Persian (Classical)      | 51.00                                 | 58.00                                           | 57.00                                    | 51.00                              |
-| Persian (Iranian)        | 66.00                                 | 63.00                                           | 65.00                                    | 65.00                              |
-| Polish                   | 9.00                                  | 8.00                                            | 4.00                                     | 7.00                               |
-| Romanian                 | 10.00                                 | 17.00                                           | 9.00                                     | 17.00                              |
-| Russian                  | 31.00                                 | 21.00                                           | 23.00                                    | 25.00                              |
-| Serbo-Croatian (Latin)   | 84.00                                 | 69.00                                           | 64.00                                    | 69.00                              |
-| Shan                     | 6.00                                  | 10.00                                           | 5.00                                     | 4.00                               |
-| Slovenian                | 73.00                                 | 52.00                                           | 56.00                                    | 50.00                              |
-| Spanish                  | 3.00                                  | 10.00                                           | 4.00                                     | 3.00                               |
-| Swedish                  | 67.00                                 | 68.00                                           | 59.00                                    | 61.00                              |
-| Tagalog                  | 11.00                                 | 17.00                                           | 13.00                                    | 11.00                              |
-| Thai                     | 70.00                                 | 49.00                                           | 39.00                                    | 42.00                              |
-| Ukrainian                | 27.00                                 | 26.00                                           | 19.00                                    | 18.00                              |
-| Urdu                     | 67.00                                 | 66.00                                           | 72.00                                    | 77.00                              |
-| Uyghur                   | 0.00                                  | 3.00                                            | 0.00                                     | 2.00                               |
-| Vietnamese (Hanoi)       | 44.00                                 | 20.00                                           | 5.00                                     | 4.00                               |
-| Welsh                    | 33.00                                 | 20.00                                           | 12.00                                    | 19.00                              |
-| Welsh (Southern Dialect) | 28.00                                 | 18.00                                           | 13.00                                    | 13.00                              |
-| **Macro-average WER**    | **37.14**                             | **34.88**                                       | **28.65**                                | **31.67**                          |
+| Language              | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive LSTM<br/>(baseline 2024) |
+|-----------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------|
+| Adyghe                | 27                                    | 39                                              | 20                                       | 30                                 |
+| Arabic                | 43                                    | 43                                              | 53                                       | 45                                 |
+| Assamese              | 14                                    | 15                                              | 7                                        | 12                                 |
+| Belarusian            | 7                                     | 6                                               | 2                                        | 2                                  |
+| Bengali               | 70                                    | 78                                              | 68                                       | 67                                 |
+| Bulgarian             | 37                                    | 30                                              | 32                                       | 27                                 |
+| Burmese               | 39                                    | 41                                              | 29                                       | 35                                 |
+| Cebuano               | 22                                    | 26                                              | 20                                       | 20                                 |
+| Central Khmer         | 56                                    | 43                                              | 31                                       | 35                                 |
+| Classical Persian     | 51                                    | 58                                              | 57                                       | 51                                 |
+| Dutch                 | 32                                    | 29                                              | 24                                       | 23                                 |
+| Eastern Armenian      | 17                                    | 16                                              | 15                                       | 20                                 |
+| Eastern Lawa          | 44                                    | 24                                              | 8                                        | 12                                 |
+| English               | 70                                    | 70                                              | 63                                       | 66                                 |
+| French                | 31                                    | 29                                              | 23                                       | 27                                 |
+| Georgian              | 0                                     | 4                                               | 0                                        | 1                                  |
+| German                | 49                                    | 56                                              | 46                                       | 45                                 |
+| Greek                 | 27                                    | 26                                              | 20                                       | 27                                 |
+| Hindi                 | 23                                    | 24                                              | 11                                       | 13                                 |
+| Hungarian             | 9                                     | 11                                              | 7                                        | 8                                  |
+| Icelandic             | 35                                    | 24                                              | 12                                       | 16                                 |
+| Indonesian            | 58                                    | 52                                              | 64                                       | 73                                 |
+| Iranian Persian       | 66                                    | 63                                              | 65                                       | 65                                 |
+| Irish                 | 57                                    | 46                                              | 43                                       | 39                                 |
+| Italian               | 22                                    | 21                                              | 15                                       | 16                                 |
+| Japanese              | 23                                    | 20                                              | 10                                       | 12                                 |
+| Korean                | 81                                    | 89                                              | 23                                       | 100                                |
+| Latvian               | 51                                    | 51                                              | 51                                       | 50                                 |
+| Lithuanian            | 32                                    | 35                                              | 33                                       | 31                                 |
+| Macedonian            | 6                                     | 5                                               | 5                                        | 5                                  |
+| Maltese               | 27                                    | 24                                              | 17                                       | 22                                 |
+| Norwegian Nynorsk     | 61                                    | 69                                              | 66                                       | 69                                 |
+| Pashto                | 70                                    | 68                                              | 67                                       | 66                                 |
+| Polish                | 9                                     | 8                                               | 4                                        | 7                                  |
+| Romanian              | 10                                    | 17                                              | 9                                        | 17                                 |
+| Russian               | 31                                    | 21                                              | 23                                       | 25                                 |
+| Serbo-Croatian        | 84                                    | 69                                              | 64                                       | 69                                 |
+| Shan                  | 6                                     | 10                                              | 5                                        | 4                                  |
+| Slovenian             | 73                                    | 52                                              | 56                                       | 50                                 |
+| Spanish               | 3                                     | 10                                              | 4                                        | 3                                  |
+| Swedish               | 67                                    | 68                                              | 59                                       | 61                                 |
+| Tagalog               | 11                                    | 17                                              | 13                                       | 11                                 |
+| Thai                  | 70                                    | 49                                              | 39                                       | 42                                 |
+| Ukrainian             | 27                                    | 26                                              | 19                                       | 18                                 |
+| Urdu                  | 67                                    | 66                                              | 72                                       | 77                                 |
+| Uyghur                | 0                                     | 3                                               | 0                                        | 2                                  |
+| Vietnamese            | 44                                    | 20                                              | 5                                        | 4                                  |
+| Welsh                 | 33                                    | 20                                              | 12                                       | 19                                 |
+| **Macro-average WER** | **37.33**                             | **35.23**                                       | **28.98**                                | **32.06**                          |
 
 ## Error Analysis
 
@@ -63,6 +62,7 @@
 | Jamo   | 23                 | 28                          | 28             |
 
 ---
+
 # How Data Amount Affects Performance of Transformer Model
 
 Comparing best performing model and transformer on different amount fo English data
@@ -82,10 +82,11 @@ Comparing best performing model and transformer on different amount fo English d
 ![transformer-analysis](eng_us_data/graph.png)
 
 ---
+
 # Multilingual Approach
 
-A tag comprising a language code (e.g. <|ENG|>, <|GER|>) is prepended  to each grapheme sequence source. 
-The datasets of each language are simply concatenated.
+A tag comprising a language code (e.g. <|ENG|> for English, <|DEU|> for German) is prepended to each grapheme sequence
+source. The datasets of each language are simply concatenated.
 
 #### Does converting the language tag to the corresponding script of the language improve the model performance?
 
@@ -99,9 +100,11 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 | No tag             | 45.00             | 44.67                      | 44.67          |
 
 ## Results
+
 <!---
 ## How Language Family and Language Script affects
 -->
+
 ### Same Language Family and Same Script
 
 <table><thead>
@@ -132,101 +135,101 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td rowspan="3">Indo-European (Germanic)</td>
     <td rowspan="3">Latin</td>
     <td>German</td>
-    <td>48</td>
+    <td></td>
     <td>46</td>
-    <td>2</td>
-    <td>47</td>
+    <td></td>
+    <td></td>
     <td>56</td>
-    <td>-9</td>
-    <td>42</td>
+    <td></td>
+    <td></td>
     <td>45</td>
-    <td>-3</td>
+    <td></td>
   </tr>
   <tr>
     <td>Dutch</td>
-    <td>25</td>
+    <td></td>
     <td>24</td>
-    <td>1</td>
-    <td>21</td>
+    <td></td>
+    <td></td>
     <td>29</td>
-    <td>-8</td>
-    <td>20</td>
+    <td></td>
+    <td></td>
     <td>23</td>
-    <td>-3</td>
+    <td></td>
   </tr>
   <tr>
     <td>Swedish</td>
-    <td>62</td>
+    <td></td>
     <td>59</td>
-    <td>3</td>
-    <td>60</td>
+    <td></td>
+    <td></td>
     <td>68</td>
-    <td>-8</td>
-    <td>60</td>
+    <td></td>
+    <td></td>
     <td>61</td>
-    <td>-1</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
     <td></td>
     <td></td>
-    <td>2.00</td>
     <td></td>
     <td></td>
-    <td>-8.33</td>
     <td></td>
     <td></td>
-    <td>-2.33</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td rowspan="3">Indo-European (Romance)</td>
     <td rowspan="3">Latin</td>
     <td>Italian</td>
-    <td>26</td>
+    <td></td>
     <td>15</td>
-    <td>11</td>
-    <td>22</td>
+    <td></td>
+    <td></td>
     <td>21</td>
-    <td>1</td>
-    <td>18</td>
+    <td></td>
+    <td></td>
     <td>16</td>
-    <td>2</td>
+    <td></td>
   </tr>
   <tr>
     <td>Spanish</td>
-    <td>12</td>
+    <td></td>
     <td>4</td>
-    <td>8</td>
-    <td>3</td>
+    <td></td>
+    <td></td>
     <td>10</td>
-    <td>-7</td>
-    <td>2</td>
+    <td></td>
+    <td></td>
     <td>3</td>
-    <td>-1</td>
+    <td></td>
   </tr>
   <tr>
     <td>Romanian</td>
-    <td>18</td>
+    <td></td>
     <td>9</td>
-    <td>9</td>
-    <td>13</td>
+    <td></td>
+    <td></td>
     <td>17</td>
-    <td>-4</td>
-    <td>13</td>
+    <td></td>
+    <td></td>
     <td>17</td>
-    <td>-4</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
     <td></td>
     <td></td>
-    <td>9.33</td>
     <td></td>
     <td></td>
-    <td>-3.33</td>
     <td></td>
     <td></td>
-    <td>-1.00</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td rowspan="3">Indo-European (Slavic)</td>
@@ -281,7 +284,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   <tr>
     <td rowspan="3">Indo-European (Slavic)</td>
     <td rowspan="3">Latin</td>
-    <td>Serbo-Croatian (Latin)</td>
+    <td>Serbo-Croatian</td>
     <td>67</td>
     <td>64</td>
     <td>3</td>
@@ -332,51 +335,51 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td rowspan="3">Indo-Iranian</td>
     <td rowspan="3">Arabic</td>
     <td>Pashto</td>
-    <td>79</td>
+    <td></td>
     <td>67</td>
-    <td>12</td>
-    <td>66</td>
+    <td></td>
+    <td></td>
     <td>68</td>
-    <td>-2</td>
-    <td>64</td>
+    <td></td>
+    <td></td>
     <td>66</td>
-    <td>-2</td>
+    <td></td>
   </tr>
   <tr>
-    <td>Persian (Iranian)</td>
-    <td>73</td>
+    <td>Iranian Persian</td>
+    <td></td>
     <td>65</td>
-    <td>8</td>
-    <td>67</td>
+    <td></td>
+    <td></td>
     <td>63</td>
-    <td>4</td>
-    <td>64</td>
+    <td></td>
+    <td></td>
     <td>65</td>
-    <td>-1</td>
+    <td></td>
   </tr>
   <tr>
     <td>Urdu</td>
-    <td>78</td>
+    <td></td>
     <td>72</td>
-    <td>6</td>
-    <td>64</td>
+    <td></td>
+    <td></td>
     <td>66</td>
-    <td>-2</td>
-    <td>71</td>
+    <td></td>
+    <td></td>
     <td>77</td>
-    <td>-6</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
     <td></td>
     <td></td>
-    <td>8.67</td>
     <td></td>
     <td></td>
-    <td>0.00</td>
     <td></td>
     <td></td>
-    <td>-3.00</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td rowspan="3">Austronesian</td>
@@ -460,53 +463,53 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Afro-Asiatic</td>
     <td rowspan="3">Arabic</td>
     <td>Arabic</td>
-    <td>57</td>
+    <td></td>
     <td>53</td>
-    <td>4</td>
-    <td>38</td>
+    <td></td>
+    <td></td>
     <td>43</td>
-    <td>-5</td>
-    <td>53</td>
+    <td></td>
+    <td></td>
     <td>45</td>
-    <td>8</td>
+    <td></td>
   </tr>
   <tr>
     <td>Indo-European</td>
-    <td>Persian (Classic)</td>
-    <td>62</td>
+    <td>Classical Persian</td>
+    <td></td>
     <td>57</td>
-    <td>5</td>
-    <td>45</td>
+    <td></td>
+    <td></td>
     <td>58</td>
-    <td>-13</td>
-    <td>55</td>
+    <td></td>
+    <td></td>
     <td>51</td>
-    <td>4</td>
+    <td></td>
   </tr>
   <tr>
     <td>Turkic</td>
     <td>Uyghur</td>
-    <td>8</td>
+    <td></td>
     <td>0</td>
-    <td>8</td>
-    <td>2</td>
+    <td></td>
+    <td></td>
     <td>3</td>
-    <td>-1</td>
-    <td>4</td>
+    <td></td>
+    <td></td>
     <td>2</td>
-    <td>2</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
     <td></td>
     <td></td>
-    <td>5.67</td>
     <td></td>
     <td></td>
-    <td>-6.33</td>
     <td></td>
     <td></td>
-    <td>4.67</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Indo-European</td>
@@ -524,7 +527,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
   <tr>
     <td>Afro-Asiatic</td>
-    <td>Maltese (Latin)</td>
+    <td>Maltese</td>
     <td>18</td>
     <td>17</td>
     <td>1</td>
@@ -569,8 +572,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <th></th>
     <th></th>
     <th></th>
-    <th colspan="3">Neural Transducer</th>
-    <th colspan="3">Encoder-decoder Transformer</th>
+    <th colspan="3">Transducer</th>
+    <th colspan="3">Transformer</th>
     <th colspan="3">Attentive LSTM</th>
   </tr></thead>
 <tbody>
@@ -604,7 +607,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
   <tr>
     <td>Afro-Asiatic</td>
-    <td>Maltese (Latin)</td>
+    <td>Maltese</td>
     <td>19</td>
     <td>17</td>
     <td>2</td>
@@ -684,54 +687,54 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   <tr>
     <td rowspan="3">Indo-European</td>
     <td>Armenian</td>
-    <td>Armenian (Eastern)</td>
-    <td>20</td>
+    <td>Eastern Armenian</td>
+    <td></td>
     <td>15</td>
-    <td>5</td>
-    <td>14</td>
+    <td></td>
+    <td></td>
     <td>16</td>
-    <td>-2</td>
-    <td>18</td>
+    <td></td>
+    <td></td>
     <td>20</td>
-    <td>-2</td>
+    <td></td>
   </tr>
   <tr>
     <td>Greek</td>
     <td>Greek</td>
-    <td>21</td>
+    <td></td>
     <td>20</td>
-    <td>1</td>
-    <td>25</td>
+    <td></td>
+    <td></td>
     <td>26</td>
-    <td>-1</td>
-    <td>23</td>
+    <td></td>
+    <td></td>
     <td>27</td>
-    <td>-4</td>
+    <td></td>
   </tr>
   <tr>
     <td>Cyrillic</td>
     <td>Russian</td>
-    <td>22</td>
+    <td></td>
     <td>23</td>
-    <td>-1</td>
+    <td></td>
+    <td></td>
     <td>21</td>
-    <td>21</td>
-    <td>0</td>
-    <td>20</td>
+    <td></td>
+    <td></td>
     <td>25</td>
-    <td>-5</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
     <td></td>
     <td></td>
-    <td>1.67</td>
     <td></td>
     <td></td>
-    <td>-1.00</td>
     <td></td>
     <td></td>
-    <td>-3.67</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </tbody></table>
 
@@ -742,8 +745,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <th></th>
     <th></th>
     <th></th>
-    <th colspan="3">Neural Transducer</th>
-    <th colspan="3">Encoder-decoder Transformer</th>
+    <th colspan="3">Transducer</th>
+    <th colspan="3">Transformer</th>
     <th colspan="3">Attentive LSTM</th>
   </tr></thead>
 <tbody>
@@ -764,67 +767,67 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   <tr>
     <td rowspan="4">Indo-European</td>
     <td>Armenian</td>
-    <td>Armenian (Eastern)</td>
+    <td>Eastern Armenian</td>
+    <td></td>
     <td>15</td>
-    <td>15</td>
-    <td>0</td>
-    <td>17</td>
+    <td></td>
+    <td></td>
     <td>16</td>
-    <td>1</td>
-    <td>19</td>
+    <td></td>
+    <td></td>
     <td>20</td>
-    <td>-1</td>
+    <td></td>
   </tr>
   <tr>
     <td>Greek</td>
     <td>Greek</td>
-    <td>22</td>
+    <td></td>
     <td>20</td>
-    <td>2</td>
+    <td></td>
+    <td></td>
     <td>26</td>
-    <td>26</td>
-    <td>0</td>
-    <td>25</td>
+    <td></td>
+    <td></td>
     <td>27</td>
-    <td>-2</td>
+    <td></td>
   </tr>
   <tr>
     <td>Cyrillic</td>
     <td>Russian</td>
-    <td>22</td>
+    <td></td>
     <td>23</td>
-    <td>-1</td>
-    <td>26</td>
+    <td></td>
+    <td></td>
     <td>21</td>
-    <td>5</td>
-    <td>24</td>
+    <td></td>
+    <td></td>
     <td>25</td>
-    <td>-1</td>
+    <td></td>
   </tr>
   <tr>
     <td>Latin</td>
     <td>Italian</td>
-    <td>19</td>
+    <td></td>
     <td>15</td>
-    <td>4</td>
+    <td></td>
+    <td></td>
     <td>21</td>
-    <td>21</td>
-    <td>0</td>
-    <td>21</td>
+    <td></td>
+    <td></td>
     <td>16</td>
-    <td>5</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
     <td></td>
     <td></td>
-    <td>1.25</td>
     <td></td>
     <td></td>
-    <td>1.50</td>
     <td></td>
     <td></td>
-    <td>0.25</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </tbody></table>
 
@@ -837,7 +840,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 <table><thead>
   <tr>
     <th></th>
-    <th colspan="3">Neural Transducer</th>
+    <th colspan="3">Transducer</th>
     <th colspan="3">Transformer</th>
     <th colspan="3">Attentive LSTM</th>
   </tr></thead>
@@ -921,8 +924,8 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 <table><thead>
   <tr>
     <th></th>
-    <th colspan="3">Neural Transducer</th>
-    <th colspan="3">Encoder-decoder Transformer</th>
+    <th colspan="3">Transducer</th>
+    <th colspan="3">Transformer</th>
     <th colspan="3">Attentive LSTM</th>
   </tr></thead>
 <tbody>
@@ -975,7 +978,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>1</td>
   </tr>
   <tr>
-    <td>Serbo-Croatian (Latin)</td>
+    <td>Serbo-Croatian</td>
     <td>76</td>
     <td>64</td>
     <td>12</td>
@@ -1037,13 +1040,17 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 </tbody></table>
 
 --- 
+
 # Reference Result from previous shared task
+
 ## 2022
 
 ### Model
+
 **Baseline**: A neural transducer system using an imitation learning paradigm (dyNET framework)
 
 **Submissions**:
+
 1. [Tü-G2P](https://aclanthology.org/2023.sigmorphon-1.28.pdf): A series of sequence labelling systems to G2P tasks,
    which use ​simpler alignment​ rather than dynamic transducer-based alignment.(Pytorch)
 2. [Hammond](https://aclanthology.org/2023.sigmorphon-1.29.pdf) ([Repo](https://github.com/hammondm/g2p2022)): A
@@ -1069,54 +1076,58 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 ## 2024
 
 ### Model
-**Baseline**: attentive_gru, attentive_lstm, gru, hard_attention_gru, lstm, pointer_generator_gru, transducer_gru, transformer(20\40\60 epochs)
+
+**Baseline**: attentive_gru, attentive_lstm, gru, hard_attention_gru, lstm, pointer_generator_gru, transducer_gru,
+transformer(20\40\60 epochs)
 
 ### Reference Result:
 
 - Baseline
 
-| Models                | gru   | lstm  | attentive_gru | attentive_lstm | hard_attention_gru | hard_attention_gru (Arab) | pointer_generator_gru | transducer_gru | transformer_20 | transformer_40 | transformer_60 |
-|-----------------------|-------|-------|---------------|----------------|--------------------|---------------------------|-----------------------|----------------|----------------|----------------|----------------|
-| WER (%)               | 43.75 | 44.25 | 63.08         | 47.25          | 40.67              | 31.33                     | 62.17                 | 69.33          | 78.25          | 81.58          | 79.50          |
+| Models  | gru   | lstm  | attentive_gru | attentive_lstm | hard_attention_gru | hard_attention_gru (Arab) | pointer_generator_gru | transducer_gru | transformer_20 | transformer_40 | transformer_60 |
+|---------|-------|-------|---------------|----------------|--------------------|---------------------------|-----------------------|----------------|----------------|----------------|----------------|
+| WER (%) | 43.75 | 44.25 | 63.08         | 47.25          | 40.67              | 31.33                     | 62.17                 | 69.33          | 78.25          | 81.58          | 79.50          |
 
 - Best performance model on all datasets(hard_attenton_gru)
 
-| Languages  | Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu   |
-|------------|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|--------|
-| WER        | 31.33  | 20.00     | 58.00   | 29.67   | 55.33      | 3.67       | 44.33  | 10.33   | 5.00    | 40.33   | 15.67     | 64.00  |
+| Languages | Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu  |
+|-----------|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|-------|
+| WER       | 31.33  | 20.00     | 58.00   | 29.67   | 55.33      | 3.67       | 44.33  | 10.33   | 5.00    | 40.33   | 15.67     | 64.00 |
 
 - GRU、LSTM、Transformer on different languages
-  
-| Model/Languages   | English | Pashto | Russian | Spanish |
-|-------------------|---------|--------|---------|---------|
-| GRU               | 31.00   | 39.00  | 14.00   | 9.00    |
-| LSTM              | 48.33   | 57.67  | 10.33   | 9.00    |
-| Transformer       | 81.33   | 77.00  | 35.67   | 24.67   |
 
-- Comparison between hard_attention_gru、attentive_lstm 
+| Model/Languages | English | Pashto | Russian | Spanish |
+|-----------------|---------|--------|---------|---------|
+| GRU             | 31.00   | 39.00  | 14.00   | 9.00    |
+| LSTM            | 48.33   | 57.67  | 10.33   | 9.00    |
+| Transformer     | 81.33   | 77.00  | 35.67   | 24.67   |
 
-| Model / Language    | Korean | Bengali | Indonesian | Pashto | Swedish |
-|---------------------|--------|---------|------------|--------|---------|
-| hard_attention_gru  | 98.00  | 87.00   | 85.00      | 78.00  | 66.00   |
-| attentive_lstm      | 100.00 | 67.00   | 73.00      | 66.00  | 61.00   |
+- Comparison between hard_attention_gru、attentive_lstm
+
+| Model / Language   | Korean | Bengali | Indonesian | Pashto | Swedish |
+|--------------------|--------|---------|------------|--------|---------|
+| hard_attention_gru | 98.00  | 87.00   | 85.00      | 78.00  | 66.00   |
+| attentive_lstm     | 100.00 | 67.00   | 73.00      | 66.00  | 61.00   |
 
 - Comparison between attentive_gru and attentive_lstm
 
-The comparison of validation accuracy (val_accuracy) between attentive_gru (GRU) and attentive_lstm (LSTM) across all languages shows:
+The comparison of validation accuracy (val_accuracy) between attentive_gru (GRU) and attentive_lstm (LSTM) across all
+languages shows:
 
-- LSTM val_accuracy higher than GRU: 20 times  
-- LSTM val_accuracy lower than GRU: 22 times  
-- LSTM val_accuracy equal to GRU: 6 times  
-- Average LSTM val_accuracy: 0.6987  
-- Average GRU val_accuracy: 0.7049  
+- LSTM val_accuracy higher than GRU: 20 times
+- LSTM val_accuracy lower than GRU: 22 times
+- LSTM val_accuracy equal to GRU: 6 times
+- Average LSTM val_accuracy: 0.6987
+- Average GRU val_accuracy: 0.7049
 
-This indicates that, on average, attentive_gru achieves slightly higher validation accuracy than attentive_lstm, although the performance varies across different languages.
+This indicates that, on average, attentive_gru achieves slightly higher validation accuracy than attentive_lstm,
+although the performance varies across different languages.
 
 - attentive_lstm performance on Adyghe and Bengali with different parameters(DEV_WER)
 
-| Params                                      | Adyghe WER | Bengali WER | Dutch WER | Urdu WER |
-|---------------------------------------------|------------|-------------|-----------|----------|
-| default                                     | 31.00      | 65.00       | 23.00     | 77.00    |
-| 4 encoder_layers + 1 decoder_layer          | 51.00      | 70.00       | 45.00     | 80.00    |
-| 256 embedding_size + 1024 hidden_size       | 37.00      | 67.00       | 30.00     | 78.00    |
-| 0.1 label_smoothing                         | 33.00      | 65.00       | 21.00     | 75.00    |
+| Params                                | Adyghe WER | Bengali WER | Dutch WER | Urdu WER |
+|---------------------------------------|------------|-------------|-----------|----------|
+| default                               | 31.00      | 65.00       | 23.00     | 77.00    |
+| 4 encoder_layers + 1 decoder_layer    | 51.00      | 70.00       | 45.00     | 80.00    |
+| 256 embedding_size + 1024 hidden_size | 37.00      | 67.00       | 30.00     | 78.00    |
+| 0.1 label_smoothing                   | 33.00      | 65.00       | 21.00     | 75.00    |

@@ -9,13 +9,14 @@ readonly SED_EM_ITERATIONS=10
 readonly MAX_ENSEMBLE_SIZE=10
 readonly HIDDEN_DIM=100
 
-DATA_TARGET='../../data'
-OUTPUT_BASE='results'
-mkdir -p "${OUTPUT_BASE}"
+DATA_TARGET="../../data"
+OUTPUT_BASE="results"
+LANGS=("ady" "arb" "asm" "bel" "ben" "bul" "bul_latin" "ceb" "cym" "deu" "ell" "eng_us" "fas_cls" "fra" "gle" "hbs"
+	"hin" "hun" "hye" "ind" "isl" "ita" "jpn" "kat" "khm" "kor" "kor_jamo" "lav" "lit" "lwl" "mkd" "mkd_latin" "mlt"
+	"mya" "nld" "nno" "pes" "pol" "pus" "ron" "rus" "rus_latin" "shn" "slv" "spa" "swe" "tgl" "tha" "uig" "ukr"
+	"ukr_latin" "urd" "vie")
 
-readonly LANGS=('ady' 'ara' 'arm_e' 'asm' 'bel' 'ben' 'bul' 'bur' 'ceb' 'dut' 'eng_us' 'fas' 'fre' 'geo' 'ger' 'gle'
-	'gre' 'hbs_latn' 'hin' 'hun' 'ice' 'ind' 'ita' 'jpn_hira' 'khm' 'kor' 'lav' 'lit' 'lwl' 'mkd' 'mlt_latn' 'nno' 'per'
-	'pus' 'rum' 'rus' 'shn' 'slv' 'spa' 'swe' 'tgl' 'tha' 'ukr' 'urd' 'vie_hanoi' 'wel' 'wel_sw')
+mkdir -p "${OUTPUT_BASE}"
 
 for LANG in "${LANGS[@]}"; do
 	# Train MAX_ENSEMBLE_SIZE models
