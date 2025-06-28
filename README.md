@@ -132,7 +132,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Δ</td>
   </tr>
   <tr>
-    <td rowspan="3">Indo-European (Germanic)</td>
+    <td rowspan="3">Indo-European<br>(Germanic)</td>
     <td rowspan="3">Latin</td>
     <td>German</td>
     <td>45</td>
@@ -154,7 +154,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>68</td>
     <td>-9</td>
     <td></td>
-    <td>23</td>
+    <td>61</td>
     <td></td>
   </tr>
   <tr>
@@ -166,7 +166,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>29</td>
     <td>-9</td>
     <td></td>
-    <td>61</td>
+    <td>23</td>
     <td></td>
   </tr>
   <tr>
@@ -182,7 +182,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="3">Indo-European (Romance)</td>
+    <td rowspan="3">Indo-European<br>(Romance)</td>
     <td rowspan="3">Latin</td>
     <td>Italian</td>
     <td>30</td>
@@ -232,7 +232,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td></td>
   </tr>
   <tr>
-    <td rowspan="3">Indo-European (Slavic)</td>
+    <td rowspan="3">Indo-European<br>(Slavic)</td>
     <td rowspan="3">Cyrillic</td>
     <td>Russian</td>
     <td>27</td>
@@ -282,7 +282,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>0.67</td>
   </tr>
   <tr>
-    <td rowspan="3">Indo-European (Slavic)</td>
+    <td rowspan="3">Indo-European<br>(Slavic)</td>
     <td rowspan="3">Latin</td>
     <td>Serbo-Croatian</td>
     <td>67</td>
@@ -346,15 +346,15 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td></td>
   </tr>
   <tr>
-    <td>Iranian Persian</td>
+    <td>Classical Persian</td>
     <td></td>
-    <td>65</td>
-    <td></td>
-    <td></td>
-    <td>63</td>
+    <td>57</td>
     <td></td>
     <td></td>
-    <td>65</td>
+    <td>58</td>
+    <td></td>
+    <td></td>
+    <td>51</td>
     <td></td>
   </tr>
   <tr>
@@ -515,53 +515,53 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Indo-European</td>
     <td rowspan="3">Latin</td>
     <td>Italian</td>
-    <td>19</td>
+    <td></td>
     <td>15</td>
-    <td>4</td>
-    <td>20</td>
+    <td></td>
+    <td></td>
     <td>21</td>
-    <td>-1</td>
-    <td>17</td>
+    <td></td>
+    <td></td>
     <td>16</td>
-    <td>1</td>
+    <td></td>
   </tr>
   <tr>
-    <td>Afro-Asiatic</td>
-    <td>Maltese</td>
-    <td>18</td>
-    <td>17</td>
-    <td>1</td>
-    <td>21</td>
-    <td>24</td>
-    <td>-3</td>
-    <td>15</td>
-    <td>22</td>
-    <td>-7</td>
+    <td>Austronesian</td>
+    <td>Indonesian</td>
+    <td></td>
+    <td>64</td>
+    <td></td>
+    <td></td>
+    <td>52</td>
+    <td></td>
+    <td></td>
+    <td>73</td>
+    <td></td>
   </tr>
   <tr>
     <td>Uralic</td>
     <td>Hungarian</td>
-    <td>6</td>
+    <td></td>
     <td>7</td>
-    <td>-1</td>
-    <td>8</td>
+    <td></td>
+    <td></td>
     <td>11</td>
-    <td>-3</td>
-    <td>3</td>
+    <td></td>
+    <td></td>
     <td>8</td>
-    <td>-5</td>
+    <td></td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
     <td></td>
     <td></td>
-    <td>1.33</td>
     <td></td>
     <td></td>
-    <td>-2.33</td>
     <td></td>
     <td></td>
-    <td>-3.67</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </tbody></table>
 
@@ -606,17 +606,17 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>3</td>
   </tr>
   <tr>
-    <td>Afro-Asiatic</td>
-    <td>Maltese</td>
-    <td>19</td>
-    <td>17</td>
-    <td>2</td>
-    <td>18</td>
-    <td>24</td>
-    <td>-6</td>
-    <td>17</td>
-    <td>22</td>
-    <td>-5</td>
+    <td>Austronesian</td>
+    <td>Indonesian</td>
+    <td>56</td>
+    <td>64</td>
+    <td>-8</td>
+    <td>52</td>
+    <td>52</td>
+    <td>0</td>
+    <td>57</td>
+    <td>73</td>
+    <td>-16</td>
   </tr>
   <tr>
     <td>Uralic</td>
@@ -632,17 +632,17 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-1</td>
   </tr>
   <tr>
-    <td>Austronesian</td>
-    <td>Indonesian</td>
-    <td>56</td>
-    <td>64</td>
-    <td>-8</td>
-    <td>52</td>
-    <td>52</td>
-    <td>0</td>
-    <td>57</td>
-    <td>73</td>
-    <td>-16</td>
+    <td>Afro-Asiatic</td>
+    <td>Maltese</td>
+    <td>19</td>
+    <td>17</td>
+    <td>2</td>
+    <td>18</td>
+    <td>24</td>
+    <td>-6</td>
+    <td>17</td>
+    <td>22</td>
+    <td>-5</td>
   </tr>
   <tr>
     <td colspan="3">Average</td>
@@ -686,29 +686,16 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
   <tr>
     <td rowspan="3">Indo-European</td>
-    <td>Armenian</td>
-    <td>Eastern Armenian</td>
+    <td>Arabic</td>
+    <td>Classical Persian</td>
     <td></td>
-    <td>15</td>
-    <td></td>
-    <td></td>
-    <td>16</td>
+    <td>57</td>
     <td></td>
     <td></td>
-    <td>20</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Greek</td>
-    <td>Greek</td>
-    <td></td>
-    <td>20</td>
+    <td>58</td>
     <td></td>
     <td></td>
-    <td>26</td>
-    <td></td>
-    <td></td>
-    <td>27</td>
+    <td>51</td>
     <td></td>
   </tr>
   <tr>
@@ -722,6 +709,19 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td></td>
     <td></td>
     <td>25</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Latin</td>
+    <td>Italian</td>
+    <td></td>
+    <td>15</td>
+    <td></td>
+    <td></td>
+    <td>21</td>
+    <td></td>
+    <td></td>
+    <td>16</td>
     <td></td>
   </tr>
   <tr>
@@ -766,29 +766,16 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
   <tr>
     <td rowspan="4">Indo-European</td>
-    <td>Armenian</td>
-    <td>Eastern Armenian</td>
+    <td>Arabic</td>
+    <td>Classical Persian</td>
     <td></td>
-    <td>15</td>
-    <td></td>
-    <td></td>
-    <td>16</td>
+    <td>57</td>
     <td></td>
     <td></td>
-    <td>20</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Greek</td>
-    <td>Greek</td>
-    <td></td>
-    <td>20</td>
+    <td>58</td>
     <td></td>
     <td></td>
-    <td>26</td>
-    <td></td>
-    <td></td>
-    <td>27</td>
+    <td>51</td>
     <td></td>
   </tr>
   <tr>
@@ -815,6 +802,19 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td></td>
     <td></td>
     <td>16</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Armenian</td>
+    <td>Eastern Armenian</td>
+    <td></td>
+    <td>15</td>
+    <td></td>
+    <td></td>
+    <td>16</td>
+    <td></td>
+    <td></td>
+    <td>20</td>
     <td></td>
   </tr>
   <tr>
