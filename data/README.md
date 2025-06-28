@@ -10,67 +10,79 @@
 2. Data from 2024 were preprocessed using different methods than the 2021/22 data.
     - Manual comparison and selection of datasets is required for languages that appear in both 2024 and 2021/22
       collections.
-3. All datasets are randomly split into 80% training data, 10% development data, and 10% test data.
-4. For ben/bur/ger/gle/ita/per/swe/tha (some target languages from the 2022 task), the test set values were from a
+3. For training, the data amount for each language is set to 1000 and the data samples are randomly selected if there are more available.
+4. All datasets are randomly split into 80% training data, 10% development data, and 10% test data.
+5. For ben/bur/ger/gle/ita/per/swe/tha (some target languages from the 2022 task), the test set values were from a
    [public dataset](https://github.com/CUNY-CL/wikipron/tree/master/data/scrape) that uses the same tool as in the
    shared tasks
-   ~~independently obtained by our team and processed to match the available train/dev set format as closely as
-   possible.~~
 
 ---
 
-| Language                 | Code     | Data Samples | Origin                            |
-|--------------------------|----------|--------------|-----------------------------------|
-| English                  | eng_us   | 41680        | 2021                              |
-| Dutch                    | dut      | 10348        | 2021 + 2022                       |
-| Armenian (Eastern)       | arm_e    | 10000        | 2021                              |
-| French                   | fre      | 10000        | 2021                              |
-| Georgian                 | geo      | 10000        | 2021                              |
-| Serbo-Croatian (Latin)   | hbs_latn | 10000        | 2021                              |
-| Hungarian                | hun      | 10000        | 2021                              |
-| Japanese (Hiragana)      | jpn      | 10000        | 2021                              |
-| Korean                   | kor      | 10000        | 2021                              |
-| Vietnamese (Hanoi)       | vie      | 10000        | 2021                              |
-| Hindi                    | hin      | 4500         | 2020                              |
-| Lithuanian               | lit      | 4500         | 2020                              |
-| Arabic                   | ara      | 3000         | 2024                              |
-| Bulgarian                | bul      | 3000         | 2024                              |
-| Indonesian               | ind      | 3000         | 2024                              |
-| Macedonian               | mkd      | 3000         | 2024                              |
-| Persian (Classical)      | fas      | 3000         | 2024                              |
-| Russian                  | rus      | 3000         | 2024                              |
-| Spanish                  | spa      | 3000         | 2024                              |
-| Tagalog                  | tgl      | 3000         | 2024                              |
-| Ukrainian                | ukr      | 3000         | 2024                              |
-| Urdu                     | urd      | 3000         | 2024                              |
-| Uyghur                   | uig      | 2158         | scraped                           |
-| Romanian                 | rum      | 1997         | 2021 + 2022                       |
-| Italian                  | ita      | 1824         | 2021 + 2022                       |
-| Adyghe                   | ady      | 1000         | 2021                              |
-| Assamese                 | asm      | 1000         | 2022                              |
-| Belarusian               | bel      | 1000         | 2022                              |
-| Bengali                  | ben      | 1000         | 2022 (729) + scraped (271)        | 
-| Burmese                  | bur      | 1000         | 2022                              |
-| Cebuano                  | ceb      | 1000         | 2022 (126) + scraped (847)        | 
-| Central Khmer            | khm      | 1000         | 2021                              |
-| Eastern Lawa             | lwl      | 1000         | 2022 (253) + oversampled          |
-| German                   | ger      | 1000         | 2022                              |
-| Greek                    | gre      | 1000         | 2021                              |
-| Irish                    | gle      | 1000         | 2022                              |
-| Icelandic                | ice      | 1000         | 2021                              |
-| Latvian                  | lav      | 1000         | 2021                              |
-| Maltese (Latin)          | mlt_latn | 1000         | 2021                              |
-| Norwegian Nynorsk        | nno      | 1000         | 2022                              |
-| Pashto                   | pus      | 1000         | 2022 (721) + scraped (262) + o.s. | 
-| Persian (Iranian)        | per      | 1000         | 2022 (565) + o.s.                 |
-| Polish                   | pol      | 1000         | scraped                           |
-| Shan                     | shn      | 1000         | 2022 (841) + scraped (157)        | 
-| Slovenian                | slv      | 1000         | 2021                              |
-| Swedish                  | swe      | 1000         | 2022                              |
-| Thai                     | tha      | 1000         | 2022                              |
-| Welsh                    | wel      | 1000         | 2022                              |
-| Welsh (Southern Dialect) | wel_sw   | 1000         | 2021                              |
+| Language               | Code    | Data Samples | Origin                            |
+|------------------------|---------|--------------|-----------------------------------|
+| American English       | eng_us  | 41680        | 2021                              |
+| Dutch                  | nld     | 10348        | 2021 + 2022                       |
+| Eastern Armenian       | hye     | 10000        | 2021                              |
+| French                 | fra     | 10000        | 2021                              |
+| Georgian               | kat     | 10000        | 2021                              |
+| Serbo-Croatian (Latin) | hbs     | 10000        | 2021                              |
+| Hungarian              | hun     | 10000        | 2021                              |
+| Japanese (Hiragana)    | jpn     | 10000        | 2021                              |
+| Korean (Hangul)        | kor     | 10000        | 2021                              |
+| Vietnamese (Hanoi)     | vie     | 10000        | 2021                              |
+| Hindi                  | hin     | 4500         | 2020                              |
+| Lithuanian             | lit     | 4500         | 2020                              |
+| Arabic                 | arb     | 3000         | 2024                              |
+| Bulgarian              | bul     | 3000         | 2024                              |
+| Indonesian             | ind     | 3000         | 2024                              |
+| Macedonian             | mkd     | 3000         | 2024                              |
+| Classical Persian      | fas_cls | 3000         | 2024                              |
+| Russian                | rus     | 3000         | 2024                              |
+| Spanish                | spa     | 3000         | 2024                              |
+| Tagalog                | tgl     | 3000         | 2024                              |
+| Ukrainian              | ukr     | 3000         | 2024                              |
+| Urdu                   | urd     | 3000         | 2024                              |
+| Uyghur                 | uig     | 2158         | scraped                           |
+| Romanian               | ron     | 1997         | 2021 + 2022                       |
+| Italian                | ita     | 1824         | 2021 + 2022                       |
+| Adyghe                 | ady     | 1000         | 2021                              |
+| Assamese               | asm     | 1000         | 2022                              |
+| Belarusian             | bel     | 1000         | 2022                              |
+| Bengali                | ben     | 1000         | 2022 (729) + scraped (271)        | 
+| Burmese                | mya     | 1000         | 2022                              |
+| Cebuano                | ceb     | 1000         | 2022 (126) + scraped (847)        | 
+| Central Khmer          | khm     | 1000         | 2021                              |
+| Eastern Lawa           | lwl     | 1000         | 2022 (253) + oversampled          |
+| German                 | deu     | 1000         | 2022                              |
+| Greek                  | ell     | 1000         | 2021                              |
+| Irish                  | gle     | 1000         | 2022                              |
+| Icelandic              | isl     | 1000         | 2021                              |
+| Latvian                | lav     | 1000         | 2021                              |
+| Maltese (Latin)        | mlt     | 1000         | 2021                              |
+| Norwegian Nynorsk      | nno     | 1000         | 2022                              |
+| Pashto                 | pus     | 1000         | 2022 (721) + scraped (262) + o.s. | 
+| Iranian Persian        | pes     | 1000         | 2022 (565) + o.s.                 |
+| Polish                 | pol     | 1000         | scraped                           |
+| Shan                   | shn     | 1000         | 2022 (841) + scraped (157)        | 
+| Slovenian              | slv     | 1000         | 2021                              |
+| Swedish                | swe     | 1000         | 2022                              |
+| Thai                   | tha     | 1000         | 2022                              |
+| Welsh                  | cym     | 1000         | 2022                              |
 
+### Other Datasets
+
+| Language           | Code      | Data Samples | Origin                 |
+|--------------------|-----------|--------------|------------------------|
+| Korean (Jamo)      | kor_jamo  | 1000         | Decomposed from Hangul |
+| Bulgarian (Latin)  | bul_latin | 1000         | Romanized              |
+| Macedonian (Latin) | mkd_latin | 1000         | Romanized              |
+| Russian (Latin)    | rus_latin | 1000         | Romanized              |
+| Ukrainian (Latin)  | ukr_latin | 1000         | Romanized              |
+
+Used Tool:
+
+- [Hangul syllable decomposition](https://github.com/JDongian/python-jamo)
+- [Universal Romanizer](https://github.com/isi-nlp/uroman)
 
 # Category
 
@@ -79,14 +91,14 @@
     <th>Family/Script</th>
     <th>Branch</th>
     <th>Latin</th>
-    <th>Greek</th>
     <th>Cyrillic</th>
-    <th>Georgian</th>
     <th>Arabic</th>
-    <th>Hiragana</th>
-    <th>Hangul</th>
-    <th>Devanagari</th>
+    <th>Georgian</th>
+    <th>Greek</th>
     <th>Armenian</th>
+    <th>Hangul</th>
+    <th>Hiragana</th>
+    <th>Devanagari</th>
     <th>Bengali-Assamese</th>
     <th>Mon-Burmese</th>
     <th>Khmer</th>
@@ -128,9 +140,9 @@
   </tr>
   <tr>
     <td>Balto-Slavic</td>
-    <td>Serbo-Croatian (Latin), Lithuanian, Latvian, Slovenian, Polish</td>
-    <td></td>
+    <td>Serbo-Croatian, Lithuanian, Latvian, Slovenian, Polish</td>
     <td>Russian, Ukrainian, Bulgarian, Macedonian, Belarusian</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -144,7 +156,7 @@
   </tr>
   <tr>
     <td>Celtic</td>
-    <td>Irish, Welsh, Welsh (Souther Dialect)</td>
+    <td>Irish, Welsh</td>
     <td></td>
     <td></td>
     <td></td>
@@ -161,10 +173,10 @@
   <tr>
     <td>Hellenic</td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td>Greek</td>
-    <td></td>
-    <td></td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -181,10 +193,10 @@
     <td></td>
     <td></td>
     <td></td>
+    <td>Eastern Armenian</td>
     <td></td>
     <td></td>
     <td></td>
-    <td>Armenian (Eastern)</td>
     <td></td>
     <td></td>
     <td></td>
@@ -194,13 +206,13 @@
     <td>Indo-Iranian</td>
     <td></td>
     <td></td>
+    <td>Urdu, Classical | Iranian Persian, Pashto</td>
     <td></td>
     <td></td>
-    <td>Urdu, Persian (Classical | Iranian), Pashto</td>
+    <td></td>
     <td></td>
     <td></td>
     <td>Hindi</td>
-    <td></td>
     <td>Bengali, Assamese</td>
     <td></td>
     <td></td>
@@ -231,9 +243,9 @@
     <td></td>
     <td></td>
     <td></td>
-    <td>Japanese (Hiragana)</td>
     <td></td>
     <td></td>
+    <td>Japanese</td>
     <td></td>
     <td></td>
     <td></td>
@@ -260,7 +272,7 @@
   <tr>
     <td>Austroasiatic</td>
     <td></td>
-    <td>Vietnamese (Hanoi)</td>
+    <td>Vietnamese</td>
     <td></td>
     <td></td>
     <td></td>
@@ -294,11 +306,11 @@
   <tr>
     <td>Afro-Asiatic</td>
     <td></td>
-    <td>Maltese (Latin)</td>
-    <td></td>
-    <td></td>
+    <td>Maltese</td>
     <td></td>
     <td>Arabic</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -312,8 +324,8 @@
     <td>Northwest Caucasian</td>
     <td></td>
     <td></td>
-    <td></td>
     <td>Adyghe</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -381,9 +393,9 @@
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
     <td>Uyghur</td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>

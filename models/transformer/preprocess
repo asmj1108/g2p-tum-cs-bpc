@@ -5,10 +5,11 @@ set -euo pipefail
 # Fairseq expects six files:
 # Two train, two dev, two test, each distinguished by prefixes.
 # One file is the source and one is the target, distinguished by suffixes.
-readonly DATA=../../data
-readonly LANGS=('ady' 'ara' 'arm_e' 'asm' 'bel' 'ben' 'bul' 'bur' 'ceb' 'dut' 'eng_us' 'fas' 'fre' 'geo' 'ger' 'gle'
-	'gre' 'hbs_latn' 'hin' 'hun' 'ice' 'ind' 'ita' 'jpn_hira' 'khm' 'kor' 'lav' 'lit' 'lwl' 'mkd' 'mlt_latn' 'nno' 'per'
-	'pus' 'rum' 'rus' 'shn' 'slv' 'spa' 'swe' 'tgl' 'tha' 'ukr' 'urd' 'vie_hanoi' 'wel' 'wel_sw')
+DATA="../../data"
+LANGS=("ady" "arb" "asm" "bel" "ben" "bul" "bul_latin" "ceb" "cym" "deu" "ell" "eng_us" "fas_cls" "fra" "gle" "hbs"
+	"hin" "hun" "hye" "ind" "isl" "ita" "jpn" "kat" "khm" "kor" "kor_jamo" "lav" "lit" "lwl" "mkd" "mkd_latin" "mlt"
+	"mya" "nld" "nno" "pes" "pol" "pus" "ron" "rus" "rus_latin" "shn" "slv" "spa" "swe" "tgl" "tha" "uig" "ukr"
+	"ukr_latin" "urd" "vie")
 
 tsv() {
 	for LANG in "${LANGS[@]}"; do

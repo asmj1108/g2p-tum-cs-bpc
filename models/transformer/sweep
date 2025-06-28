@@ -46,9 +46,12 @@ readonly DROPOUTS=(.1 .2 .3)
 # Prediction options.
 readonly BEAM=5
 
-LANGS=('ara' 'arm_e' 'asm' 'bel' 'ben' 'bul' 'bur' 'ceb' 'dut' 'eng_us' 'fas' 'fre' 'geo' 'ger' 'gle'
-	'gre' 'hbs_latn' 'hin' 'hun' 'ice' 'ind' 'ita' 'jpn_hira' 'khm' 'kor' 'lav' 'lit' 'lwl' 'mkd' 'mlt_latn' 'nno' 'per'
-	'pus' 'rum' 'rus' 'shn' 'slv' 'spa' 'swe' 'tgl' 'tha' 'ukr' 'urd' 'vie_hanoi' 'wel' 'wel_sw')
+LANGS=("ady" "arb" "asm" "bel" "ben" "bul" "bul_latin" "ceb" "cym" "deu" "ell" "eng_us" "fas_cls" "fra" "gle" "hbs"
+	"hin" "hun" "hye" "ind" "isl" "ita" "jpn" "kat" "khm" "kor" "kor_jamo" "lav" "lit" "lwl" "mkd" "mkd_latin" "mlt"
+	"mya" "nld" "nno" "pes" "pol" "pus" "ron" "rus" "rus_latin" "shn" "slv" "spa" "swe" "tgl" "tha" "uig" "ukr"
+	"ukr_latin" "urd" "vie")
+# Choose languages for hyperparameter tuning process
+TUNING_LANGS=("ady" "eng_us" "khm" "pus" "swe" "urd")
 
 MODE="default"
 
@@ -185,22 +188,22 @@ large_decoder() {
 }
 
 run_hyperparameter_tuning() {
-	# Choose a language for hyperparameter tuning process
-	local -r LANGUAGE="ady"
-	for BATCH in "${BATCHES[@]}"; do
-		for DROPOUT in "${DROPOUTS[@]}"; do
-			small_encoder
-			small_decoder
-			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-s"
-			small_encoder
-			large_decoder
-			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-l"
-			large_encoder
-			small_decoder
-			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-s"
-			large_encoder
-			large_decoder
-			train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-l"
+	for LANGUAGE in "${TUNING_LANGS[@]}"; do
+		for BATCH in "${BATCHES[@]}"; do
+			for DROPOUT in "${DROPOUTS[@]}"; do
+				small_encoder
+				small_decoder
+				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-s"
+				small_encoder
+				large_decoder
+				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-s-l"
+				large_encoder
+				small_decoder
+				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-s"
+				large_encoder
+				large_decoder
+				train_evaluate "checkpoints/${LANGUAGE}-${BATCH}-${DROPOUT}-l-l"
+			done
 		done
 	done
 }
