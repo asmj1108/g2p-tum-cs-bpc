@@ -1134,10 +1134,6 @@ although the performance varies across different languages.
 
 - Summary of the G2P performance of the Transphone toolkit on several languages
 
-| Language   |   WER   |
-|------------|---------|
-| Dutch      |   51.00 |
-| English    |   76.00 |
-| French     |   7.00  |
-| Italian    |   21.00 |
-| Spanish    |   16.00 |
+| Language  | Dutch | English | French | Italian | Spanish |
+|-----------|-------|---------|--------|---------|---------|
+| WER       | 51.00 | 76.00   | 7.00   | 21.00   | 16.00   |
