@@ -6,10 +6,10 @@ set -euo pipefail
 # Two train, two dev, two test, each distinguished by prefixes.
 # One file is the source and one is the target, distinguished by suffixes.
 DATA="../../data"
-LANGS=("ady" "arb" "asm" "bel" "ben" "bul" "bul_latin" "ceb" "cym" "deu" "ell" "eng_us" "fas_cls" "fra" "gle" "hbs"
-	"hin" "hun" "hye" "ind" "isl" "ita" "jpn" "kat" "khm" "kor" "kor_jamo" "lav" "lit" "lwl" "mkd" "mkd_latin" "mlt"
-	"mya" "nld" "nno" "pes" "pol" "pus" "ron" "rus" "rus_latin" "shn" "slv" "spa" "swe" "tgl" "tha" "uig" "ukr"
-	"ukr_latin" "urd" "vie")
+LANGS=("ady" "arb" "arb_latin" "asm" "bel" "ben" "bul" "bul_latin" "ceb" "cym" "deu" "ell" "ell_latin" "eng_us"
+	"fas_cls" "fas_cls_latin" "fra" "gle" "hbs" "hin" "hun" "hye" "hye_latin" "ind" "isl" "ita" "jpn" "kat" "khm" "kor"
+	"kor_jamo" "lav" "lit" "lwl" "mkd" "mkd_latin" "mlt" "mya" "nld" "nno" "pes" "pol" "pus" "pus_latin" "ron" "rus"
+	"rus_latin" "shn" "slv" "spa" "swe" "tgl" "tha" "uig" "uig_latin" "ukr" "ukr_latin" "urd" "urd_latin" "vie")
 
 tsv() {
 	for LANG in "${LANGS[@]}"; do
