@@ -1388,7 +1388,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>-15.0</td>
   </tr>
 </tbody></table>
 
