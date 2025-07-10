@@ -1112,80 +1112,98 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 <table><thead>
   <tr>
     <th></th>
-    <th colspan="3">Transducer</th>
-    <th colspan="3">Transformer</th>
-    <th colspan="3">Attentive LSTM</th>
+    <th colspan="4">Transducer</th>
+    <th colspan="4">Transformer</th>
+    <th colspan="4">Attentive LSTM</th>
   </tr></thead>
 <tbody>
   <tr>
     <td></td>
-    <td>Latin</td>
+    <td>uroman</td>
+    <td>epitran</td>
     <td>Arabic</td>
     <td>Δ</td>
-    <td>Latin</td>
+    <td>uroman</td>
+    <td>epitran</td>
     <td>Arabic</td>
     <td>Δ</td>
-    <td>Latin</td>
+    <td>uroman</td>
+    <td>epitran</td>
     <td>Arabic</td>
     <td>Δ</td>
   </tr>
   <tr>
     <td>Arabic</td>
     <td>70</td>
+    <td>63</td>
     <td>53</td>
     <td>17</td>
     <td>67</td>
+    <td></td>
     <td>43</td>
     <td>24</td>
     <td>70</td>
+    <td></td>
     <td>45</td>
     <td>25</td>
   </tr>
   <tr>
     <td>Classical Persian</td>
     <td>48</td>
+    <td>58</td>
     <td>57</td>
     <td>-9</td>
     <td>49</td>
+    <td></td>
     <td>58</td>
     <td>-9</td>
     <td>50</td>
+    <td></td>
     <td>51</td>
     <td>-1</td>
   </tr>
   <tr>
     <td>Pashto</td>
     <td>74</td>
+    <td>/</td>
     <td>67</td>
     <td>7</td>
     <td>76</td>
+    <td>/</td>
     <td>68</td>
     <td>8</td>
     <td>72</td>
+    <td>/</td>
     <td>66</td>
     <td>6</td>
   </tr>
   <tr>
     <td>Urdu</td>
     <td>72</td>
+    <td>73</td>
     <td>72</td>
     <td>0</td>
     <td>67</td>
+    <td></td>
     <td>66</td>
     <td>1</td>
     <td>78</td>
+    <td></td>
     <td>77</td>
     <td>1</td>
   </tr>
   <tr>
     <td>Uyghur</td>
     <td>28</td>
+    <td>4</td>
     <td>0</td>
     <td>28</td>
     <td>38</td>
+    <td></td>
     <td>3</td>
     <td>35</td>
     <td>35</td>
+    <td></td>
     <td>2</td>
     <td>33</td>
   </tr>
@@ -1193,17 +1211,20 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>Average</td>
     <td></td>
     <td></td>
+    <td></td>
     <td>8.6</td>
     <td></td>
     <td></td>
+    <td></td>
     <td>11.8</td>
+    <td></td>
     <td></td>
     <td></td>
     <td>12.8</td>
   </tr>
 </tbody></table>
 
-#### Multilingual
+#### Multilingual(uroman)
 
 <table><thead>
   <tr>
@@ -1239,7 +1260,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
   <tr>
     <td>Classical Persian*</td>
-    <td>62</td>
+    <td>66</td>
     <td>48</td>
     <td>14</td>
     <td>42</td>
@@ -1248,18 +1269,6 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>50</td>
     <td>50</td>
     <td>0</td>
-  </tr>
-  <tr>
-    <td>Pashto*</td>
-    <td>82</td>
-    <td>74</td>
-    <td>8</td>
-    <td>70</td>
-    <td>76</td>
-    <td>-6</td>
-    <td>74</td>
-    <td>72</td>
-    <td>2</td>
   </tr>
   <tr>
     <td>Urdu*</td>
@@ -1296,6 +1305,90 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td></td>
     <td></td>
     <td>-2.6</td>
+  </tr>
+</tbody></table>
+
+#### Multilingual(epitran)
+
+<table><thead>
+  <tr>
+    <th></th>
+    <th colspan="3">Transducer</th>
+    <th colspan="3">Transformer</th>
+    <th colspan="3">Attentive LSTM</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+    <td>Multi</td>
+    <td>Mono</td>
+    <td>Δ</td>
+  </tr>
+  <tr>
+    <td>Arabic*</td>
+    <td>58</td>
+    <td>63</td>
+    <td>-5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Classical Persian*</td>
+    <td>66</td>
+    <td>58</td>
+    <td>8</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Urdu*</td>
+    <td>77</td>
+    <td>73</td>
+    <td>4</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Uyghur*</td>
+    <td>10</td>
+    <td>4</td>
+    <td>6</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Average</td>
+    <td></td>
+    <td></td>
+    <td>3.3</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </tbody></table>
 
