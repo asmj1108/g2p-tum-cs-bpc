@@ -2096,3 +2096,19 @@ although the performance varies across different languages.
 | Language  | Dutch | English | French | Italian | Spanish |
 |-----------|-------|---------|--------|---------|---------|
 | WER       | 51.00 | 76.00   | 7.00   | 21.00   | 16.00   |
+
+### Statistical Summary Table
+
+| Models                | Multi > Mono | Multi < Mono | Average Δ |
+|-----------------------|--------------|--------------|-----------|
+| **Neural Transducer** | 15           | 3            | +5.11     |
+| **Transformer**       | 6            | 12           | -2.44     |
+| **Attentive LSTM**    | 6            | 12           | -1.33     |
+
+### ByT5 Subset vs All Statistical Summary
+
+| Comparison        | Count | Average Δ |
+|-------------------|-------|-----------|
+| **Subset > All**  | 8     | +2.25     |
+| **Subset < All**  | 10    | -4.10     |
+| **Overall**       | 18    | **-1.22** |
