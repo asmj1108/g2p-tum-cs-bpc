@@ -71,18 +71,30 @@
 
 ### Other Datasets
 
-| Language           | Code      | Data Samples | Origin                 |
-|--------------------|-----------|--------------|------------------------|
-| Korean (Jamo)      | kor_jamo  | 1000         | Decomposed from Hangul |
-| Bulgarian (Latin)  | bul_latin | 1000         | Romanized              |
-| Macedonian (Latin) | mkd_latin | 1000         | Romanized              |
-| Russian (Latin)    | rus_latin | 1000         | Romanized              |
-| Ukrainian (Latin)  | ukr_latin | 1000         | Romanized              |
+| Language                  | Code          | Data Samples | Origin                  |
+|---------------------------|---------------|--------------|-------------------------|
+| Arabic (Latin)            | arb_ept       | 1000         | Romanized using Epitran |
+| Arabic (Latin)            | arb_latin     | 1000         | Romanized using uroman  |
+| Bulgarian (Latin)         | bul_latin     | 1000         | Romanized using uroman  |
+| Classical Persian (Latin) | fas_cls_ept   | 1000         | Romanized using Epitran |
+| Classical Persian (Latin) | fas_cls_latin | 1000         | Romanized using uroman  |
+| Eastern Armenian (Latin)  | hye_latin     | 1000         | Romanized using uroman  |
+| Greek (Latin)             | ell_latin     | 1000         | Romanized using uroman  |
+| Korean (Jamo)             | kor_jamo      | 1000         | Decomposed from Hangul  |
+| Macedonian (Latin)        | mkd_latin     | 1000         | Romanized using uroman  |
+| Pashto (Latin)            | pus_latin     | 1000         | Romanized using uroman  |
+| Russian (Latin)           | rus_latin     | 1000         | Romanized using uroman  |
+| Ukrainian (Latin)         | ukr_latin     | 1000         | Romanized using uroman  |
+| Urdu (Latin)              | urd_ept       | 1000         | Romanized using Epitran |
+| Urdu (Latin)              | urd_latin     | 1000         | Romanized using uroman  |
+| Uyghur (Latin)            | uig_ept       | 1000         | Romanized using Epitran |
+| Uyghur (Latin)            | uig_latin     | 1000         | Romanized using uroman  |
 
 Used Tool:
 
 - [Hangul syllable decomposition](https://github.com/JDongian/python-jamo)
-- [Universal Romanizer](https://github.com/isi-nlp/uroman)
+- [uroman: Universal Romanizer](https://github.com/isi-nlp/uroman)
+- [Epitran: Orthographic Text to IPA Transliteration](https://github.com/dmort27/epitran)
 
 # Category
 
