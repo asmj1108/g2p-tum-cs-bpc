@@ -1,0 +1,8 @@
+name: g2p-byt5
+channels:
+ - conda-forge
+dependencies:
+ - transformers<4.23
+ - pytorch<2.6
+ - evaluate
+ - jiwer
