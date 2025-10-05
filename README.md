@@ -1,60 +1,74 @@
-# Monolingual Results
+# Multilingual Low-resource Grapheme-to-Phoneme Conversion
 
-| Language              | Pair n-Gram Model<br/>(baseline 2020) | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive LSTM<br/>(baseline 2024) |
-|-----------------------|---------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------|
-| Adyghe                | 27                                    | 39                                              | 20                                       | 30                                 |
-| Arabic                | 43                                    | 43                                              | 53                                       | 45                                 |
-| Assamese              | 14                                    | 15                                              | 7                                        | 12                                 |
-| Belarusian            | 7                                     | 6                                               | 2                                        | 2                                  |
-| Bengali               | 70                                    | 78                                              | 68                                       | 67                                 |
-| Bulgarian             | 37                                    | 30                                              | 32                                       | 27                                 |
-| Burmese               | 39                                    | 41                                              | 29                                       | 35                                 |
-| Cebuano               | 22                                    | 26                                              | 20                                       | 20                                 |
-| Central Khmer         | 56                                    | 43                                              | 31                                       | 35                                 |
-| Classical Persian     | 51                                    | 58                                              | 57                                       | 51                                 |
-| Dutch                 | 32                                    | 29                                              | 24                                       | 23                                 |
-| Eastern Armenian      | 17                                    | 16                                              | 15                                       | 20                                 |
-| Eastern Lawa          | 44                                    | 24                                              | 8                                        | 12                                 |
-| English               | 70                                    | 70                                              | 63                                       | 66                                 |
-| French                | 31                                    | 29                                              | 23                                       | 27                                 |
-| Georgian              | 0                                     | 4                                               | 0                                        | 1                                  |
-| German                | 49                                    | 56                                              | 46                                       | 45                                 |
-| Greek                 | 27                                    | 26                                              | 20                                       | 27                                 |
-| Hindi                 | 23                                    | 24                                              | 11                                       | 13                                 |
-| Hungarian             | 9                                     | 11                                              | 7                                        | 8                                  |
-| Icelandic             | 35                                    | 24                                              | 12                                       | 16                                 |
-| Indonesian            | 58                                    | 52                                              | 64                                       | 73                                 |
-| Iranian Persian       | 66                                    | 63                                              | 65                                       | 65                                 |
-| Irish                 | 57                                    | 46                                              | 43                                       | 39                                 |
-| Italian               | 22                                    | 21                                              | 15                                       | 16                                 |
-| Japanese              | 23                                    | 20                                              | 10                                       | 12                                 |
-| Korean                | 81                                    | 89                                              | 23                                       | 100                                |
-| Latvian               | 51                                    | 51                                              | 51                                       | 50                                 |
-| Lithuanian            | 32                                    | 35                                              | 33                                       | 31                                 |
-| Macedonian            | 6                                     | 5                                               | 5                                        | 5                                  |
-| Maltese               | 27                                    | 24                                              | 17                                       | 22                                 |
-| Norwegian Nynorsk     | 61                                    | 69                                              | 66                                       | 69                                 |
-| Pashto                | 70                                    | 68                                              | 67                                       | 66                                 |
-| Polish                | 9                                     | 8                                               | 4                                        | 7                                  |
-| Romanian              | 10                                    | 17                                              | 9                                        | 17                                 |
-| Russian               | 31                                    | 21                                              | 23                                       | 25                                 |
-| Serbo-Croatian        | 84                                    | 69                                              | 64                                       | 69                                 |
-| Shan                  | 6                                     | 10                                              | 5                                        | 4                                  |
-| Slovenian             | 73                                    | 52                                              | 56                                       | 50                                 |
-| Spanish               | 3                                     | 10                                              | 4                                        | 3                                  |
-| Swedish               | 67                                    | 68                                              | 59                                       | 61                                 |
-| Tagalog               | 11                                    | 17                                              | 13                                       | 11                                 |
-| Thai                  | 70                                    | 49                                              | 39                                       | 42                                 |
-| Ukrainian             | 27                                    | 26                                              | 19                                       | 18                                 |
-| Urdu                  | 67                                    | 66                                              | 72                                       | 77                                 |
-| Uyghur                | 0                                     | 3                                               | 0                                        | 2                                  |
-| Vietnamese            | 44                                    | 20                                              | 5                                        | 4                                  |
-| Welsh                 | 33                                    | 20                                              | 12                                       | 19                                 |
-| **Macro-average WER** | **37.33**                             | **35.23**                                       | **28.98**                                | **32.06**                          |
+**Main Deliverables:**
 
-## Error Analysis
+- [Poster](Poster.pdf)
 
-### Korean
+  A concise, visual overview of the project’s goals and key results.  
+  
+
+- [Report](Report.pdf)
+
+  A polished, in-depth document covering the methodology, experimental setup, detailed results, and discussion.  
+
+---
+## Monolingual Results
+
+| Language              | Encoder-decoder Transformer<br/>(baseline 2020) | Neural Transducer<br/>(baseline 2021/22) | Attentive LSTM<br/>(baseline 2024) |
+|-----------------------|-------------------------------------------------|------------------------------------------|------------------------------------|
+| Adyghe                | 39                                              | 20                                       | 30                                 |
+| Arabic                | 43                                              | 53                                       | 45                                 |
+| Assamese              | 15                                              | 7                                        | 12                                 |
+| Belarusian            | 6                                               | 2                                        | 2                                  |
+| Bengali               | 78                                              | 68                                       | 67                                 |
+| Bulgarian             | 30                                              | 32                                       | 27                                 |
+| Burmese               | 41                                              | 29                                       | 35                                 |
+| Cebuano               | 26                                              | 20                                       | 20                                 |
+| Central Khmer         | 43                                              | 31                                       | 35                                 |
+| Classical Persian     | 58                                              | 57                                       | 51                                 |
+| Dutch                 | 29                                              | 24                                       | 23                                 |
+| Eastern Armenian      | 16                                              | 15                                       | 20                                 |
+| Eastern Lawa          | 24                                              | 8                                        | 12                                 |
+| English               | 70                                              | 63                                       | 66                                 |
+| French                | 29                                              | 23                                       | 27                                 |
+| Georgian              | 4                                               | 0                                        | 1                                  |
+| German                | 56                                              | 46                                       | 45                                 |
+| Greek                 | 26                                              | 20                                       | 27                                 |
+| Hindi                 | 24                                              | 11                                       | 13                                 |
+| Hungarian             | 11                                              | 7                                        | 8                                  |
+| Icelandic             | 24                                              | 12                                       | 16                                 |
+| Indonesian            | 52                                              | 64                                       | 73                                 |
+| Iranian Persian       | 63                                              | 65                                       | 65                                 |
+| Irish                 | 46                                              | 43                                       | 39                                 |
+| Italian               | 21                                              | 15                                       | 16                                 |
+| Japanese              | 20                                              | 10                                       | 12                                 |
+| Korean                | 89                                              | 23                                       | 100                                |
+| Latvian               | 51                                              | 51                                       | 50                                 |
+| Lithuanian            | 35                                              | 33                                       | 31                                 |
+| Macedonian            | 5                                               | 5                                        | 5                                  |
+| Maltese               | 24                                              | 17                                       | 22                                 |
+| Norwegian Nynorsk     | 69                                              | 66                                       | 69                                 |
+| Pashto                | 68                                              | 67                                       | 66                                 |
+| Polish                | 8                                               | 4                                        | 7                                  |
+| Romanian              | 17                                              | 9                                        | 17                                 |
+| Russian               | 21                                              | 23                                       | 25                                 |
+| Serbo-Croatian        | 69                                              | 64                                       | 69                                 |
+| Shan                  | 10                                              | 5                                        | 4                                  |
+| Slovenian             | 52                                              | 56                                       | 50                                 |
+| Spanish               | 10                                              | 4                                        | 3                                  |
+| Swedish               | 68                                              | 59                                       | 61                                 |
+| Tagalog               | 17                                              | 13                                       | 11                                 |
+| Thai                  | 49                                              | 39                                       | 42                                 |
+| Ukrainian             | 26                                              | 19                                       | 18                                 |
+| Urdu                  | 66                                              | 72                                       | 77                                 |
+| Uyghur                | 3                                               | 0                                        | 2                                  |
+| Vietnamese            | 20                                              | 5                                        | 4                                  |
+| Welsh                 | 20                                              | 12                                       | 19                                 |
+| **Macro-average WER** | **35.23**                                       | **28.98**                                | **32.06**                          |
+
+### Error Analysis
+
+#### Korean
 
 |        | Neutral Transducer | Encoder-Decoder Transformer | Attentive LSTM |
 |--------|--------------------|-----------------------------|----------------|
@@ -63,7 +77,7 @@
 
 ---
 
-# How Data Amount Affects Performance of Transformer Model
+## How Data Amount Affects Performance of Transformer Model
 
 Comparing best performing model and transformer on different amount fo English data
 
@@ -83,9 +97,9 @@ Comparing best performing model and transformer on different amount fo English d
 
 ---
 
-# Multilingual Approach
+## Multilingual Approach
 
-A tag comprising a language code (e.g. <|ENG|> for English, <|DEU|> for German) is prepended to each grapheme sequence
+A tag comprising a language code (e.g. <|ENG|> for English) is prepended to each grapheme sequence
 source. The datasets of each language are simply concatenated.
 
 #### Does converting the language tag to the corresponding script of the language improve the model performance?
@@ -99,13 +113,13 @@ Using `slavic_cyrillic` dataset we got following validation WER:
 | Lowercase Latin    | 32.33             | 28.00                      | 27.00          |
 | No tag             | 45.00             | 44.67                      | 44.67          |
 
-## Results
+### Results
 
 <!---
 ## How Language Family and Language Script affects
 -->
 
-### Same Language Family and Same Script
+#### Same Language Family and Same Script
 
 <table><thead>
   <tr>
@@ -484,7 +498,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-### Different Language Family and Same Script
+#### Different Language Family and Same Script
 
 <table><thead>
   <tr>
@@ -635,7 +649,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-#### Larger Model/Dataset
+##### Larger Model/Dataset
 
 <table><thead>
   <tr>
@@ -741,7 +755,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-### Same Language Family and Different Script
+#### Same Language Family and Different Script
 
 <table><thead>
   <tr>
@@ -832,7 +846,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-#### Larger Model/Dataset
+##### Larger Model/Dataset
 
 <table><thead>
   <tr>
@@ -938,11 +952,11 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-## Effect of Transliteration
+### Effect of Transliteration
 
-### Latin transliteration of languages with Cyrillic script
+#### Latin transliteration of languages with Cyrillic script
 
-#### Monolingual
+##### Monolingual
 
 <table><thead>
   <tr>
@@ -1026,7 +1040,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-#### Multilingual Dataset - Slavic Latin
+##### Multilingual Dataset - Slavic Latin
 
 <table><thead>
   <tr>
@@ -1165,9 +1179,9 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-### Latin transliteration of languages with Arabic script
+#### Latin transliteration of languages with Arabic script
 
-#### Monolingual
+##### Monolingual
 
 <table><thead>
   <tr>
@@ -1305,7 +1319,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-#### Multilingual (uroman)
+##### Multilingual (uroman)
 
 <table><thead>
   <tr>
@@ -1402,7 +1416,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-#### Multilingual (Epitran)
+##### Multilingual (Epitran)
 
 <table><thead>
   <tr>
@@ -1499,9 +1513,9 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-### Latin transliteration of Indo-European languages
+#### Latin transliteration of Indo-European languages
 
-#### Monolingual
+##### Monolingual
 
 <table><thead>
   <tr>
@@ -1561,7 +1575,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-#### Multilingual
+##### Multilingual
 
 <table><thead>
   <tr>
@@ -1700,9 +1714,9 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-## Influence of Languages on each other in a dataset
+### Influence of Languages on each other in a dataset
 
-### Language Family and Script
+#### Language Family and Script
 
 <table><tbody>
   <tr>
@@ -1800,7 +1814,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-### Classical/Iranian Persian and Uyghur
+#### Classical/Iranian Persian and Uyghur
 
 <table><thead>
   <tr>
@@ -1899,7 +1913,7 @@ Using `slavic_cyrillic` dataset we got following validation WER:
   </tr>
 </tbody></table>
 
-### Maltese
+#### Maltese
 
 <table><thead>
   <tr>
@@ -2054,118 +2068,3 @@ Using `slavic_cyrillic` dataset we got following validation WER:
     <td>-10</td>
   </tr>
 </tbody></table>
-
---- 
-
-# Reference Result from previous shared task
-
-## 2022
-
-### Model
-
-**Baseline**: A neural transducer system using an imitation learning paradigm (dyNET framework)
-
-**Submissions**:
-
-1. [Tü-G2P](https://aclanthology.org/2023.sigmorphon-1.28.pdf): A series of sequence labelling systems to G2P tasks,
-   which use ​simpler alignment​ rather than dynamic transducer-based alignment.(Pytorch)
-2. [Hammond](https://aclanthology.org/2023.sigmorphon-1.29.pdf) ([Repo](https://github.com/hammondm/g2p2022)): A
-   non-neural system based on OpenFST and uses weighted finite-state transducers and expectation-maximization to compute
-   the best many-to-many alignment of letters and phonetic symbol
-3. ~~[mSLAM](https://aclanthology.org/2023.sigmorphon-1.31.pdf): Non-archival; abstract only;~~ useless
-4. ~~[NFST](https://aclanthology.org/2023.sigmorphon-1.30.pdf): Non-archival; abstract only;~~ useless
-
-### Reference Result:
-
-- Baseline
-
-| Language | Bengali | Burmese | German | Irish | Italian | Persian | Swedish | Tagalog | Thai  | Ukrainian | Macro-average |
-|----------|---------|---------|--------|-------|---------|---------|---------|---------|-------|-----------|---------------|
-| WER      | 67.12   | 29.00   | 42.00  | 38.00 | 15.00   | 59.65   | 45.00   | 20.00   | 21.00 | 32.00     | 36.88         |
-
-- Hammond (trigram alignment)
-
-| Language | Bengali | Burmese | German | Irish | Italian | Persian | Swedish | Tagalog | Thai  | Ukrainian | Macro-average |
-|----------|---------|---------|--------|-------|---------|---------|---------|---------|-------|-----------|---------------|
-| WER      | 68.49   | 48.00   | 61.00  | 51.00 | 25.00   | 67.86   | 55.00   | 18.00   | 72.00 | 50.00     | 51.63         |
-
-## 2024
-
-### Model
-
-**Baseline**: attentive_gru, attentive_lstm, gru, hard_attention_gru, lstm, pointer_generator_gru, transducer_gru,
-transformer(20\40\60 epochs)
-
-### Reference Result:
-
-- Baseline
-
-| Models  | gru   | lstm  | attentive_gru | attentive_lstm | hard_attention_gru | hard_attention_gru (Arab) | pointer_generator_gru | transducer_gru | transformer_20 | transformer_40 | transformer_60 |
-|---------|-------|-------|---------------|----------------|--------------------|---------------------------|-----------------------|----------------|----------------|----------------|----------------|
-| WER (%) | 43.75 | 44.25 | 63.08         | 47.25          | 40.67              | 31.33                     | 62.17                 | 69.33          | 78.25          | 81.58          | 79.50          |
-
-- Best performance model on all datasets(hard_attenton_gru)
-
-| Languages | Arabic | Bulgarian | English | Persian | Indonesian | Macedonian | Pashto | Russian | Spanish | Tagalog | Ukrainian | Urdu  |
-|-----------|--------|-----------|---------|---------|------------|------------|--------|---------|---------|---------|-----------|-------|
-| WER       | 31.33  | 20.00     | 58.00   | 29.67   | 55.33      | 3.67       | 44.33  | 10.33   | 5.00    | 40.33   | 15.67     | 64.00 |
-
-- GRU、LSTM、Transformer on different languages
-
-| Model/Languages | English | Pashto | Russian | Spanish |
-|-----------------|---------|--------|---------|---------|
-| GRU             | 31.00   | 39.00  | 14.00   | 9.00    |
-| LSTM            | 48.33   | 57.67  | 10.33   | 9.00    |
-| Transformer     | 81.33   | 77.00  | 35.67   | 24.67   |
-
-- Comparison between hard_attention_gru、attentive_lstm
-
-| Model / Language   | Korean | Bengali | Indonesian | Pashto | Swedish |
-|--------------------|--------|---------|------------|--------|---------|
-| hard_attention_gru | 98.00  | 87.00   | 85.00      | 78.00  | 66.00   |
-| attentive_lstm     | 100.00 | 67.00   | 73.00      | 66.00  | 61.00   |
-
-- Comparison between attentive_gru and attentive_lstm
-
-The comparison of validation accuracy (val_accuracy) between attentive_gru (GRU) and attentive_lstm (LSTM) across all
-languages shows:
-
-- LSTM val_accuracy higher than GRU: 20 times
-- LSTM val_accuracy lower than GRU: 22 times
-- LSTM val_accuracy equal to GRU: 6 times
-- Average LSTM val_accuracy: 0.6987
-- Average GRU val_accuracy: 0.7049
-
-This indicates that, on average, attentive_gru achieves slightly higher validation accuracy than attentive_lstm,
-although the performance varies across different languages.
-
-- attentive_lstm performance on Adyghe and Bengali with different parameters(DEV_WER)
-
-| Params                                | Adyghe WER | Bengali WER | Dutch WER | Urdu WER |
-|---------------------------------------|------------|-------------|-----------|----------|
-| default                               | 31.00      | 65.00       | 23.00     | 77.00    |
-| 4 encoder_layers + 1 decoder_layer    | 51.00      | 70.00       | 45.00     | 80.00    |
-| 256 embedding_size + 1024 hidden_size | 37.00      | 67.00       | 30.00     | 78.00    |
-| 0.1 label_smoothing                   | 33.00      | 65.00       | 21.00     | 75.00    |
-
-- Summary of the G2P performance of the Transphone toolkit on several languages
-
-| Language  | Dutch | English | French | Italian | Spanish |
-|-----------|-------|---------|--------|---------|---------|
-| WER       | 51.00 | 76.00   | 7.00   | 21.00   | 16.00   |
-
-### Statistical Summary Table
-
-| Models                | Multi > Mono | Multi < Mono | Average Δ |
-|-----------------------|--------------|--------------|-----------|
-| **Neural Transducer** | 15           | 3            | +5.11     |
-| **Transformer**       | 6            | 12           | -2.44     |
-| **Attentive LSTM**    | 6            | 12           | -1.33     |
-
-### ByT5 Subset vs All Statistical Summary
-
-| Comparison        | Count | Average Δ |
-|-------------------|-------|-----------|
-| **Subset > All**  | 8     | +2.25     |
-| **Subset < All**  | 10    | -4.10     |
-| **Overall**       | 18    | **-1.22** |

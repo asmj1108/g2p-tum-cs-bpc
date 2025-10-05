@@ -14,8 +14,6 @@ models/transformer/checkpoints/
 models/transformer/data-bin/
 models/transformer/*.log
 
-models/byt5/*/
+models/byt5/data/
 
 **/__pycache__/*
-
-Note.md

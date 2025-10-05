@@ -1,0 +1,20 @@
+#!/bin/bash
+
+DATA_TARGET="../../data"
+OUTPUT_BASE="results"
+LANGS=("ady" "arb" "arb_latin" "asm" "bel" "ben" "bul" "bul_latin" "ceb" "cym" "deu" "ell" "ell_latin" "eng_us"
+	"fas_cls" "fas_cls_latin" "fra" "gle" "hbs" "hin" "hun" "hye" "hye_latin" "ind" "isl" "ita" "jpn" "kat" "khm" "kor"
+	"kor_jamo" "lav" "lit" "lwl" "mkd" "mkd_latin" "mlt" "mya" "nld" "nno" "pes" "pol" "pus" "pus_latin" "ron" "rus"
+	"rus_latin" "shn" "slv" "spa" "swe" "tgl" "tha" "uig" "uig_latin" "ukr" "ukr_latin" "urd" "urd_latin" "vie")
+
+mkdir -p "${OUTPUT_BASE}"
+
+for LANG in "${LANGS[@]}"; do
+	OUTPUT="${OUTPUT_BASE}/${LANG}"
+	yoyodyne-train \
+		--model_dir "${OUTPUT}" \
+		--train "${DATA_TARGET}/${LANG}/${LANG}_train.tsv" \
+		--val "${DATA_TARGET}/${LANG}/${LANG}_dev.tsv" \
+		--arch attentive_lstm \
+		--patience 10
+done
